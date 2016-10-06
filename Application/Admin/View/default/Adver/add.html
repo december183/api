@@ -1,0 +1,79 @@
+<extend name="Public/base" />
+<block name="title"><title>广告管理-添加广告</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 广告管理-添加广告</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">广告列表</a> &gt; <a href="__CONTROLLER__/add">添加广告</a></div>
+		    <form method="post" action="" enctype="multipart/form-data">
+		    <div class="content">
+	    		<div class="input medium">广告标题：<input type="text" name="title" /> <em class="red">*</em></div>
+	    		<div class="input medium">广告链接：<input type="text" name="url" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            链接类型：
+		            <select name="type" id="type">
+		            <option value="0">--请选择链接类型--</option>
+		            <option value="1">url链接</option>
+		            <option value="2">商品列表</option>
+		            <option value="3">活动列表</option>
+		            <option value="4">商品</option>
+		            <option value="5">活动</option>
+		            </select> <em class="red">*</em>
+		        </div>
+	    		<div class="input">
+		            年龄范围：
+		            <select name="agerange" id="agerange">
+		            <option value="0">--请选择年龄范围--</option>
+		            <option value="1">0-3</option>
+		            <option value="2">3-6</option>
+		            <option value="3">6-12</option>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="input">
+		            广告位置：
+		            <select name="typeid" id="typeid">
+		            <option value="0">--请选择广告类型--</option>
+		            <volist name="typelist" id="vo">
+		                <option value="{$vo.id}">{$vo.name}</option>
+		            </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="input">广告宽度：<input type="text" name="width" class="width" /> <em class="red">*</em></div>
+		        <div class="input">广告高度：<input type="text" name="height" class="height" /> <em class="red">*</em></div>
+				<div class="input">
+		            缩略　图：<input type="file" name="pic" /> <em class="red">*</em>
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">广告描述：</span><textarea name="summary" rows="3" cols="5"></textarea>
+		        </div>
+		        <div class="input">
+		        	是否推荐：
+		            <input type="radio" id="radio1" name="status"  checked="checked" value="1" /><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="status" value="0" /><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#typeid').change(function(){
+			var typeid=$(this).val();
+			$.ajax({
+				url:'__MODULE__/AdverType/getAdverTypeInfo',
+				data:{"id":typeid},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						$('.width').val(response.width);
+						$('.height').val(response.height);
+					}
+				}
+			});
+		});
+	</script>
+</block>

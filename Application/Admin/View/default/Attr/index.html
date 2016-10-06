@@ -1,0 +1,48 @@
+<extend name="Public/comm" />
+<block name="title"><title>属性管理-属性列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 属性管理-属性列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">属性列表</a> &gt; <a href="__CONTROLLER__/add">添加属性</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>属性名称</th>
+		                    <th>属性值</th>
+		                    <th>属性类型</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="attrlist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td>{$vo.name}</td>
+		                    <td>{$vo.value}</td>
+		                    <td><if condition="$vo['type'] eq 1">text单行文本<elseif condition="$vo['type'] eq 2" />radio单选<elseif condition="$vo['type'] eq 3" />checkbox多选<elseif condition="$vo['type'] eq 4" />textarea多行文本<else /></if></td>
+		                    <td class="actions"><a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个属性吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</block>

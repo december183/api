@@ -1,0 +1,37 @@
+<extend name="Public/comm" />
+<block name="title"><title>用户组管理-添加用户组</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 用户组管理-添加用户组</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">用户组列表</a> &gt; <a href="__CONTROLLER__/add">添加用户组</a></div>
+		    <form method="post" action="">
+		    <div class="content">
+	    		<div class="input">用户组名：<input type="text" name="groupname" /> <em class="red">*</em></div>
+	    		<div class="input">
+	    			权限设置：
+	    			<div class="pad-left">
+		    			<volist name="authlist" id="vo">
+		    			<label><input type="checkbox" name="auth[]" value="{$vo.id}" />{$vo.name}</label><br/>
+		    			<volist name="vo['child']" id="voo">
+		    			<label><input type="checkbox" name="auth[]" value="{$voo.id}" />{$voo.name}</label>　	
+		    			</volist><br/>
+		    			</volist>
+	    			</div>
+	    		</div>
+		        <div class="input">
+		        	是否启用：
+		            <input type="radio" id="radio1" name="status"  checked="checked" value="1" /><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="status" value="0" /><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

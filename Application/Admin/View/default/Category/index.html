@@ -1,0 +1,55 @@
+<extend name="Public/comm" />
+<block name="title"><title>公告管理-栏目列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 公告管理-栏目列表</h1>
+        <div class="bloc">
+		    <div class="title"><volist name="categrouplist" id="vo"><a href="__CONTROLLER__/index/gid/{$vo.id}">{$vo.name}栏目列表</a>&nbsp;&gt;&nbsp;</volist><a href="__CONTROLLER__/add">添加栏目</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>栏目名称</th>
+		                    <th>栏目简介</th>
+		                    <th>自定义属性</th>
+		                    <th>栏目类型</th>
+		                    <th>栏目分组</th>
+		                    <th style="text-align:center;">排序</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="catelist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td class="pad-left-level{$vo.level}">{$vo.name}</td>
+		                    <td>{$vo.descript}</td>
+		                    <td>{$vo.attr}</td>
+		                    <td><if condition="$vo['type'] eq 1">列表栏目<else />单页栏目</if></td>
+		                    <td><if condition="$vo['groupid'] eq 1">公告<elseif condition="$vo['groupid'] eq 2" />商品<elseif condition="$vo['groupid'] eq 3" />服务<elseif condition="$vo['groupid'] eq 4" />活动<elseif condition="$vo['groupid'] eq 5" />论坛<else /></if></td>
+		                    <td style="text-align:center;"><input type="text" name="sort[{$vo.id}]" class="small" value="{$vo.sort}" /></td>
+		                    <td class="actions"><if condition="$vo['type'] eq 1"><a href="__CONTROLLER__/add/gid/{$gid}/id/{$vo.id}" title="Add this content"><else /><a href="javascript:;" title="Add this content"></if><img src="__PUBLIC__/Admin/img/add.png" alt="新增"></a>　<a href="__CONTROLLER__/edit/gid/{$gid}/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/gid/{$gid}/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个栏目吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		                <option value="sort">Sort</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</block>

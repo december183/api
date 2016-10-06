@@ -1,0 +1,101 @@
+<extend name="Public/comm" />
+<block name="title"><title>栏目管理-修改栏目</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 栏目管理-修改栏目</h1>
+        <div class="bloc">
+		    <div class="title"><volist name="categrouplist" id="vo"><a href="__CONTROLLER__/index/gid/{$vo.id}">{$vo.name}栏目列表</a>&nbsp;&gt;&nbsp;</volist><a href="__CONTROLLER__/add">添加栏目</a></div>
+		    <form method="post" action="" enctype="multipart/form-data">
+		    <input type="hidden" name="id" value="{$oneCategory.id}" />
+		    <div class="content">
+	    		<div class="input">栏目名称：<input type="text" name="name" value="{$oneCategory.name}" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            上级栏目：
+		            <select name="pid" id="pid">
+		                <option value="0">顶级栏目</option>
+		                <volist name="catelist" id="vo">
+		                <option value="{$vo.id}" <if condition="$oneCategory['pid'] eq $vo['id']">selected="selected"</if><in name="vo['id']" value="$oneCategory['ids']">disabled="disabled"</in>>{$vo.name}</option>
+		                <volist name="vo['child']" id="voo">
+		                	<option value="{$voo.id}" style="padding-left:<php> echo 25*$voo['level']; </php>px;" <if condition="$oneCategory['pid'] eq $voo['id']">selected="selected"</if><in name="voo['id']" value="$oneCategory['ids']">disabled="disabled"</in>>{$voo.name}</option>
+		                </volist>
+		                </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <if condition="$gid eq 2">
+		        <div class="input brand">
+		        	关联品牌：<volist name="brandlist" id="vo"><label class="normal"><input type="checkbox" value="{$vo.id}" name="brandids[]" class="auto" <in name="vo['id']" value="$oneCategory['brandids']">checked="checked"</in> />{$vo.name}</label>　</volist>
+		        </div>
+		        </if>
+		        <div class="input">栏目　组：<input type="text" name="groupname" value="{$oneCategory.groupname}" /><input type="hidden" name="groupid" value="{$oneCategory.groupid}" /></div>
+		        <div class="input">
+	    			<span class="cusattr">栏目属性：</span>
+	    			<div class="pad-left">
+		    			<volist name="attrlist" id="vo">
+		    			<label class="normal"><input type="checkbox" name="attr[]" value="{$vo.id}" <in name="vo['id']" value="$oneCategory['attr']">checked="checked"</in> />{$vo.name}</label>　
+		    			</volist>
+	    			</div>
+	    		</div>
+		        <div class="input">
+		            缩略　图：<input type="file" name="pic" /> <img src="{$oneCategory.thumb}" class="thumb" alt="{$oneCategory.name}" /> <em class="red">*</em>
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">栏目简介：</span><textarea name="descript" rows="3" cols="5">{$oneCategory.descript}</textarea>
+		        </div>
+		        <div class="input textarea">
+		        	栏目详情：<textarea name="content" id="editor">{$oneCategory.content}</textarea>
+		        </div>
+		        <div class="input">
+		        	栏目类型：
+		            <input type="radio" id="radio1" name="type" value="1" <if condition="$oneCategory.type eq 1">checked="checked"</if> /><label for="radio1" class="inline">列表栏目</label>
+		            <input type="radio" id="radio2"  name="type" value="0" <if condition="$oneCategory.type eq 0">checked="checked"</if> /><label for="radio2" class="inline">单页栏目</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<script>
+        KindEditor.ready(function(K){
+            var opts={
+                uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager : true,
+                height : '450px',
+                width : '100%',
+                afterBlur:function(){this.sync();}
+            };
+            var editor = K.create('textarea[name="content"]', opts);
+        });
+    </script>
+    <script type="text/javascript">
+    	$('#pid').change(function(){
+    		if($(this).parent().parent().siblings().hasClass('brand')){
+    			$(this).parent().parent().siblings('.brand').remove();
+    		}
+    		var cateid=$(this).val();
+    		$.ajax({
+    			url:'__MODULE__/Brand/getBrand',
+    			data:{"cateid":cateid},
+    			type:'post',
+    			dataType:'json',
+    			success:function(response){
+    				if(response.errno == 0){
+    					var str='';
+    					var list=response.brandlist;
+    					var leng=list.length;
+    					for(var i=0;i<leng;i++){
+    						str+='<label class="normal"><input type="checkbox" class="auto" name="brandids[]" value="'+list[i].id+'" />'+list[i].name+'</label>　';
+    					}
+    					var html='<div class="input brand">关联品牌：'+str+'</div>';
+    					$('#pid').parent().parent().after(html);
+    				}
+    			}
+    		});
+    	});
+    </script>
+</block>

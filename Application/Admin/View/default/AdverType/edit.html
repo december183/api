@@ -1,0 +1,30 @@
+<extend name="Public/comm" />
+<block name="title"><title>广告类型管理-添加广告类型</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 广告类型管理-添加广告类型</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">广告类型列表</a> &gt; <a href="__CONTROLLER__/add">添加广告类型</a> &gt; <a href="__CONTROLLER__/edit/id/{$oneAdvertype.id}">修改广告类型</a></div>
+		    <form method="post" action="">
+		    <input type="hidden" name="id" value="{$oneAdvertype.id}" />
+		    <div class="content">
+	    		<div class="input">类型名称：<input type="text" name="name" value="{$oneAdvertype.name}" /> <em class="red">*</em></div>
+	    		<div class="input">广告宽度：<input type="text" name="width" value="{$oneAdvertype.width}" /> <em class="red">*</em></div>
+	    		<div class="input">广告高度：<input type="text" name="height" value="{$oneAdvertype.height}" /> <em class="red">*</em></div>
+		        <div class="input textarea">
+		            <span class="middle">类型描述：</span><textarea name="summary" rows="3" cols="5">{$oneAdvertype.summary}</textarea>
+		        </div>
+		        <div class="input">
+		        	是否启用：
+		            <input type="radio" id="radio1" name="status" value="1" <if condition="$oneAdvertype['status'] eq 1">checked="checked"</if>/><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="status" value="0" <if condition="$oneAdvertype['status'] eq 0">checked="checked"</if>/><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

@@ -1,0 +1,115 @@
+<extend name="Public/base" />
+<block name="title"><title>商品管理-商品列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 商品管理-商品列表</h1>
+        <div class="bloc">
+		    <div class="title"><volist name="topCates" id="vo"><a href="__CONTROLLER__/index/cid/{$vo.id}">{$vo.name}</a><if condition="$i neq count($topCates)">&nbsp;&gt;&nbsp;</if></volist></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>缩略图</th>
+		                    <th>商品标题</th>
+		                    <th>商品编号</th>
+		                    <th>商品售价</th>
+		                    <th>商品库存</th>
+		                    <th>收藏数量</th>
+		                    <th>点赞数量</th>
+		                    <th>商品栏目</th>
+		                    <th>商品标签</th>
+		                    <th>商品排序</th>
+		                    <th>商品状态</th>
+		                    <th>是否推荐</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="goodslist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td class="picture" style="width:100px;"><a href="{$vo.mainpic}" class="zoombox"><img src="{$vo.thumbpic}" class="thumb" alt="{$vo.title}" /></a></td>
+		                    <td><a href="__ROOT__/index.php/Home/Detail/index/id/{$vo.id}" title="{$vo.title}" target="_blank">{$vo.title|mb_substr=0,32,'utf-8'}...</a></td>
+		                    <td>{$vo.sn}</td>
+		                    <td>{$vo.saleprice}</td>
+		                    <td>{$vo.inventory}</td>
+		                    <td>{$vo.collectnum}</td>
+		                    <td>{$vo.admirenum}</td>
+		                    <td>{$vo.typename}</td>
+		                    <td>
+		                    <volist name="vo['tags']" id="voo"> 
+		                    	<a href="#">{$voo}</a>　
+		                    </volist>
+		                    </td>
+		                    <td><input type="text" name="sort[{$vo.id}]" class="small" value="{$vo.sort}" /></td>
+		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">已审核</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">未审核</a></if></td>
+		                    <td><if condition="$vo['isrec'] eq 1"><a href="javascript:;" onclick="isRec({$vo.id},this);">已推荐</a><else /><a href="javascript:;" onclick="isRec({$vo.id},this);">未推荐</a></if></td>
+		                    <td style="text-align:center;"><a href="__CONTROLLER__/del/cid/{$cid}/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这件商品吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		                <option value="sort">Sort</option>
+		                <option value="check">Check</option>
+		                <option value="rec">Rec</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function setStatus(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/setStatus',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.status == 1){
+							$target.text('已审核');
+							alert('审核通过');
+						}else{
+							$target.text('未审核');
+							alert('审核失败');
+						}
+					}
+				}
+			});
+		}
+		function isRec(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/isRec',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.isrec == 1){
+							$target.text('已推荐');
+							alert('推荐成功');
+						}else{
+							$target.text('未推荐');
+							alert('取消推荐');
+						}
+					}
+				}
+			});
+		}
+	</script>
+</block>

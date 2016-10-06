@@ -1,0 +1,80 @@
+<extend name="Public/base" />
+<block name="title"><title>广告管理-广告列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 广告管理-广告列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">广告列表</a> &gt; <a href="__CONTROLLER__/add">添加广告</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>缩略图</th>
+		                    <th>标题</th>
+		                    <th>链接</th>
+		                    <th>链接类型</th>
+		                    <th>广告位置</th>
+		                    <th>年龄范围</th>
+		                    <th>前台显示</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="adverlist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td class="picture" style="width:100px;"><a href="{$vo.thumb}" class="zoombox"><img src="{$vo.thumb}" class="thumb" alt="{$vo.title}" /></a></td>
+		                    <td><a href="{$vo.url}">{$vo.title}</a></td>
+		                    <td>{$vo.url}</td>
+		                    <td><if condition="$vo['type'] eq 1">url链接<elseif condition="$vo['type'] eq 2" />商品列表<elseif condition="$vo['type'] eq 3" />活动列表<elseif condition="$vo['type'] eq 4" />商品<elseif condition="$vo['type'] eq 5">活动<else /></if></td>
+		                    <td>{$vo.typename}</td>
+		                    <td><if condition="$vo['agerange'] eq 1">0-3<elseif condition="$vo['agerange'] eq 2" />3-6<elseif condition="$vo['agerange'] eq 3" />6-12<else /></if></td>
+		                    <td>
+		                    <if condition="$vo['status'] eq 1">是 | <a href="javascript:;" onclick="isRec({$vo.id},this);">取消</a><else />否 | <a href="javascript:;" onclick="isRec({$vo.id},this);">推荐</a></if>
+		                    </td>
+		                    <td class="actions"><a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这条广告吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function isRec(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/isRec',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.status == 1){
+							$target.parent().html('是 | <a href="javascript:;" onclick="isRec('+id+',this);">取消</a>');
+							alert('已推荐');
+						}else{
+							$target.parent().html('否 | <a href="javascript:;" onclick="isRec('+id+',this);">推荐</a>');
+							alert('已取消');
+						}
+					}
+				}
+			});
+		}
+	</script>
+</block>

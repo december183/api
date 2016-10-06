@@ -1,0 +1,62 @@
+<extend name="Public/comm" />
+<block name="title"><title>菜单管理-菜单列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 菜单管理-菜单列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">菜单列表</a> &gt; <a href="__CONTROLLER__/add">添加菜单</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>菜单ID</th>
+		                    <th>菜单名称</th>
+		                    <th>图标样式</th>
+		                    <th>菜单链接</th>
+		                    <th>显示菜单</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            <volist name="authlist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td>{$vo.id}</td>
+		                    <td>{$vo.name}</td>
+		                    <td>{$vo.icon}</td>
+		                    <td>{$vo.url}</td>
+		                    <td><if condition="$vo['status'] eq 1">是<else />否</if></td>
+		                    <td class="actions"><a href="__CONTROLLER__/add/id/{$vo.id}" title="Add this content"><img src="__PUBLIC__/Admin/img/add.png" alt="新增"></a>　<a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个菜单吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                <volist name="vo['child']" id="voo">
+		                    <tr>
+			                    <td><input type="checkbox" name="id[]" value="{$voo.id}" /></td>
+			                    <td>{$voo.id}</td>
+			                    <td style="padding-left:25px;">{$voo.name}</td>
+			                    <td>{$voo.icon}</td>
+			                    <td>{$voo.url}</td>
+			                    <td><if condition="$voo['status'] eq 1">是<else />否</if></td>
+			                    <td class="actions"><a href="__CONTROLLER__/add/id/{$voo.id}" title="Add this content"><img src="__PUBLIC__/Admin/img/add.png" alt="新增"></a>　<a href="__CONTROLLER__/edit/id/{$voo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$voo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个菜单吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+			                </tr>	
+		                </volist>
+		            </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</block>

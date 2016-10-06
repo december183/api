@@ -1,0 +1,24 @@
+<div id="sidebar">
+    <ul>
+        <li>
+            <a href="__MODULE__/Index/index">
+                <img src="__PUBLIC__/Admin/img/icons/menu/inbox.png" alt="" />
+                仪表盘
+            </a>
+        </li>
+        <volist name="menulist" id="vo">
+        <in name="vo['id']" value="$userAuth">
+            <if condition="$curAuth['pid'] eq $vo['id']"><li class="{$vo.icon} current"><else /><li class="{$vo.icon}"></if>
+                <if condition="$vo['url'] neq ''"><a href="{$vo.url}"> {$vo.name}</a><else /><a href="javascript:;"> {$vo.name}</a></if>
+                <ul>
+                    <volist name="vo['child']" id="voo">
+                    <in name="voo['id']" value="$userAuth">
+                        <li <if condition="$curAuth['url'] eq $voo['url']">class="current"</if>><a href="__MODULE__/{$voo.url}">{$voo.name}</a></li>
+                    </in>
+                    </volist>
+                </ul>
+            </li>
+        </in>
+        </volist>
+    </ul>
+</div>

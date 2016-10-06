@@ -1,0 +1,41 @@
+<extend name="Public/comm" />
+<block name="title"><title>菜单管理-修改菜单</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 菜单管理-修改菜单</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">菜单列表</a> &gt; <a href="__CONTROLLER__/add">添加菜单</a> &gt; <a href="javascript:;">修改菜单</a></div>
+		    <form method="post" action="">
+		    <input type="hidden" name="id" value="{$oneAuth.id}" />
+		    <div class="content">
+	    		<div class="input">菜单名称：<input type="text" name="name" value="{$oneAuth.name}" /> <em class="red">*</em></div>
+	    		<div class="input">图标样式：<input type="text" name="icon" value="{$oneAuth.icon}" /> <em class="red">*</em></div>
+	    		<div class="input">菜单链接：<input type="text" name="url" value="{$oneAuth.url}" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            上级节点：
+		            <select name="pid" id="select">
+		            <option value="0">顶级菜单</option>
+		            <volist name="authlist" id="vo">
+		                <option value="{$vo.id}" <if condition="$oneAuth['pid'] eq $vo['id']">selected="selected"</if>>{$vo.name}</option>
+		                <volist name="vo['child']" id="voo">
+		                	<option value="{$voo.id}" style="padding-left:25px;" <if condition="$oneAuth['pid'] eq $voo['id']">selected="selected"</if>>{$voo.name}</option>
+		                </volist>
+		            </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="input">
+		        	是否显示：
+		            <input type="radio" id="radio1" name="status" value="1" <if condition="$oneAuth['status'] eq 1">checked="checked"</if> /><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="status" value="0" <if condition="$oneAuth['status'] eq 0">checked="checked"</if> /><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

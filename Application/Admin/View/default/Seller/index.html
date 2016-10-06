@@ -1,0 +1,105 @@
+<extend name="Public/base" />
+<block name="title"><title>客户管理-商家列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 客户管理-商家列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">商家列表</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>营业执照</th>
+		                    <th>商铺名称</th>
+		                    <th>商户名称</th>
+		                    <th>手机</th>
+		                    <th>电话</th>
+		                    <th>门店地址</th>
+		                    <th>年龄范围</th>
+		                    <th>是否审核</th>
+		                    <th>状态</th>
+		                    <th>注册日期</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="sellerlist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td class="picture" style="width:100px;"><a href="{$vo.licence}" class="zoombox"><img src="{$vo.licence}" class="thumb" alt="{$vo.shopname}" /></a></td>
+		                    <td>{$vo.shopname}</td>
+		                    <td>{$vo.realname}</td>
+		                    <td>{$vo.phone}</td>
+		                    <td>{$vo.tel}</td>
+		                    <td>{$vo.location}</td>
+		                    <td>{$vo.agerange}</td>
+		                    <td><if condition="$vo['level'] gt 2"><a href="javascript:;" onclick="checkSeller({$vo.id},this);">已审核</a><else /><a href="javascript:;" onclick="checkSeller({$vo.id},this);">未审核</a></if></td>
+		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">正常</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">禁用</a></if></td>
+		                    <td>{$vo.date|date='Y-m-d',###}</td>
+		                    <td style="text-align:center;"><a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这条信息吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		                <option value="check">Check</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function setStatus(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/setStatus',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.status == 1){
+							$target.text('启用');
+							alert('已启用');
+						}else{
+							$target.text('禁用');
+							alert('已禁用');
+						}
+					}
+				}
+			});
+		}
+		function checkSeller(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/checkSeller',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.level == 3){
+							$target.text('已审核');
+							alert('审核通过');
+						}else{
+							$target.text('未审核');
+							alert('审核失败');
+						}
+					}
+				}
+			});
+		}
+	</script>
+</block>

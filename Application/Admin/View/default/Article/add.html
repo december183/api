@@ -1,0 +1,122 @@
+<extend name="Public/base" />
+<block name="title"><title>文章管理-添加文章</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/laydate/laydate.dev.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 文章管理-添加文章</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">文章列表</a> &gt; <a href="__CONTROLLER__/add">添加文章</a></div>
+		    <form method="post" action="" enctype="multipart/form-data">
+		    <div class="content">
+	    		<div class="input medium">文章标题：<input type="text" name="title" /> <em class="red">*</em></div>
+	    		<div class="input medium">文章标签：<input type="text" name="tags" /> (<em class="red">*</em> 多个关键词以“,”分开)</div>
+	    		<div class="input">文章作者：<input type="text" name="author" /></div>
+	    		<div class="input">文章来源：<input type="text" name="source" /></div>
+	    		<div class="input">发布时间：<input type="text" name="date" id="sub_date" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            文章栏目：
+		            <select name="cateid" id="cateid">
+		            <option value="0">--请选择文章栏目--</option>
+		            <volist name="catelist" id="vo">
+		                <optgroup label="{$vo.name}">
+		                <volist name="vo['child']" id="voo">
+		                	<option value="{$voo.id}">{$voo.name}</option>
+		                </volist>
+		                </optgroup>
+		            </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+				<div class="input">
+		            缩略　图：<input type="file" name="pic" /> <em class="red">*</em>
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">文章简介：</span><textarea name="descript" rows="3" cols="5"></textarea>
+		        </div>
+		        <div class="input textarea">
+		        	文章详情：<textarea name="content" id="editor"></textarea>
+		        </div>
+		        <div class="input">
+		        	是否推荐：
+		            <input type="radio" id="radio1" name="is_rec" checked="checked" value="1" /><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="is_rec" value="0" /><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+    <script>
+        KindEditor.ready(function(K){
+            var opts={
+                uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager : true,
+                height : '450px',
+                width : '100%',
+                afterBlur:function(){this.sync();}
+            };
+            var editor = K.create('textarea[name="content"]', opts);
+        });
+        laydate({
+            elem:'#sub_date',
+            istime:true, 
+            format:'YYYY-MM-DD hh:mm:ss',
+        });
+    </script>
+    <script type="text/javascript">
+    	$('#cateid').change(function(){
+        	var cateid=$(this).val();
+        	$.ajax({
+        		url:'__MODULE__/Category/getAttr',
+        		data:{"id":cateid},
+        		type:'post',
+        		dataType:'json',
+        		success:function(response){
+        			$('#cateid').parent().parent().siblings('.cateattr').remove();
+        			if(response.errno == 0){
+        				var data = response.list;
+        				var length = data.length;
+        				var html = '';
+        				for(var i=0;i<length;i++){
+        					var id = data[i].id;
+        					var name = data[i].name;
+        					if(data[i].value != ''){
+        						var valArr = data[i].value.split(';');
+        						var len = valArr.length;
+        						var str = '';
+        						for(var j=0;j<len;j++){
+        							var val=valArr[j].split(':');
+        							if(data[i].type == 2){
+        								str+='<label class="new_label"><input type="radio" name="attr[item'+id+']" value="'+val[0]+'" />'+val[1]+'</label>　';
+        							}else if(data[i].type == 3){
+        								str+='<label class="normal"><input type="checkbox" class="auto" name="attr[item'+id+'][]" value="'+val[0]+'" />'+val[1]+'</label>　';
+        							}
+        						}
+        					}
+        					if(data[i].type == 1){
+                                if(id == 7){
+                                    var start_time_descript=' (<em class="red">*</em> 格式：2016/9/20 09:00:00)';
+                                }else{
+                                    var start_time_descript='';
+                                }
+        						html+='<div class="input cateattr">'+name+'：<input type="text" name="attr[item'+id+']" />'+start_time_descript+'</div>';
+        					}else if(data[i].type == 2){
+        						html+='<div class="input cateattr">'+name+'：'+str+'</div>';
+        					}else if (data[i].type == 3){
+        						html+='<div class="input cateattr"><span class="cusattr">'+name+'：</span><div class="pad-left">'+str+'</div></div>';
+        					}else if(data[i].type == 4){
+        						html+='<div class="input cateattr textarea"><span class="middle">'+name+'：</span><textarea name="attr[item'+id+']" rows="3" cols="5"></textarea></div>';
+        					}
+        				}
+        				$('#cateid').parent().parent().after(html);
+        			}
+        		}
+        	});
+        });
+    </script>
+</block>

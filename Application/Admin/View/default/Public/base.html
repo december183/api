@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <block name="title"><title>89时讯网站管理后台</title></block>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+        <!-- jQuery AND jQueryUI -->
+        <script type="text/javascript" src="__PUBLIC__/Admin/js/libs/jquery/1.6/jquery.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/Admin/js/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+        <!--  -->
+        <link rel="stylesheet" href="__PUBLIC__/Admin/css/min.css" />
+        <script type="text/javascript" src="__PUBLIC__/Admin/js/min.js"></script>
+    </head>
+    <body>
+        
+        <script type="text/javascript" src="__PUBLIC__/Admin/content/settings/main.js"></script>
+        <link rel="stylesheet" href="__PUBLIC__/Admin/content/settings/style.css" />
+       
+        <!--              
+                HEAD
+                        --> 
+        <include file="Public/header" />                
+                
+        <!--            
+                SIDEBAR
+                         --> 
+        <include file="Public/side" />
+
+        <!--            
+              CONTENT 
+                        --> 
+        <block name="content"></block>
+        
+    </body>
+</html>

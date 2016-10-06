@@ -1,0 +1,46 @@
+<extend name="Public/comm" />
+<block name="title"><title>属性管理-添加属性</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 属性管理-添加属性</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">属性列表</a> &gt; <a href="__CONTROLLER__/add">添加属性</a></div>
+		    <form method="post" action="">
+		    <div class="content">
+	    		<div class="input">属性名称：<input type="text" name="name" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            属性类型：
+		            <select name="type" id="type">
+		            	<option value="0">--请选择属性类型--</option>
+		                <option value="1">单行文本</option>
+		                <option value="2">单选按钮</option>
+		                <option value="3">多选按钮</option>
+		                <option value="4">多行文本</option>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#type').change(function(){
+			var val=$(this).val();
+			if(val == 2 || val == 3){
+				if(!$(this).parent().parent().next().hasClass('attrval')){
+					var html='<div class="input textarea attrval"><span class="middle">属性　值：(<em class="red">*</em>以key:value形式组合，每个组合数据以分号分割，类似：key1:value1;key2:value2)</span><textarea name="value" rows="3" cols="5"></textarea></div>';
+					$(this).parent().parent().after(html);
+				}
+			}else{
+				if($(this).parent().parent().next().hasClass('attrval')){
+					$(this).parent().parent().next().remove();
+				}
+			}
+		});
+	</script>
+</block>

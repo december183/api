@@ -1,0 +1,45 @@
+<extend name="Public/base" />
+<block name="title"><title>用户管理-编辑用户</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 用户管理-编辑用户</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">用户列表</a> &gt; <a href="__CONTROLLER__/add">添加用户</a> &gt; <a href="javascript:;">编辑用户</a></div>
+		    <form method="post" action="" enctype="multipart/form-data">
+		    <input type="hidden" name="id" value="{$oneManage.id}" />
+		    <div class="content">
+	    		<div class="input">用户名称：{$oneManage.username}</div>
+	    		<div class="input">用户密码：<input type="password" name="userpass" /> <em class="red">*</em></div>
+	    		<div class="input">确认密码：<input type="password" name="ckuserpass" /> <em class="red">*</em></div>
+	    		<div class="input">用户邮箱：<input type="text" name="email" value="{$oneManage.email}" /></div>
+	    		<div class="input">用户手机：<input type="text" name="phone" value="{$oneManage.phone}" /></div>
+		        <div class="input">
+		            用户　组：
+		            <select name="groupid" id="select">
+		            <volist name="grouplist" id="vo">
+		                <option value="{$vo.id}" <if condition="$oneManage['groupid'] eq $vo['id']">selected="selected"</if>>{$vo.groupname}</option>
+		            </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="input">
+		            缩略　图：<input type="file" name="pic" /> <img src="{$oneManage.head_img}" class="thumb" alt="{$oneManage.username}" /> <em class="red">*</em>
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">用户备注：</span><textarea name="remark" rows="3" cols="5">{$oneManage.remark}</textarea>
+		        </div>
+		        <div class="input">
+		        	用户状态：
+		            <input type="radio" id="radio1" name="status" value="1" <if condition="$oneManage['status'] eq 1">checked="checked"</if> /><label for="radio1" class="inline">启用</label>
+		            <input type="radio" id="radio2"  name="status" value="0" <if condition="$oneManage['status'] eq 0">checked="checked"</if> /><label for="radio2" class="inline">禁用</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

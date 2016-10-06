@@ -1,0 +1,86 @@
+<extend name="Public/comm" />
+<block name="title"><title>修改密码</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 修改密码</h1>
+        <div class="bloc">
+		    <div class="title"><a href="JavaScript:;">修改密码</a></div>
+		    <form method="post" name="edit" id="edit" enctype="multipart/form-data">
+		    <input type="hidden" name="flag" id="flag" value="0" />
+		    <div class="content">
+		    	<div class="input">会员名称：{$oneManage.username}</div>
+		    	<div class="input">原　密码：<input type="password" name="oldpass" value="" onblur="checkPass(this);" /> <em class="red">*</em><span class="oldpass">原密码必须填写</span></div>
+		    	<div class="input">新　密码：<input type="password" name="userpass" value="" /> <em class="red">*</em>留空则不修改</div>
+		    	<div class="input">确认密码：<input type="password" name="ckuserpass" value="" /> <em class="red">*</em>必须与新密码一致</div>
+		    	<div class="input">用户邮箱：<input type="text" name="email" value="{$oneManage.email}" /></div>
+	    		<div class="input">用户手机：<input type="text" name="phone" value="{$oneManage.phone}" /></div>
+		    	<div class="input">
+		            会员头像：<input type="file" name="pic" /> <img src="{$oneManage.head_img}" class="thumb" alt="{$oneManage.username}" />
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">签名备注：</span><textarea name="remark" rows="3" cols="5">{$oneManage.remark}</textarea>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" onclick="return checkEditForm();" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+	   	</div>
+	</div>
+	<script type="text/javascript">
+		function checkPass(target){
+	        var $target=$(target);
+	        var pass=$target.val();
+	        $.ajax({
+	            url:'__CONTROLLER__/checkPass',
+	            data:{"userpass":pass},
+	            type:'post',
+	            dataType:'json',
+	            success:function(response){
+	                if(response.errno == 1){
+	                    $('#flag').val('0');
+	                    $('.oldpass').remove();
+	                    if($target.parent().find('span.success').text().length != 0){
+	                        $target.parent().find('span.success').remove();
+	                    }
+	                    if($target.parent().find('span.error').text().length == 0){
+	                        $target.parent().append('<span class="error">'+response.errmsg+'</span>');
+	                    }
+	                }else{
+	                    $('#flag').val('1');
+	                    $('.oldpass').remove();
+	                    if($target.parent().find('span.error').text().length != 0){
+	                        $target.parent().find('span.error').remove();
+	                    }
+	                    if($target.parent().find('span.success').text().length == 0){
+	                        $target.parent().append('<span class="success">'+response.errmsg+'</span>');
+	                    }
+	                }
+	            }
+	        });
+	    }
+	    function checkEditForm(){
+	    	var fm = document.getElementById('edit');
+	    	var flag = document.getElementById('flag');
+	    	if(fm.oldpass.value == ''){
+	    		alert('原密码必须填写！');
+	    		fm.oldpass.focus();
+	    		return false;
+	    	}
+	    	if(flag.value == 0){
+	    		alert('原密码不正确！');
+	    		fm.oldpass.focus();
+	    		return false;
+	    	}
+	    	if(fm.userpass.value != ''){
+	    		if(fm.userpass.value != fm.ckuserpass.value){
+	    			alert('密码与确认密码必须一致！');
+	    			fm.ckuserpass.focus();
+	    			return false;
+	    		}
+	    	}
+	    	return true;
+	    }
+	</script>
+</block>

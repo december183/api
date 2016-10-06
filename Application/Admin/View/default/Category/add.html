@@ -1,0 +1,147 @@
+<extend name="Public/comm" />
+<block name="title"><title>栏目管理-添加栏目</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 栏目管理-添加栏目</h1>
+        <div class="bloc">
+		    <div class="title"><volist name="categrouplist" id="vo"><a href="__CONTROLLER__/index/gid/{$vo.id}">{$vo.name}栏目列表</a>&nbsp;&gt;&nbsp;</volist><a href="__CONTROLLER__/add">添加栏目</a></div>
+		    <form method="post" action="" enctype="multipart/form-data">
+		    <div class="content">
+	    		<div class="input">栏目名称：<input type="text" name="name" /> <em class="red">*</em></div>
+	    		<if condition="$oneParentCate['id'] eq ''">
+	    		<div class="input">
+	    			栏目　组：<select name="groupid" id="group">
+		                <option value="0">--请选择栏目分组--</option>
+		                <volist name="categrouplist" id="vo">
+		                <option value="{$vo.id}">{$vo.name}</option>
+		                </volist>
+		            </select> <em class="red">*</em>
+	    		</div>
+	    		<div class="input">
+		            上级栏目：
+		            <select name="pid" id="pid">
+		                <option value="0">顶级栏目</option>
+		                <volist name="catelist" id="vo">
+		                <option value="{$vo.id}">{$vo.typename}</option>
+		                <volist name="vo['child']" id="voo">
+		                	<option value="{$voo.id}">{$voo.typename}</option>
+		                </volist>
+		                </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <else />
+		        <div class="input">
+	    			栏目　组：<input type="text" name="pgroup" value="{$oneParentCate.groupname}" readonly="true" />
+		            <input type="hidden" name="groupid" value="{$oneParentCate.groupid}" />
+	    		</div>
+		        <div class="input">
+		        	上级栏目：<input type="text" name="pname" value="{$oneParentCate.name}" readonly="true" />
+		            <input type="hidden" name="pid" value="{$oneParentCate.id}" />
+		        </div>
+		        <if condition="$gid eq 2">
+		        <div class="input brand">关联品牌：<volist name="brandlist" id="vo"><label class="normal"><input type="checkbox" value="{$vo.id}" name="brandids[]" class="auto">{$vo.name}</label>　</volist></div>
+		        </if>
+		        </if>
+		        <div class="input">
+	    			<span class="cusattr">栏目属性：</span>
+	    			<div class="pad-left">
+		    			<volist name="attrlist" id="vo">
+		    			<label class="normal"><input type="checkbox" name="attr[]" value="{$vo.id}" />{$vo.name}</label>　
+		    			</volist>
+	    			</div>
+	    		</div>
+		        <div class="input">
+		            缩略　图：<input type="file" name="pic" /> <em class="red">*</em>
+		        </div>
+		        <div class="input textarea">
+		            <span class="middle">栏目简介：</span><textarea name="descript" rows="3" cols="5"></textarea>
+		        </div>
+		        <div class="input textarea">
+		        	栏目详情：<textarea name="content" id="editor"></textarea>
+		        </div>
+		        <div class="input">
+		        	栏目类型：
+		            <input type="radio" id="radio1" name="type" value="1" checked="checked" /><label for="radio1" class="inline">列表栏目</label>
+		            <input type="radio" id="radio2"  name="type" value="0" /><label for="radio2" class="inline">单页栏目</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<script>
+        KindEditor.ready(function(K){
+            var opts={
+                uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager : true,
+                height : '450px',
+                width : '100%',
+                afterBlur:function(){this.sync();}
+            };
+            var editor = K.create('textarea[name="content"]', opts);
+        });
+    </script>
+    <script type="text/javascript">
+    	$('#group').change(function(){
+    		$('#pid').children('option:first').siblings().remove();
+    		var gid=$(this).val();
+    		$.ajax({
+    			url:'__CONTROLLER__/getSortNavByGid',
+    			data:{"gid":gid},
+    			type:'post',
+    			dataType:'json',
+    			success:function(response){
+    				var html='';
+    				if(response.errno == 0){
+    					var list=response.catelist;
+    					var leng=list.length;
+    					for(var i=0;i<leng;i++){
+    						html+='<option value="'+list[i].id+'">'+list[i].name+'</option>';
+    						var child=list[i].child;
+    						if(child){
+    							var len=child.length;
+	    						for(var j=0;j<len;j++){
+	    							var left=25*child[j].level;
+	    							html+='<option value="'+child[j].id+'" style="padding-left:'+left+'px;">'+child[j].name+'</option>';
+	    						}
+    						}
+    					}
+    				}else{
+    					html='<option value="0">'+response.errmsg+'</option>';
+    				}
+    				$('#pid').children('option:first').after(html);
+    			}
+    		});
+    	});
+    	$('#pid').change(function(){
+    		if($(this).parent().parent().siblings().hasClass('brand')){
+    			$(this).parent().parent().siblings('.brand').remove();
+    		}
+    		var cateid=$(this).val();
+    		$.ajax({
+    			url:'__MODULE__/Brand/getBrand',
+    			data:{"cateid":cateid},
+    			type:'post',
+    			dataType:'json',
+    			success:function(response){
+    				if(response.errno == 0){
+    					var str='';
+    					var list=response.brandlist;
+    					var leng=list.length;
+    					for(var i=0;i<leng;i++){
+    						str+='<label class="normal"><input type="checkbox" class="auto" name="brandids[]" value="'+list[i].id+'" />'+list[i].name+'</label>　';
+    					}
+    					var html='<div class="input brand">关联品牌：'+str+'</div>';
+    					$('#pid').parent().parent().after(html);
+    				}
+    			}
+    		});
+    	});
+    </script>
+</block>

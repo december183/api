@@ -1,0 +1,69 @@
+<extend name="Public/comm" />
+<block name="title"><title>用户组管理-用户组列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 用户组管理-用户组列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">用户组列表</a> &gt; <a href="__CONTROLLER__/add">添加用户组</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>用户组名称</th>
+		                    <th>用户组状态</th>
+		                    <th>用户组权限</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="grouplist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td>{$vo.groupname}</td>
+		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">启用</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">禁用</a></if></td>
+		                    <td>{$vo.auth}</td>
+		                    <td class="actions"><a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个用户组吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function setStatus(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/setStatus',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.status == 1){
+							$target.text('启用');
+							alert('已启用');
+						}else{
+							$target.text('禁用');
+							alert('已禁用');
+						}
+					}
+				}
+			});
+		}
+	</script>
+</block>
