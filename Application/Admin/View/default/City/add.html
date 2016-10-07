@@ -1,0 +1,28 @@
+<extend name="Public/base" />
+<block name="title"><title>城市管理-添加城市</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 城市管理-添加城市</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">城市列表</a>&nbsp;&gt;&nbsp;<a href="__CONTROLLER__/add">添加城市</a></div>
+		    <form method="post" action="">
+		    <div class="content">
+	    		<div class="input">城市名称：<input type="text" name="name" /> <em class="red">*</em></div>
+	    		<div class="input">
+		            所在省分：
+		            <select name="pid" id="pid">
+		            <option value="0">--请选择所在省分--</option>
+	                <volist name="provincelist" id="vo">
+	                	<option value="{$vo.id}">{$vo.name}</option>
+	                </volist>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

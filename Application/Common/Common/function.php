@@ -164,3 +164,35 @@
         }
         return false;
     }
+    /**
+     * [getAgeRange ]
+     * @param  [int] $date [日期时间戳]
+     * @return [string]       [年龄范围]
+     */
+    function getAgeRange($date){  
+        $date1=date('Y-m-d',time());
+        $data2=date('Y-m-d',$date); 
+        list($Y1,$m1,$d1)=explode('-',$date1);  
+        list($Y2,$m2,$d2)=explode('-',$date2);  
+        $Y=$Y2-$Y1;  
+        $m=$m2-$m1;  
+        $d=$d2-$d1;  
+        if($d<0){  
+            $d+=(int)date('t',strtotime("-1 month $date2"));  
+            $m--;  
+        }  
+        if($m<0){  
+            $m+=12;  
+            $Y--;  
+        }
+        if($Y < 3){
+            $agerange='0-3';
+        }elseif(($Y > 3 && $Y < 6) || $Y == 3){
+            $agerange='3-6';
+        }elseif(($Y > 6 && $Y <12) || $Y == 6){
+            $agerange='6-12';
+        }else{
+            $agerange='';
+        }
+        return $agerange;
+    }  

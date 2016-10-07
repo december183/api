@@ -1,2 +1,3 @@
 <?php
-echo time();
+//echo time();
+echo rand(1,100);

@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
  <head>
-        <title>用户组管理-用户组列表</title>
+        <title>地区管理-地区列表</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         
         <!-- jQuery AND jQueryUI -->
@@ -25,7 +25,15 @@
         你好, 
         <a href="#"><?php echo ($user["username"]); ?></a>
         |
-        <a href="/api/index.php?s=/Admin/Group/logout">退出</a>
+        <a href="/api/index.php?s=/Admin/Region/logout">退出</a>
+    </div>
+    <div class="right">
+        <form action="" method="post" id="search" class="search placeholder">
+            <label>请输入关键字...</label>
+            <input type="hidden" name="action" value="search" />
+            <input type="text" value="" name="q" class="text" />
+            <input type="submit" value="rechercher" class="submit" />
+        </form>
     </div>
 </div>                
                 
@@ -54,28 +62,30 @@
                         --> 
         
 	<div id="content" class="white">
-        <h1><img src="/api/Public/Admin/img/icons/posts.png" alt="" /> 用户组管理-用户组列表</h1>
+        <h1><img src="/api/Public/Admin/img/icons/posts.png" alt="" /> 地区管理-地区列表</h1>
         <div class="bloc">
-		    <div class="title"><a href="/api/index.php?s=/Admin/Group/index">用户组列表</a> &gt; <a href="/api/index.php?s=/Admin/Group/add">添加用户组</a></div>
+		    <div class="title"><a href="/api/index.php?s=/Admin/Region/index">地区列表</a> &gt; <a href="/api/index.php?s=/Admin/Region/add">添加地区</a></div>
 		    <div class="content">
 		   	<form method="post" action="">
 				<table>
 					<thead>
 		                <tr>
 		                    <th><input type="checkbox" class="checkall"/></th>
-		                    <th>用户组名称</th>
-		                    <th>用户组状态</th>
-		                    <th>用户组权限</th>
+		                    <th>地区名称</th>
+		                    <th>所在城市</th>
+		                    <th>所在省分</th>
+		                    <th>排序</th>
 		                    <th style="text-align:center;">操作</th>
 		                </tr>
 		            </thead>
 		            <tbody>
-		            	<?php if(is_array($grouplist)): $i = 0; $__LIST__ = $grouplist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+		            	<?php if(is_array($regionlist)): $i = 0; $__LIST__ = $regionlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 		                    <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>" /></td>
-		                    <td><?php echo ($vo["groupname"]); ?></td>
-		                    <td><?php if($vo['status'] == 1): ?><a href="javascript:;" onclick="setStatus(<?php echo ($vo["id"]); ?>,this);">启用</a><?php else: ?><a href="javascript:;" onclick="setStatus(<?php echo ($vo["id"]); ?>,this);">禁用</a><?php endif; ?></td>
-		                    <td width="70%"><span style="display:inline-block;width:880px;word-wrap: break-word;"><?php echo ($vo["auth"]); ?></span></td>
-		                    <td class="actions"><a href="/api/index.php?s=/Admin/Group/edit/id/<?php echo ($vo["id"]); ?>" title="Edit this content"><img src="/api/Public/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="/api/index.php?s=/Admin/Group/del/id/<?php echo ($vo["id"]); ?>" title="Delete this content" onclick="return confirm('你确定要删除这个用户组吗？');"><img src="/api/Public/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                    <td><?php echo ($vo["name"]); ?></td>
+		                    <td><?php echo ($vo["city"]); ?></td>
+		                    <td><?php echo ($vo["province"]); ?></td>
+		                    <td><input type="text" name="sort[<?php echo ($vo["id"]); ?>]" class="small" value="<?php echo ($vo["sort"]); ?>" /></td>
+		                    <td class="actions"><a href="/api/index.php?s=/Admin/Region/edit/id/<?php echo ($vo["id"]); ?>" title="Edit this content"><img src="/api/Public/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="/api/index.php?s=/Admin/Region/del/id/<?php echo ($vo["id"]); ?>" title="Delete this content" onclick="return confirm('你确定要删除这条记录吗？');"><img src="/api/Public/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
 		                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		            </tbody>
 				</table>
@@ -83,39 +93,19 @@
 					<select name="action" id="tableaction">
 		                <option value="">Action</option>
 		                <option value="delete">Delete</option>
+		                <option value="sort">Sort</option>
 		            </select>
 		            <div class="submit">
 		            	<input type="submit" value="提交" />
 		            </div>
 				</div>
 				<div class="pagination">
+					<?php echo ($page); ?>
 				</div>
 			</form>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function setStatus(id,target){
-			var $target=$(target);
-			$.ajax({
-				url:'/api/index.php?s=/Admin/Group/setStatus',
-				data:{"id":id},
-				type:'post',
-				dataType:'json',
-				success:function(response){
-					if(response.errno == 0){
-						if(response.status == 1){
-							$target.text('启用');
-							alert('已启用');
-						}else{
-							$target.text('禁用');
-							alert('已禁用');
-						}
-					}
-				}
-			});
-		}
-	</script>
 
         
     </body>

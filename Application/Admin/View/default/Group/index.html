@@ -23,7 +23,7 @@
 		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
 		                    <td>{$vo.groupname}</td>
 		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">启用</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">禁用</a></if></td>
-		                    <td>{$vo.auth}</td>
+		                    <td width="70%"><span style="display:inline-block;width:880px;word-wrap: break-word;">{$vo.auth}</span></td>
 		                    <td class="actions"><a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个用户组吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
 		                </tr>
 		                </volist>

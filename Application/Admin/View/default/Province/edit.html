@@ -1,0 +1,19 @@
+<extend name="Public/comm" />
+<block name="title"><title>省分管理-添加省分</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 省分管理-添加省分</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">省分列表</a>&nbsp;&gt;&nbsp;<a href="__CONTROLLER__/add">添加省分</a>&nbsp;&gt;&nbsp;<a href="__CONTROLLER__/edit/id/{$oneProvince.id}">修改省分</a></div>
+		    <form method="post" action="__CONTROLLER__/edit/id/{$oneProvince.id}">
+		    <div class="content">
+	    		<div class="input">省分名称：<input type="text" name="name" value="{$oneProvince.name}" /> <em class="red">*</em></div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

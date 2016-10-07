@@ -1,0 +1,45 @@
+[ 2016-09-30T16:18:22+08:00 ] 127.0.0.1 /api/Home/Index/getChannels
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-30T16:18:37+08:00 ] 127.0.0.1 /api/Home/Index/getChannels
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 14 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+SQL: SELECT * FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 16 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-09-30T16:21:36+08:00 ] 127.0.0.1 /api/Home/Index/getChannels
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T17:35:05+08:00 ] 127.0.0.1 /api/Home/Index/getChannels
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 20 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
