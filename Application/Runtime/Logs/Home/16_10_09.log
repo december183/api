@@ -1,0 +1,1861 @@
+[ 2016-10-09T08:23:55+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0312s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:23:55+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:24:40+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0312s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 50 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:28:30+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:28:32+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0156s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:29:17+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Undefined variable: data D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 41 行.
+NOTIC: [8] Undefined index: mainpic D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 41 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 48 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:29:17+08:00 ] 192.168.11.105 /api/index.php/Home/Service/releaseService
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 58 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 74 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:31:36+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:31:37+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:32:10+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:33:30+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:33:30+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:34:08+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:44:42+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:44:46+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:45:26+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:47:33+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:47:34+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:48:15+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:50:44+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:50:45+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:51:32+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:53:53+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:53:53+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:54:07+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:55:48+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T08:56:43+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:56:43+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:57:19+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:59:16+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:59:16+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:59:41+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T08:59:50+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:00+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:00+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:20+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:26+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:42+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:03:50+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:07:33+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:07:34+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:08:15+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:08:46+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:11:00+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:11:00+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:12:26+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:12:27+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:12:41+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:12:56+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:15:30+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:15:30+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0156s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:16:02+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:17:10+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:17:10+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:17:29+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:18:26+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:18:26+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:18:41+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T09:19:37+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:19:38+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:19:59+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T09:22:39+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:22:40+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:22:58+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:24:28+08:00 ] 192.168.11.105 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:24:28+08:00 ] 192.168.11.105 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:24:45+08:00 ] 192.168.11.105 /api/index.php/Home/Service/uploadMainPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: file D:\wamp\www\api\Application\Home\Controller\ComController.class.php 第 33 行.
+NOTIC: [2] Missing argument 3 for Think\Controller::apiNotice(), called in D:\wamp\www\api\Application\Home\Controller\ComController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 267 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 275 行.
+
+[ 2016-10-09T09:32:23+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:32:24+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:32:24+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:32:28+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 31 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:32:35+08:00 ] 192.168.11.193 /api/index.php/Home/Collect/addApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `app_collect` (`uid`,`serviceid`,`date`) VALUES ('1','1','1475976755') [ RunTime:0.0320s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CollectController.class.php on line 14 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:33:23+08:00 ] 192.168.11.193 /api/index.php/Home/Admire/addApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `app_admire` (`uid`,`serviceid`,`date`) VALUES ('1','1','1475976803') [ RunTime:0.0390s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\AdmireController.class.php on line 15 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:33:27+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:34:14+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:34:15+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:34:16+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:34:28+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:35:40+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:35:41+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:35:42+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:35:54+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:36:31+08:00 ] 192.168.11.193 /api/index.php/Home/Collect/addApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\api\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `app_collect` (`uid`,`serviceid`,`date`) VALUES ('1','1','1475976990') [ RunTime:0.0624s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CollectController.class.php on line 14 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:51:01+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:51:51+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:53:57+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:54:56+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:55:06+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:55:06+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:55:06+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:55:10+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:56:12+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:56:13+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0156s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:56:13+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:56:22+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T09:56:25+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:00:01+08:00 ] 192.168.11.231 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:02:32+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:02:33+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0156s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:02:33+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:02:46+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:05:00+08:00 ] 192.168.11.193 /api/index.php/home/user/isFilledUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`isfilled` FROM `app_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\UserController.class.php on line 34 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:05:01+08:00 ] 192.168.11.193 /api/index.php/home/index/indexApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`thumb` FROM `app_category` WHERE `groupid` = 3 AND `pid` = 0 ORDER BY sort ASC LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `typeid` = 1 AND `status` = 1 ORDER BY sort ASC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `birthday` FROM `app_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\api\Application\Common\Common\function.php 第 176 行.
+NOTIC: [8] Undefined variable: date2 D:\wamp\www\api\Application\Common\Common\function.php 第 181 行.
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 4 AND `status` = 1 ORDER BY date DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 2 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`url`,`thumb` FROM `app_adver` WHERE `agerange` = '0-3' AND `typeid` = 3 AND `status` = 1 ORDER BY date DESC LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\IndexController.class.php on line 42 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:05:01+08:00 ] 192.168.11.193 /api/index.php/Home/Category/serviceCateList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`name`,`thumb`,`brandids`,`attr` FROM `app_category` WHERE `type` <> 0 AND `groupid` = 3 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\api\Application\Home\Model\CategoryModel.class.php 第 19 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\CategoryController.class.php on line 22 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
+[ 2016-10-09T10:05:03+08:00 ] 192.168.11.193 /api/index.php/Home/Service/serviceList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_service` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `app_admire` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_collect` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `cateid` IN ('13','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`thumbpic`,`title`,`price`,`location` FROM `app_service` WHERE `cateid` IN ('13','1') ORDER BY sort ASC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `serviceid` FROM `app_admire` WHERE `uid` = 1 AND `commentid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: admireids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 29 行.
+SQL: SELECT `serviceid` FROM `app_collect` WHERE `uid` = 1 AND `eventid` = 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: collectids D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php 第 34 行.
+NOTIC: [2] Missing argument 4 for Think\Controller::apiReturn(), called in D:\wamp\www\api\Application\Home\Controller\ServiceController.class.php on line 51 and defined D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 244 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\api\ThinkPHP\Library\Think\Controller.class.php 第 253 行.
+
