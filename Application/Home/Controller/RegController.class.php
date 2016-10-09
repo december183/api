@@ -11,10 +11,11 @@ class RegController extends Controller {
         $data=I('param.');
         if($data=$this->user->create($data)){
         	if($data['mscode'] == $_SESSION['mscode']){
-        		if($this->user->add($data)){
-	        		$this->apiNotice(200,'注册成功！');
+                $result=$this->user->add($data);
+        		if($result){
+	        		$this->apiReturn(200,'注册成功！',array('id'=>$result));
 	        	}else{
-	        		$this->apiNotice(400,'注册失败！');
+	        		$this->apiNotice(403,'注册失败！');
 	        	}
         	}else{
         		$this->apiNotice(402,'短信验证码失败！');

@@ -11,6 +11,12 @@ class AdverController extends BaseController{
 	public function index(){
 		if(IS_POST){
 			$data=I('param.');
+			$param=I('get.');
+			if($param){
+				foreach($param as $key=>$value){
+					$paramStr.=$key.'/'.$value;
+				}
+			}
 			if($data['action']=='delete'){
 				$ids=implode(',',$data['id']);
 				if($this->adver->delete($ids)){
@@ -18,12 +24,25 @@ class AdverController extends BaseController{
 				}else{
 					$this->error('删除失败！');
 				}
+			}elseif($data['action']=='sort'){
+				foreach($data['sort'] as $key=>$value){
+					$sql="UPDATE app_adver SET sort='$value' WHERE id='$key'";
+					$this->adver->execute($sql);
+				}
+				$this->success('排序成功！',U('Admin/Adver/index/'.$paramStr),2);
+			}elseif($data['action']=='search'){
+				if($data['q']){
+					$condition['a.title']=array('LIKE','%'.$data['q'].'%');
+				}
+		        $adverlist=$this->adver->alias('a')->join('app_adver_type as b ON a.typeid=b.id')->field('a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.sort,a.status,a.date,b.name as typename')->where($condition)->order('sort ASC')->select();
+		        $this->assign('adverlist',$adverlist);
+		        $this->display();
 			}
 		}else{
 			$total=$this->adver->count();
 			$page=new \Think\Page($total,PAGE_SIZE);
 			$show=$page->show();
-			$adverlist=$this->adver->alias('a')->join('app_adver_type as b ON a.typeid=b.id')->field('a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.status,a.date,b.name as typename')->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$adverlist=$this->adver->alias('a')->join('app_adver_type as b ON a.typeid=b.id')->field('a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.sort,a.status,a.date,b.name as typename')->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
 			$this->assign('adverlist',$adverlist);
 			$this->assign('page',$show);
 			$this->display();
@@ -107,12 +126,5 @@ class AdverController extends BaseController{
 			}
 		}
 		$this->ajaxReturn($response,'json');
-	}
-	public function search(){
-		$query=I('param.q');
-		$condition['title']=array('LIKE','%'.$query.'%');
-        $adverlist=$this->adver->where($condition)->order('date DESC')->select();
-        $this->assign('adverlist',$adverlist);
-        $this->display('Adver/search');
 	}
 }

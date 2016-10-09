@@ -77,6 +77,7 @@
 		                    <th>链接类型</th>
 		                    <th>广告位置</th>
 		                    <th>年龄范围</th>
+		                    <th>排序</th>
 		                    <th>前台显示</th>
 		                    <th style="text-align:center;">操作</th>
 		                </tr>
@@ -90,6 +91,7 @@
 		                    <td><?php if($vo['type'] == 1): ?>url链接<?php elseif($vo['type'] == 2): ?>商品列表<?php elseif($vo['type'] == 3): ?>活动列表<?php elseif($vo['type'] == 4): ?>商品<elseif condition="$vo['type'] eq 5">活动<?php else: endif; ?></td>
 		                    <td><?php echo ($vo["typename"]); ?></td>
 		                    <td><?php if($vo['agerange'] == 1): ?>0-3<?php elseif($vo['agerange'] == 2): ?>3-6<?php elseif($vo['agerange'] == 3): ?>6-12<?php else: endif; ?></td>
+		                    <td><input type="text" name="sort[<?php echo ($vo["id"]); ?>]" class="small" value="<?php echo ($vo["sort"]); ?>" /></td>
 		                    <td>
 		                    <?php if($vo['status'] == 1): ?>是 | <a href="javascript:;" onclick="isRec(<?php echo ($vo["id"]); ?>,this);">取消</a><?php else: ?>否 | <a href="javascript:;" onclick="isRec(<?php echo ($vo["id"]); ?>,this);">推荐</a><?php endif; ?>
 		                    </td>
@@ -101,6 +103,7 @@
 					<select name="action" id="tableaction">
 		                <option value="">Action</option>
 		                <option value="delete">Delete</option>
+		                <option value="sort">Sort</option>
 		            </select>
 		            <div class="submit">
 		            	<input type="submit" value="提交" />

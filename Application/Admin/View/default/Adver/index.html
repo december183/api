@@ -17,6 +17,7 @@
 		                    <th>链接类型</th>
 		                    <th>广告位置</th>
 		                    <th>年龄范围</th>
+		                    <th>排序</th>
 		                    <th>前台显示</th>
 		                    <th style="text-align:center;">操作</th>
 		                </tr>
@@ -31,6 +32,7 @@
 		                    <td><if condition="$vo['type'] eq 1">url链接<elseif condition="$vo['type'] eq 2" />商品列表<elseif condition="$vo['type'] eq 3" />活动列表<elseif condition="$vo['type'] eq 4" />商品<elseif condition="$vo['type'] eq 5">活动<else /></if></td>
 		                    <td>{$vo.typename}</td>
 		                    <td><if condition="$vo['agerange'] eq 1">0-3<elseif condition="$vo['agerange'] eq 2" />3-6<elseif condition="$vo['agerange'] eq 3" />6-12<else /></if></td>
+		                    <td><input type="text" name="sort[{$vo.id}]" class="small" value="{$vo.sort}" /></td>
 		                    <td>
 		                    <if condition="$vo['status'] eq 1">是 | <a href="javascript:;" onclick="isRec({$vo.id},this);">取消</a><else />否 | <a href="javascript:;" onclick="isRec({$vo.id},this);">推荐</a></if>
 		                    </td>
@@ -43,6 +45,7 @@
 					<select name="action" id="tableaction">
 		                <option value="">Action</option>
 		                <option value="delete">Delete</option>
+		                <option value="sort">Sort</option>
 		            </select>
 		            <div class="submit">
 		            	<input type="submit" value="提交" />

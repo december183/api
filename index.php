@@ -26,6 +26,9 @@ define('APP_ROOT',dirname(__FILE__));
 // 定义后台分页数量
 define('PAGE_SIZE',20);
 
+// 定义前台分页数量
+define('FRONT_PAGE_SIZE',10);
+
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 
