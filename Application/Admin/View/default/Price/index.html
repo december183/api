@@ -1,0 +1,46 @@
+<extend name="Public/comm" />
+<block name="title"><title>价格区间管理-价格区间列表</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 价格区间管理-价格区间列表</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index/gid/1">商品价格区间列表</a> &gt; <a href="__CONTROLLER__/index/gid/2">服务价格区间列表</a> &gt; <a href="__CONTROLLER__/add">添加价格区间</a></div>
+		    <div class="content">
+		   	<form method="post" action="">
+				<table>
+					<thead>
+		                <tr>
+		                    <th><input type="checkbox" class="checkall"/></th>
+		                    <th>价格区间</th>
+		                    <th>关联栏目</th>
+		                    <th style="text-align:center;">操作</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<volist name="pricelist" id="vo">
+		                <tr>
+		                    <td><input type="checkbox" name="id[]" value="{$vo.id}" /></td>
+		                    <td>{$vo.minprice} - {$vo.maxprice}</td>
+		                    <td>{$vo.catename}</td>
+		                    <td class="actions"><a href="__CONTROLLER__/edit/id/{$vo.id}" title="Edit this content"><img src="__PUBLIC__/Admin/img/icons/actions/edit.png" alt="修改" /></a>　<a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这个属性吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
+		                </tr>
+		                </volist>
+		            </tbody>
+				</table>
+				<div class="left input">
+					<select name="action" id="tableaction">
+		                <option value="">Action</option>
+		                <option value="delete">Delete</option>
+		            </select>
+		            <div class="submit">
+		            	<input type="submit" value="提交" />
+		            </div>
+				</div>
+				<div class="pagination">
+					{$page}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</block>

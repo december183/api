@@ -1,0 +1,70 @@
+<extend name="Public/comm" />
+<block name="title"><title>价格区间管理-新增价格区间</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 价格区间管理-新增价格区间</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">价格区间列表</a> &gt; <a href="__CONTROLLER__/add">新增价格区间</a></div>
+		    <form method="post" action="">
+		    <div class="content">
+	    		<div class="input">价格区间：<input type="text" name="minprice" class="small" /> - <input type="text" name="maxprice" class="small" /> <em class="red">*</em></div>
+	    		<div class="input">
+	    			栏目分组：
+					<select name="gid" id="gid">
+						<option value="0">--请选择栏目分组--</option>
+						<option value="1">商品</option>
+						<option value="2">服务</option>
+					</select> <em class="red">*</em>
+	    		</div>
+	    		<div class="input">
+		            关联栏目：
+		            <select name="cateid" id="cateid">
+		            	<option value="0">--请选择栏目类别--</option>
+		            </select> <em class="red">*</em>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white" />
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#gid').change(function(){
+			$('#cateid').siblings('span').text('--请选择栏目类别--');
+			$('#cateid').children('option:first').siblings().remove();
+			var groupid=$(this).val();
+			var gid=(groupid == 1) ? 2 : 3;
+			$.ajax({
+				url:'__MODULE__/Category/getSortNavByGid',
+				data:{"gid":gid},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						var html='';
+						var list=response.catelist;
+						var leng=list.length;
+						for(var i=0;i<leng;i++){
+							html+='<option value="'+list[i].id+'">'+list[i].name+'</option>';
+							var child=list[i].child;
+							if(child){
+								var len=child.length;
+								for(var j=0;j<len;j++){
+									var left=25*child[j].level;
+									html+='<option value="'+child[j].id+'" style="padding-left:'+left+'px;">'+child[j].name+'</option>';
+								}
+							}
+						}
+					}else{
+						html=response.errmsg;
+					}
+					$('#cateid').children('option:first').after(html);
+				}
+			});
+		});
+	</script>
+</block>

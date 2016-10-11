@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks":true,
+			"path": "."
+		}
+	],
+	"settings":{
+		"xdebug":{
+			"url":"http://localhost/api/test.php",
+			"super_globals":true,
+			"close_on_stop":true,
+			"port":9000
+		}
+	}
+}

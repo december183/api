@@ -41,7 +41,7 @@ class IndexController extends Controller {
     	if($data){
     		$this->apiReturn(200,'首页数据返回成功',$data);
     	}else{
-    		$this->apiNotice(401,'暂无首页相关数据');
+    		$this->apiReturn(401,'暂无首页相关数据');
     	}
     }
     public function cateList(){
@@ -49,7 +49,7 @@ class IndexController extends Controller {
     	if($catelist){
     		$this->apiReturn(200,'首页栏目数据返回成功',$catelist);
     	}else{
-    		$this->apiNotice(401,'暂无相关栏目信息');
+    		$this->apiReturn(401,'暂无相关栏目信息');
     	}
     }
     public function bannerList(){
@@ -57,7 +57,7 @@ class IndexController extends Controller {
     	if($bannerlist){
     		$this->apiReturn(200,'首页banner数据返回成功',$bannerlist);
     	}else{
-    		$this->apiNotice(401,'暂无首页banner数据');
+    		$this->apiReturn(401,'暂无首页banner数据');
     	}
     }
     public function custBabyAdver(){
@@ -80,7 +80,7 @@ class IndexController extends Controller {
     	if($adverlist){
     		$this->apiReturn(200,'返回宝宝自定义推荐广告成功',$adverlist);
     	}else{
-    		$this->apiNotice(401,'暂无宝宝自定义推荐广告信息');
+    		$this->apiReturn(401,'暂无宝宝自定义推荐广告信息');
     	}
     }
     public function custMamaAdver(){
@@ -100,7 +100,7 @@ class IndexController extends Controller {
     	if($adverlist){
     		$this->apiReturn(200,'返回妈妈自定义推荐广告成功',$adverlist);
     	}else{
-    		$this->apiNotice(400,'暂无妈妈自定义推荐广告信息');
+    		$this->apiReturn(400,'暂无妈妈自定义推荐广告信息');
     	}
     }
 }

@@ -42,7 +42,7 @@ class GoodsController extends ComController{
 		if($goodslist){
 			$this->apiReturn(200,'返回商品列表成功',$goodslist);
 		}else{
-			$this->apiNotice(400,'暂无数据');
+			$this->apiReturn(400,'暂无数据');
 		}
 	}
 	public function releaseGoods(){
@@ -63,16 +63,16 @@ class GoodsController extends ComController{
 			}
 			$data['mainpic']=substr($data['mainpic'],0,-1);
 		}else{
-			$this->apiNotice(401,'请上传商品主图');
+			$this->apiReturn(401,'请上传商品主图');
 		}
 		if($this->goods->create($data)){
 			if($this->goods->add()){
-				$this->apiNotice(200,'商品发布成功');
+				$this->apiReturn(200,'商品发布成功');
 			}else{
-				$this->apiNotice(402,'商品发布失败');
+				$this->apiReturn(402,'商品发布失败');
 			}
 		}else{
-			$this->apiNotice(403,$this->goods->getError());
+			$this->apiReturn(403,$this->goods->getError());
 		}
 	}
 	public function editGoods(){
@@ -95,12 +95,12 @@ class GoodsController extends ComController{
 		}
 		if($this->goods->create($data)){
 			if($this->goods->save()){
-				$this->apiNotice(200,'商品修改成功');
+				$this->apiReturn(200,'商品修改成功');
 			}else{
-				$this->apiNotice(401,'商品修改失败');
+				$this->apiReturn(401,'商品修改失败');
 			}
 		}else{
-			$this->apiNotice(402,$this->goods->getError());
+			$this->apiReturn(402,$this->goods->getError());
 		}
 	}
 	public function goodsDetail(){
@@ -109,7 +109,7 @@ class GoodsController extends ComController{
 		if($oneGoods){
 			$this->apiReturn(200,'返回商品详情成功',$oneGoods);
 		}else{
-			$this->apiNotice(400,'暂无该商品信息');
+			$this->apiReturn(400,'暂无该商品信息');
 		}
 	}
 }

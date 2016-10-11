@@ -10,20 +10,20 @@ class LoginController extends Controller {
     public function api(){
         $data=i('param.');
         if($data=$this->user->create($data)){
-        	$oneUser=$this->user->field('id,username,phone,pass')->where(array('phone'=>$data['phone']))->find();
+        	$oneUser=$this->user->field('id,username,avatar,level,birthday,phone,pass')->where(array('phone'=>$data['phone']))->find();
 	        if($oneUser){
-	        	if($oneUser['pass'] == password($data['pass'])){
+	        	if($oneUser['pass'] == $data['pass']){
 	        		unset($oneUser['pass']);
 	        		$this->apiReturn(200,'登录成功！',$oneUser);
 	        	}else{
-	        		$this->apiNotice(403,'密码错误！');
+	        		$this->apiReturn(403,'密码错误！');
 	        	}
 	        }else{
-	        	$this->apiNotice(402,'未找到该用户！');
+	        	$this->apiReturn(402,'未找到该用户！');
 	        }
 		}else{
 			$message=$this->user->getError();
-			$this->apiNotice(401,$message);
+			$this->apiReturn(401,$message);
 		}
 	}
 }

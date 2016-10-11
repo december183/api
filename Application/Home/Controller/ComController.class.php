@@ -11,7 +11,7 @@ class ComController extends Controller{
         $upload->savePath='';
         $info=$upload->upload();
         if(!$info){
-            $this->apiNotice(401,$upload->getError());
+            $this->apiReturn(401,$upload->getError());
         }else{
         	foreach($info as $file){
         		$pathArr[] = APP_ROOT.'/Uploads/image/'.$file['savepath'].$file['savename'];
@@ -31,7 +31,7 @@ class ComController extends Controller{
     }
     public function uploadMainPic(){
         if($_FILES['file']){
-            $this->apiReturn('101','调试',$_FILES['file']);
+            //$this->apiReturn('101','调试',$_FILES);
             $arr=$this->upload();
             foreach($arr as $key=>$path){
                 $imgArr=getimagesize($path);
@@ -48,7 +48,7 @@ class ComController extends Controller{
             $data['mainpic']=substr($data['mainpic'],0,-1);
             $this->apiReturn(200,'图片上传成功',$data);
         }else{
-            $this->apiNotice(402,'请上传商品主图');
+            $this->apiReturn(402,'请上传商品主图');
         }
     }
     public function uploadPic(){

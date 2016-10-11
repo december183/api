@@ -160,3 +160,1034 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2016-10-09T10:10:13+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Up/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015600s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:10:21+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 17 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:16:42+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Up/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T10:23:44+08:00 ] 127.0.0.1 /api/Admin/Up/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\UpController::mark() should be compatible with Admin\Controller\BaseController::mark($path, $mark) D:\wamp\www\api\Application\Admin\Controller\UpController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Up/index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\api\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T14:41:10+08:00 ] 127.0.0.1 /api/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T14:41:15+08:00 ] 127.0.0.1 /api/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 51 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+NOTIC: [8] Undefined variable: curAuth D:\wamp\www\api\Application\Runtime\Cache\Admin\085b574956cdc611cfedaace62cf4e64.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-09T14:41:22+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_adver` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.sort,a.status,a.date,b.name as typename FROM app_adver a INNER JOIN app_adver_type as b ON a.typeid=b.id  ORDER BY sort ASC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T14:41:23+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_adver_type` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T14:53:21+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Region/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Region/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_region` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_city` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_province` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_region` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.name,a.sort,b.name as province,c.name as city FROM app_region a INNER JOIN app_province as b ON a.pid=b.id INNER JOIN app_city as c ON a.cityid=c.id  ORDER BY sort ASC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page D:\wamp\www\api\Application\Runtime\Cache\Admin\c3523cdee2dd01434742fe79acd51566.php 第 103 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T14:54:50+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Attr/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Attr/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_attr` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_attr` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_attr` LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T14:54:51+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Attr/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Attr/add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_attr` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T14:55:47+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Attr/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Attr/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_attr` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_attr` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_attr` LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T14:55:48+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Attr/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Attr/add' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_attr` [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T18:57:19+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0166s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_adver` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.sort,a.status,a.date,b.name as typename FROM app_adver a INNER JOIN app_adver_type as b ON a.typeid=b.id  ORDER BY sort ASC LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T18:57:22+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/add' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_adver_type` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T19:00:01+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Goods/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `app_category` WHERE `pid` = 0 AND `groupid` = 2 AND `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_goods` WHERE `cateid` IN ('6','7','8','9','5') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.title,a.mainpic,a.thumbpic,a.tags,a.brandid,a.sn,a.saleprice,a.inventory,a.sort,a.status,a.isrec,a.collectnum,a.admirenum,b.name as typename FROM app_goods a INNER JOIN app_category as b ON a.cateid=b.id  WHERE `cateid` IN ('6','7','8','9','5') ORDER BY a.sort ASC LIMIT 0,20   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: goodslist D:\wamp\www\api\Application\Admin\Controller\GoodsController.class.php 第 81 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T19:00:03+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Goods/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Goods/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_category` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `app_category` WHERE `pid` = 0 AND `groupid` = 2 AND `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_category`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_goods` WHERE `cateid` IN ('11','10') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.title,a.mainpic,a.thumbpic,a.tags,a.brandid,a.sn,a.saleprice,a.inventory,a.sort,a.status,a.isrec,a.collectnum,a.admirenum,b.name as typename FROM app_goods a INNER JOIN app_category as b ON a.cateid=b.id  WHERE `cateid` IN ('11','10') ORDER BY a.sort ASC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T19:00:44+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `app_adver` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.id,a.title,a.thumb,a.type,a.url,a.agerange,a.sort,a.status,a.date,b.name as typename FROM app_adver a INNER JOIN app_adver_type as b ON a.typeid=b.id  ORDER BY sort ASC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-09T19:00:47+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Adver/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 14 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'Adver/add' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_adver_type` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

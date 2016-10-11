@@ -8,20 +8,26 @@ class UserController extends Controller{
 		parent::__construct();
 		$this->user=D('User');
 	}
-	public function index(){
-		
+	public function indexApi(){
+		$data['id']=I('param.uid');
+		$oneUser=$this->user->field('avatar,level,birthday')->where($data)->find();
+		if($oneUser){
+			$this->apiReturn(200,'返回登陆用户信息成功',$oneUser);
+		}else{
+			$this->apiReturn(404,'获取登陆用户信息失败');
+		}
 	}
 	public function filledUserInfo(){
 		$data=I('param.');
 		$data['isfilled']=1;
 		if($this->user->create($data)){
 			if($this->user->save()){
-				$this->apiNotice(200,'完善用户信息成功');
+				$this->apiReturn(200,'完善用户信息成功');
 			}else{
-				$this->apiNotice(400,'完善用户信息失败');
+				$this->apiReturn(400,'完善用户信息失败');
 			}
 		}else{
-			$this->apiNotice(401,$this->user->getError());
+			$this->apiReturn(401,$this->user->getError());
 		}
 	}
 	public function isFilledUserInfo(){
@@ -34,7 +40,7 @@ class UserController extends Controller{
 				$this->apiReturn(201,'用户信息未完善',$oneUser);
 			}
 		}else{
-			$this->apiNotice(400,'未找到此用户');
+			$this->apiReturn(400,'未找到此用户');
 		}
 	}
 	public function getUserInfo(){
@@ -43,7 +49,7 @@ class UserController extends Controller{
 		if($oneUser){
 			$this->apiReturn(200,'获取用户信息成功',$oneUser);
 		}else{
-			$this->apiNotice(400,'未找到此用户');
+			$this->apiReturn(400,'未找到此用户');
 		}
 	}
 }

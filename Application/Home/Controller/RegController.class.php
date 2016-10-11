@@ -2,27 +2,26 @@
 namespace Home\Controller;
 use Think\Controller;
 class RegController extends Controller {
-	private $user=D('User');
+	private $user=null;
 	public function __construct(){
 		parent::__construct();
 		$this->user=D('User');
 	}
     public function api(){
         $data=I('param.');
-        if($data=$this->user->create($data)){
-        	if($data['mscode'] == $_SESSION['mscode']){
+        if($data['mscode'] == $_SESSION['mscode']){
+            if($data=$this->user->create($data,4)){
                 $result=$this->user->add($data);
         		if($result){
 	        		$this->apiReturn(200,'注册成功！',array('id'=>$result));
 	        	}else{
-	        		$this->apiNotice(403,'注册失败！');
+	        		$this->apiReturn(403,'注册失败！');
 	        	}
         	}else{
-        		$this->apiNotice(402,'短信验证码失败！');
+                $this->apiReturn(401,$this->user->getError());
         	}
         }else{
-        	$message=$this->user->getError();
-        	$this->apiNotice(401,$message);
+            $this->apiReturn(402,'短信验证码失败！');
         }
     }
 }

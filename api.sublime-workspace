@@ -1,0 +1,632 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"price",
+				"pricelist"
+			],
+			[
+				"min",
+				"minprice"
+			],
+			[
+				"cate",
+				"catelist"
+			],
+			[
+				"reg",
+				"regionlist"
+			],
+			[
+				"get",
+				"getSortNavByGid"
+			],
+			[
+				"appl",
+				"applylist"
+			],
+			[
+				"one",
+				"oneEvent"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"com",
+				"commentlist"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"is",
+				"is_array"
+			],
+			[
+				"main",
+				"mainnail"
+			],
+			[
+				"api",
+				"apiReturn"
+			],
+			[
+				"ser",
+				"servicelist"
+			],
+			[
+				"coll",
+				"collectids"
+			],
+			[
+				"word",
+				"word-wrap"
+			],
+			[
+				"rand",
+				"randClick"
+			],
+			[
+				"path",
+				"pathArr"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"post",
+				"postJson"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"acc",
+				"accesstoken"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"adver",
+				"advertype"
+			],
+			[
+				"top",
+				"topCates"
+			],
+			[
+				"param",
+				"paramStr"
+			],
+			[
+				"check",
+				"checkSeller"
+			],
+			[
+				"bra",
+				"brandids"
+			],
+			[
+				"brand",
+				"brandlist"
+			],
+			[
+				"the",
+				"themelist"
+			],
+			[
+				"cur",
+				"curUrl"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"ajax",
+				"ajaxReturn"
+			],
+			[
+				"ajx",
+				"ajaxReturn"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git:com",
+				"Git: Commit"
+			],
+			[
+				"git:",
+				"Git: Add..."
+			],
+			[
+				"minimap",
+				"View: Toggle Minimap"
+			],
+			[
+				"syntax java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 221.0,
+		"history":
+		[
+			"git config --global user.name \"december183\"",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/wamp/www/api"
+	],
+	"file_history":
+	[
+		"/D/wamp/www/api/test.php",
+		"/D/wamp/www/api/api.sublime-project",
+		"/D/wamp/www/api/Application/Home/Controller/EventController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/TopicController.class.php",
+		"/D/wamp/bin/php/php5.5.12/php.ini",
+		"/D/wamp/www/api/Application/Home/Controller/PriceController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/ComController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/RegionController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/AdmireController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/PriceController.class.php",
+		"/D/wamp/www/api/Application/Admin/Model/PriceModel.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Price/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Price/edit.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Price/index.html",
+		"/D/wamp/www/api/Public/Admin/css/min.css",
+		"/D/wamp/www/api/Application/Admin/Controller/UserController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/ServiceController.class.php",
+		"/D/wamp/www/api/Application/Home/Model/UserModel.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/TestController.class.php",
+		"/D/wamp/www/api/ThinkPHP/Library/Think/Controller.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/UserController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/GoodsController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/IndexController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/LoginController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/RegController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/CategoryController.class.php",
+		"/D/wamp/www/api/Application/Home/Controller/CollectController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/UpController.class.php",
+		"/D/wamp/www/api/Public/Admin/js/demo.js",
+		"/D/wamp/www/api/Application/Home/Model/AdmireModel.class.php",
+		"/D/wamp/www/api/Application/Home/Model/CollectModel.class.php",
+		"/D/wamp/www/api/Application/Home/Model/CategoryModel.class.php",
+		"/D/wamp/www/api/index.php",
+		"/D/wamp/www/api/Application/Home/Model/ServiceModel.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/AdverController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Adver/index.html",
+		"/D/wamp/www/api/Application/Admin/Model/AdverModel.class.php",
+		"/C/Users/Administrator/.ssh/id_rsa.pub",
+		"/C/Users/Administrator/.ssh/known_hosts",
+		"/D/Program Files/Git/etc/ssh/ssh_config",
+		"/D/Program Files/Git/etc/ssh/sshd_config",
+		"/C/Users/Administrator/.ssh/github_rsa.pub",
+		"/C/Users/Administrator/.ssh/github_rsa",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/D/wamp/www/api/Application/Admin/Model/RegionModel.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/City/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/City/edit.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Province/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Region/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Region/edit.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Province/add.html",
+		"/D/wamp/www/api/Application/Admin/Controller/RegionController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/CityController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Region/index.html",
+		"/D/wamp/www/api/Application/Admin/Model/ProvinceModel.class.php",
+		"/D/wamp/www/api/Application/Admin/Model/CityModel.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/BaseController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/ProvinceController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Group/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/City/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Province/edit.html",
+		"/D/wamp/www/api/Application/Admin/Controller/AddressController.class.php",
+		"/C/Windows/System32/drivers/etc/hosts.dz",
+		"/C/Windows/System32/drivers/etc/hosts.ics",
+		"/D/wamp/www/api/Application/Common/Common/function.php",
+		"/D/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/D/wamp/www/api/Application/Admin/View/default/Adver/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Adver/edit.html",
+		"/D/wamp/bin/apache/apache2.4.9/conf/wampserver.conf",
+		"/C/Users/Administrator/Desktop/weixin/PHP微信开发—提升篇课程代码/IndexAction.class.php",
+		"/C/Users/Administrator/Desktop/weixin/PHP微信开发—提升篇课程代码/IndexModel.class.php",
+		"/D/wamp/www/jx/Application/Weixin/Controller/IndexController.class.php",
+		"/D/wamp/www/jx/Application/Weixin/Controller/function.php",
+		"/D/wamp/www/jx/Application/Weixin/Controller/index.php",
+		"/D/wamp/www/jx/Application/Weixin/Controller/test.php",
+		"/D/wamp/www/jx/Application/Weixin/View/default/Index/index.html",
+		"/D/wamp/www/config.php",
+		"/D/wamp/www/jx/config.php",
+		"/D/wamp/www/jx/Application/Weixin/Conf/config.php",
+		"/D/wamp/www/api/Application/Admin/View/default/AdverType/edit.html",
+		"/C/Users/Administrator/Desktop/files/Linux学习/4.Linux压缩，挂载，shell.txt",
+		"/D/wamp/www/api/Application/Admin/View/default/AdverType/add.html",
+		"/D/wamp/www/api/Application/Admin/Controller/AdverTypeController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/AdverType/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/ArticleController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Article/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Article/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Article/edit.html",
+		"/D/wamp/www/api/Application/Admin/Model/ArticleModel.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/BrandController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Brand/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/ManageController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/TopicCommentController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/EventCommentController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/EventComment/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/TopicController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Topic/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/TopicComment/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Event/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/EventController.class.php",
+		"/D/wamp/www/api/Application/Admin/Controller/ServiceController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Service/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/GoodsController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Category/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/CategoryController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Goods/index.html",
+		"/D/wamp/www/api/Application/Admin/Model/UserModel.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/User/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/SellerController.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Seller/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Category/edit.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Brand/edit.html",
+		"/D/wamp/www/api/Application/Admin/Model/CategoryModel.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Category/add.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Brand/add.html",
+		"/D/wamp/www/api/Application/Admin/Model/BrandModel.class.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/wamp/www/api/Application/Admin/View/default/Attr/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/AttrController.class.php",
+		"/D/wamp/www/api/Public/kindeditor/php/upload_json.php",
+		"/D/wamp/www/api/Application/Admin/Controller/AuthController.class.php",
+		"/D/wamp/www/api/Application/Admin/Model/AuthModel.class.php",
+		"/D/wamp/www/api/Application/Admin/View/default/Public/header.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Login/index.html",
+		"/D/wamp/www/api/Application/Admin/View/default/Index/index.html",
+		"/D/wamp/www/api/Application/Admin/Controller/CommentController.class.php"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"admire",
+			"属性",
+			"apiNotice",
+			"新增",
+			"Attr",
+			"attr",
+			"Attr",
+			"attr",
+			"Attr",
+			"attr",
+			"Attr",
+			"attr",
+			"Attr",
+			"attr",
+			"Attr",
+			"attr",
+			"php",
+			"$data['id']",
+			"Service",
+			"Collect",
+			"collect",
+			"Collect",
+			"Service",
+			"service",
+			"Service",
+			"发布",
+			"service",
+			"商品",
+			"service",
+			"点赞",
+			"admire",
+			"Admire",
+			"admire",
+			"mainnail",
+			"Service",
+			"service",
+			"Service",
+			"service",
+			"Service",
+			"service",
+			"Service",
+			"service",
+			"Service",
+			"service",
+			"Service",
+			"data",
+			"id=\"city\"",
+			"class=\"city\"",
+			"区域",
+			"添加",
+			"城市",
+			"添加",
+			"省分",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"Region",
+			"region",
+			"新增",
+			"Controller",
+			"require",
+			"宝宝",
+			"'agerange'=>$agerange,",
+			"type",
+			"require",
+			"Options",
+			"Options FollowSymLinks",
+			"Deny",
+			"require",
+			"local",
+			"directory",
+			"require",
+			"deny",
+			"allow",
+			"allows",
+			"allow",
+			"deny",
+			"allow",
+			"deny",
+			"Allow from all",
+			"Deny from all",
+			"http_curl",
+			"sprintf",
+			"){",
+			"event",
+			"Event",
+			"event",
+			");\n",
+			"status",
+			"sort",
+			");\n",
+			"topic",
+			"Topic",
+			"topic",
+			"status",
+			"goods",
+			"Goods",
+			"goods",
+			"Goods",
+			"goods",
+			"Goods",
+			"goods",
+			"status",
+			"管理员",
+			"customer",
+			"user",
+			"User",
+			"user"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 130.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "api.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"149":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 241.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -454,6 +454,7 @@ solid #0B0A0A;-moz-border-radius:10px;-webkit-border-radius:10px;-khtml-border-r
 #content .detail-info td img{max-width: 120px;height:auto;display: inline-block;}
 #content table td .head_photo{max-width: 200px;height: auto;display: inline-block;}
 #content table td .small{width:65px;text-align:center;}
+#content .bloc .input .small{width:65px;text-align:center;}
 #content .bloc .input select optgroup{color:#333;}
 #content .bloc .input .cusattr{position:relative;top:15px;}
 #content .bloc .input div.pad-left{padding-left: 63px;}

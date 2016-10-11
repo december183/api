@@ -13,15 +13,15 @@ class AdmireController extends Controller{
 		if($this->admire->create($data)){
 			$oneAdmire=$this->admire->where($data)->find();
 			if($oneAdmire){
-				$this->apiNotice(402,'该商品已点赞');
+				$this->apiReturn(402,'该商品已点赞');
 			}
 			if($this->admire->add()){
-				$this->apiNotice(200,'点赞成功');
+				$this->apiReturn(200,'点赞成功');
 			}else{
-				$this->apiNotice(402,'点赞失败');
+				$this->apiReturn(402,'点赞失败');
 			}
 		}else{
-			$this->apiNotice(401,$this->admire->getError());
+			$this->apiReturn(401,$this->admire->getError());
 		}
 	}
 }

@@ -18,8 +18,6 @@ class ServiceController extends ComController{
 		$data=I('param.');
 		$map['cateid']=$data['cateid'];
 		$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
-		$page=$data['page'] ? $data['page'] : 1;
-		$map['p']=array('eq',$page);
 		$total=$this->service->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
@@ -50,7 +48,7 @@ class ServiceController extends ComController{
 		if($servicelist){
 			$this->apiReturn(200,'返回商品列表成功',$servicelist);
 		}else{
-			$this->apiNotice(401,'暂无数据');
+			$this->apiReturn(401,'暂无数据');
 		}
 	}
 	public function releaseService(){
@@ -71,16 +69,16 @@ class ServiceController extends ComController{
 			}
 			$data['mainpic']=substr($data['mainpic'],0,-1);
 		}else{
-			$this->apiNotice(402,'请上传商品主图');
+			$this->apiReturn(402,'请上传商品主图');
 		}
 		if($this->service->create($data)){
 			if($this->service->add()){
-				$this->apiNotice(200,'商品发布成功');
+				$this->apiReturn(200,'商品发布成功');
 			}else{
-				$this->apiNotice(404,'商品发布失败');
+				$this->apiReturn(404,'商品发布失败');
 			}
 		}else{
-			$this->apiNotice(403,$this->service->getError());
+			$this->apiReturn(403,$this->service->getError());
 		}
 	}
 	public function editService(){
@@ -103,22 +101,90 @@ class ServiceController extends ComController{
 		}
 		if($this->service->create($data)){
 			if($this->service->save()){
-				$this->apiNotice(200,'商品修改成功');
+				$this->apiReturn(200,'商品修改成功');
 			}else{
-				$this->apiNotice(404,'商品修改失败');
+				$this->apiReturn(404,'商品修改失败');
 			}
 		}else{
-			$this->apiNotice(402,$this->service->getError());
+			$this->apiReturn(402,$this->service->getError());
 		}
 	}
 	public function serviceDetail(){
 		$data=I('param.');
-		$oneService=$this->service->where($data)->find();
+		$map['a.id']=$data['id'];
+		$oneService=$this->service->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.title,a.mainpic,a.price,a.location,a.phone,a.descript,b.shopname')->where($map)->find();
 		if($oneService){
+			$oneAdmire=$this->admire->where(array('serviceid'=>$data['id'],'uid'=>$data['uid']))->find();
+			if($oneAdmire){
+				$oneService['isadmire']=1;
+			}else{
+				$oneService['isadmire']=0;
+			}
+			$oneCollect=$this->collect->where(array('serviceid'=>$data['id'],'uid'=>$data['uid']))->find();
+			if($oneCollect){
+				$oneService['iscollect']=1;
+			}else{
+				$oneService['iscollect']=0;
+			}
 			$this->apiReturn(200,'返回商品详情成功',$oneService);
 		}else{
-			$this->apiNotice(404,'暂无该商品信息');
+			$this->apiReturn(404,'暂无该商品信息');
 		}
 	}
-
+	public function userServiceList(){
+		$data['uid']=I('param.uid');
+		$total=$this->service->where($data)->count();
+		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
+		$servicelist=$this->service->field('id,title,price,thumbpic,location')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+		if($servicelist){
+			$this->apiReturn(200,'返回用户商品列表成功',$servicelist);
+		}else{
+			$this->apiReturn(404,'暂无用户商品列表信息');
+		}
+	}
+	public function deleteService(){
+		$data=I('param.');
+		$oneService=$this->service->field('id,uid')->where(array('id'=>$data['id']))->find();
+		if($oneService){
+			if($data['uid'] == $oneService['uid']){
+				if($this->service->delete($oneService['id'])){
+					$this->apiReturn(200,'删除成功');
+				}else{
+					$this->apiReturn(404,'删除失败');
+				}
+			}else{
+				$this->apiReturn(402,'无权限进行此操作');
+			}
+		}else{
+			$this->apiReturn(401,'暂无该商品');
+		}
+	}
+	public function isUpService(){
+		$data=I('param.');
+		$oneService=$this->service->field('id,uid,isup')->where(array('id'=>$data['id']))->find();
+		if($oneService){
+			if($data['uid'] == $oneService['uid']){
+				$data2['id']=$data['id'];
+				if($oneService['isup'] == 1){
+					$data2['isup']=0;
+					if($this->service->save($data2)){
+						$this->apiReturn(200,'下架成功');
+					}else{
+						$this->apiReturn(404,'下架失败');
+					}
+				}else{
+					$data2['isup']=1;
+					if($this->service->save($data2)){
+						$this->apiReturn(200,'上架成功');
+					}else{
+						$this->apiReturn(404,'上架失败');
+					}
+				}
+			}else{
+				$this->apiReturn(402,'无权限进行此操作');
+			}
+		}else{
+			$this->apiReturn(401,'暂无该商品');
+		}
+	}
 }

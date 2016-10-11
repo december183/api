@@ -14,7 +14,14 @@ class UpController extends BaseController{
 	}
 	public function index(){
 		if(IS_POST){
-	        echo $this->up();
+	        $info=$this->upload->upload();
+	        if(!$info){
+	            return $this->error($upload->getError());
+	        }else{
+	            foreach($info as $file){
+					echo $file['savepath'].$file['savename'];
+				}
+	        }
 		}else{
 			$this->display();
 		}

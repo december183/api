@@ -243,13 +243,18 @@ abstract class Controller {
      */
     protected function apiReturn($status,$message='',$data,$type){
         if(!is_numeric($status) || !is_string($message) || (isset($data) && !is_array($data))){
-            $this->apiNotice('400','参数错误',$type);
+            $res = array(
+                'status' => 400,
+                'message' => '参数错误',
+                'data' => null
+            );
+        }else{
+            $res = array(
+                'status' => $status,
+                'message' => $message,
+                'data' => $data
+            );
         }
-        $res = array(
-            'status' => $status,
-            'message' => $message,
-            'data' => $data
-        );
         if(in_array($type, array('json','xml'))){
             $this->ajaxReturn($res,$type);
         }else{
