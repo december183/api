@@ -17,6 +17,9 @@ class TopicController extends ComController{
 	public function topicList(){
 		$data=I('param.');
 		$map['cateid']=array('in',$this->category->getDelIds($data['cateid']));
+		if(isset($data['keywords']) && !empty(urlencode($data['keywords']))){
+			$map['title']=array('like','%'.$data['keywords'].'%');
+		}
 		$total=$this->topic->where($map)->select();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$topiclist=$this->topic->field('id,title,tags,thumbpic,commentnum,hits,date')->where($map)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
@@ -28,7 +31,42 @@ class TopicController extends ComController{
 		}
 	}
 	public function releaseTopic(){
-
+		$data=I('param.');
+		if($_FILES['file']){
+            $res=$this->uploadPic();
+            if(is_array($res)){
+            	array_merge($data,$res);
+            }
+        }else{
+            $this->apiReturn(402,'请上传帖子主图');
+        }
+		if($this->topic->create($data)){
+			if($this->topic->add()){
+				$this->apiReturn(200,'帖子发布成功');
+			}else{
+				$this->apiReturn(404,'帖子发布失败');
+			}
+		}else{
+			$this->apiReturn(403,$this->topic->getError());
+		}
+	}
+	public function editTopic(){
+		$data=I('param.');
+		if($_FILES['file']){
+            $res=$this->uploadPic();
+            if(is_array($res)){
+            	array_merge($data,$res);
+            }
+        }
+		if($this->topic->create($data)){
+			if($this->topic->save()){
+				$this->apiReturn(200,'帖子修改成功');
+			}else{
+				$this->apiReturn(404,'帖子修改失败');
+			}
+		}else{
+			$this->apiReturn(403,$this->topic->getError());
+		}
 	}
 	public function topicDetail(){
 		$data=I('param.');
@@ -65,6 +103,23 @@ class TopicController extends ComController{
 			$this->apiReturn(200,'返回帖子列表成功',$topiclist);
 		}else{
 			$this->apiReturn(401,'暂无帖子数据');
+		}
+	}
+	public function deleteTopic(){
+		$data=I('param.');
+		$oneTopic=$this->topic->field('id,uid')->where(array('id'=>$data['id']))->find();
+		if($oneTopic){
+			if($data['uid'] == $oneTopic['uid']){
+				if($this->topic->delete($oneTopic['id'])){
+					$this->apiReturn(200,'删除成功');
+				}else{
+					$this->apiReturn(404,'删除失败');
+				}
+			}else{
+				$this->apiReturn(402,'无权限进行此操作');
+			}
+		}else{
+			$this->apiReturn(401,'暂无该帖子信息');
 		}
 	}
 }

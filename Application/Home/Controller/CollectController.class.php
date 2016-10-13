@@ -17,9 +17,14 @@ class CollectController extends Controller{
 		if($this->collect->create($data)){
 			$oneCollect=$this->collect->where($data)->find();
 			if($oneCollect){
-				$this->apiReturn(402,'该商品已收藏');
+				$this->apiReturn(402,'已收藏');
 			}
 			if($this->collect->add()){
+				if(isset($data['serviceid'])){
+					$this->service->where(array('id'=>$data['serviceid']))->setInc('collectnum');
+				}elseif(isset($data['eventid'])){
+					$this->event->where(array('id'=>$data['eventid']))->setInc('collectnum');
+				}
 				$this->apiReturn(200,'收藏成功');
 			}else{
 				$this->apiReturn(404,'收藏失败');

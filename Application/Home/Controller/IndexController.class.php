@@ -5,14 +5,25 @@ class IndexController extends Controller {
 	private $category=null;
 	private $adver=null;
 	private $user=null;
+    private $price=null;
 	public function __construct(){
 		parent::__construct();
 		$this->category=D('Category');
 		$this->adver=D('Adver');
 		$this->user=D('User');
+        $this->price=D('Price');
 	}
     public function indexApi(){
-        $catelist=$this->category->field('id,name,thumb')->where(array('groupid'=>3,'pid'=>0))->order('sort ASC')->limit(8)->select();
+        $list=$this->category->field('id,name,thumb')->where(array('groupid'=>3,'pid'=>0))->order('sort ASC')->select();
+        foreach($list as $value){
+            $catepricelist=$this->price->field('minprice,maxprice')->where(array('cateid'=>$value['id'],'gid'=>2))->select();
+            $pricelist=array();
+            foreach($catepricelist as $val){
+                $pricelist[]=$val['minprice'].'-'.$val['maxprice'];
+            }
+            $value['price']=$pricelist;
+            $catelist[]=$value;
+        }
         $bannerlist=$this->adver->field('id,title,type,url,thumb')->where(array('typeid'=>1,'status'=>1))->order('sort ASC')->limit(4)->select();
         $data['id']=I('param.id');
     	$oneUser=$this->user->field('birthday')->where($data)->find();
@@ -41,7 +52,7 @@ class IndexController extends Controller {
     	if($data){
     		$this->apiReturn(200,'首页数据返回成功',$data);
     	}else{
-    		$this->apiReturn(401,'暂无首页相关数据');
+    		$this->apiReturn(404,'暂无首页相关数据');
     	}
     }
     public function cateList(){
@@ -49,7 +60,7 @@ class IndexController extends Controller {
     	if($catelist){
     		$this->apiReturn(200,'首页栏目数据返回成功',$catelist);
     	}else{
-    		$this->apiReturn(401,'暂无相关栏目信息');
+    		$this->apiReturn(404,'暂无相关栏目信息');
     	}
     }
     public function bannerList(){
@@ -57,7 +68,7 @@ class IndexController extends Controller {
     	if($bannerlist){
     		$this->apiReturn(200,'首页banner数据返回成功',$bannerlist);
     	}else{
-    		$this->apiReturn(401,'暂无首页banner数据');
+    		$this->apiReturn(404,'暂无首页banner数据');
     	}
     }
     public function custBabyAdver(){
@@ -80,10 +91,10 @@ class IndexController extends Controller {
     	if($adverlist){
     		$this->apiReturn(200,'返回宝宝自定义推荐广告成功',$adverlist);
     	}else{
-    		$this->apiReturn(401,'暂无宝宝自定义推荐广告信息');
+    		$this->apiReturn(404,'暂无宝宝自定义推荐广告信息');
     	}
     }
-    public function custMamaAdver(){
+    public function custMomAdver(){
     	$data['id']=I('param.id');
     	$oneUser=$this->user->field('birthday')->where($data)->find();
     	$agerange=getAgeRange($oneUser['birthday']);
@@ -100,7 +111,7 @@ class IndexController extends Controller {
     	if($adverlist){
     		$this->apiReturn(200,'返回妈妈自定义推荐广告成功',$adverlist);
     	}else{
-    		$this->apiReturn(400,'暂无妈妈自定义推荐广告信息');
+    		$this->apiReturn(404,'暂无妈妈自定义推荐广告信息');
     	}
     }
 }

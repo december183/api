@@ -9,6 +9,7 @@ class EventController extends ComController{
 	private $comment=null;
 	private $apply=null;
 	private $admire=null;
+	private $user=null;
 	public function __construct(){
 		parent::__construct();
 		$this->event=D('Event');
@@ -17,10 +18,39 @@ class EventController extends ComController{
 		$this->comment=D('Comment');
 		$this->apply=D('Apply');
 		$this->admire=D('Admire');
+		$this->user=D('User');
 	}
 	public function eventList(){
 		$data=I('param.');
-		$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
+		if(isset($data['cateid'])){
+			$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
+		}
+		if(isset($data['region'])){
+			$map['region']=array('eq',$data['region']);
+		}
+		if(isset($data['type'])){
+			if($data['type'] == 1){
+				$condition['level']=array('eq',1);
+			}else{
+				$condition['level']=array('neq',1);
+			}
+			$userlist=$this->user->field('id')->where($condition)->select();
+			foreach($userlist as $value){
+				$userids.=$value['id'].',';
+			}
+			$userids=substr($userids,0,-1);
+			$map['uid']=array('in',$userids);
+		}
+		if(isset($data['isfree'])){
+			if($data['isfree']){
+				$map['price']=array('eq',0);
+			}else{
+				$map['price']=array('neq',0);
+			}
+		}
+		if(isset($data['agerange'])){
+			$map['agerange']=array('eq',$data['agerange']);
+		}
 		$total=$this->event->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
@@ -36,9 +66,8 @@ class EventController extends ComController{
 			}else{
 				$value['iscollect']=0;
 			}
-			$eventlist['event'][]=$value;
+			$eventlist[]=$value;
 		}
-		$eventlist['cate']=$catelist;
 		if($eventlist){
 			$this->apiReturn(200,'返回活动列表成功',$eventlist);
 		}else{
@@ -94,26 +123,22 @@ class EventController extends ComController{
 			}else{
 				$oneEvent['iscollect']=0;
 			}
-			/*if($oneEvent['status'] == 1){
+			if($oneEvent['status'] == 1){
 				$oneApply=$this->apply->field('id')->where(array('eventid'=>$oneEvent['id'],'uid'=>$data['uid']))->find();
 				if($oneApply){
-					$oneEvent['eventstatus']='已报名';
+					$oneEvent['status']=1;
 				}else{
 					$applylist=$this->apply->field('id,num')->where(array('eventid'=>$oneEvent['id']))->select();
 					foreach($applylist as $value){
 						$applynum+=$applylist['num'];
 					}
 					if($applynum < $oneEvent['maxnum']){
-						$oneEvent['eventstatus']='立即报名';
+						$oneEvent['status']=2;
 					}else{
-						$oneEvent['eventstatus']='报名人数已满';
+						$oneEvent['status']=3;
 					}
 				}
-			}elseif($oneEvent['status'] == 2){
-				$oneEvent['eventstatus']='报名截止';
-			}else{
-				$oneEvent['eventstatus']='活动结束';
-			}*/
+			}
 			$admirelist=$this->admire->field('commentid')->where(array('uid'=>$data['uid'],'serviceid'=>0))->select();
 			foreach($admirelist as $value){
 				$admireids .= $value['commentid'].',';
@@ -174,6 +199,23 @@ class EventController extends ComController{
 			$this->apiReturn(200,'返回会员活动详情成功',$oneEvent);
 		}else{
 			$this->apiReturn(404,'暂无该会员活动信息');
+		}
+	}
+	public function deleteEvent(){
+		$data=I('param.');
+		$oneEvent=$this->event->field('id,uid')->where(array('id'=>$data['id']))->find();
+		if($oneEvent){
+			if($data['uid'] == $oneEvent['uid']){
+				if($this->event->delete($oneEvent['id'])){
+					$this->apiReturn(200,'删除成功');
+				}else{
+					$this->apiReturn(404,'删除失败');
+				}
+			}else{
+				$this->apiReturn(402,'无权限进行此操作');
+			}
+		}else{
+			$this->apiReturn(401,'暂无该帖子信息');
 		}
 	}
 }

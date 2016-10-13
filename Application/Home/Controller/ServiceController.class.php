@@ -18,6 +18,20 @@ class ServiceController extends ComController{
 		$data=I('param.');
 		$map['cateid']=$data['cateid'];
 		$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
+		if(isset($data['price'])){
+			$priceArr=explode('-',$data['price']);
+			$map['price']=array('gt',$priceArr[0]);
+			$map['price']=array('lt',$priceArr[1]);
+		}
+		if(isset($data['region'])){
+			$map['region']=array('eq',$data['region']);
+		}
+		if(isset($data['agerange'])){
+			$map['agerange']=array('eq',$data['agerange']);
+		}
+		if(isset($data['keywords'])){
+			$map['title']=array('like','%'.$data['keywords'].'%');
+		}
 		$total=$this->service->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
@@ -135,7 +149,7 @@ class ServiceController extends ComController{
 		$data['uid']=I('param.uid');
 		$total=$this->service->where($data)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
-		$servicelist=$this->service->field('id,title,price,thumbpic,location')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+		$servicelist=$this->service->field('id,title,price,thumbpic,location,isup')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 		if($servicelist){
 			$this->apiReturn(200,'返回用户商品列表成功',$servicelist);
 		}else{

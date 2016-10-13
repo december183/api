@@ -1,5 +1,5 @@
 <?php
-	$array=array(12,5,26,7,17,9);
+	/*$array=array(12,5,26,7,17,9);
 	$len=count($array);
 	for($i=1;$i<$len;$i++){
 		$key=$array[$i];
@@ -10,4 +10,5 @@
 		}
 		$array[$j + 1]=$key;
 	}
-	print_r($array);
+	print_r($array);*/
+	

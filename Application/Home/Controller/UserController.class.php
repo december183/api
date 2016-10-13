@@ -52,4 +52,41 @@ class UserController extends Controller{
 			$this->apiReturn(400,'未找到此用户');
 		}
 	}
+	public function applySeller(){
+		$data=I('param.');
+		if(isset($data['uid'])){
+			$oneUser=$this->user->where(array('id'=>$data['uid']))->find();
+			if($oneUser){
+				if($_FILES['file']){
+		            $arr=$this->upload();
+			        foreach($arr as $key=>$path){
+			            $imgArr=getimagesize($path);
+			            if($imgArr[0] < 800 && $imgArr[1] < 800){
+			                $path=str_replace('\\', '/',$path);
+			                $data['licence'].=strstr($path,__ROOT__.'/Uploads/image/').';';
+			            }else{
+			                $data['licence'].=$this->thumb($path).';';
+			            }
+			        }
+			        $data['licence']=substr($data['licence'],0,-1);
+		        }else{
+		            $this->apiReturn(402,'请上传商家营业执照');
+		        }
+				if($this->user->create($data)){
+					if($this->user->save()){
+						$this->apiReturn(200,'提交申请成功');
+					}else{
+						$this->apiReturn(404,'提交申请失败');
+					}
+				}else{
+					$this->apiReturn(403,$this->user->getError());
+				}
+			}else{
+				$this->apiReturn(401,'未找到此用户');
+			}
+			
+		}else{
+			$this->apiReturn(400,'参数错误');
+		}
+	}
 }

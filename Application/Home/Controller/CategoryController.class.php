@@ -13,7 +13,7 @@ class CategoryController extends Controller{
 		if($catelist){
 			$this->apiReturn(200,'返回商品栏目成功',$catelist);
 		}else{
-			$this->apiReturn(400,'暂无商品栏目信息');
+			$this->apiReturn(404,'暂无商品栏目信息');
 		}
 	}
 	public function serviceCateList(){
@@ -21,7 +21,7 @@ class CategoryController extends Controller{
 		if($catelist){
 			$this->apiReturn(200,'返回商品栏目成功',$catelist);
 		}else{
-			$this->apiReturn(400,'暂无商品栏目信息');
+			$this->apiReturn(404,'暂无商品栏目信息');
 		}
 	}
 	public function eventCateList(){
@@ -29,7 +29,7 @@ class CategoryController extends Controller{
 		if($catelist){
 			$this->apiReturn(200,'返回活动栏目成功',$catelist);
 		}else{
-			$this->apiReturn(400,'暂无活动栏目信息');
+			$this->apiReturn(404,'暂无活动栏目信息');
 		}
 	}
 	public function topicCateList(){
@@ -37,7 +37,7 @@ class CategoryController extends Controller{
 		if($catelist){
 			$this->apiReturn(200,'返回论坛栏目成功',$catelist);
 		}else{
-			$this->apiReturn(400,'暂无论坛栏目信息');
+			$this->apiReturn(404,'暂无论坛栏目信息');
 		}
 	}
 }
