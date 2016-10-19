@@ -7,16 +7,22 @@ class TopicController extends ComController{
 	private $category=null;
 	private $comment=null;
 	private $admire=null;
+	private $user=null;
+	private $daily=null;
 	public function __construct(){
 		parent::__construct();
 		$this->topic=D('Topic');
 		$this->category=D('Category');
 		$this->comment=D('Comment');
 		$this->admire=D('Admire');
+		$this->user=D('User');
+		$this->daily=D('Daily');
 	}
 	public function topicList(){
 		$data=I('param.');
-		$map['cateid']=array('in',$this->category->getDelIds($data['cateid']));
+		if(isset($data['cateid'])){
+			$map['cateid']=array('in',$this->category->getDelIds($data['cateid']));
+		}
 		if(isset($data['keywords']) && !empty(urlencode($data['keywords']))){
 			$map['title']=array('like','%'.$data['keywords'].'%');
 		}
@@ -42,7 +48,32 @@ class TopicController extends ComController{
         }
 		if($this->topic->create($data)){
 			if($this->topic->add()){
-				$this->apiReturn(200,'帖子发布成功');
+				$oneDaily=$this->daily->where(array('uid'=>$data['uid']))->order('date DESC')->limit(1)->select();
+				$date=date('Y-m-d',$onedaily[0]['date']);
+				$today=date('Y-m-d',time());
+				if($date == $today){
+					if($onedaily['ispost'] == 0){
+						$data2['id']=$onedaily['id'];
+						$data2['ispost']=1;
+						$data2['point']=$oneDaily['point']+3;
+						if($this->daily->save($data2)){
+							$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
+						}
+					}
+				}else{
+					$data2['uid']=$data['uid'];
+					$data2['ispost']=1;
+					$data2['point']=3;
+					$data2['date']=time();
+					if($this->daily->add($data2)){
+						$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
+					}
+				}
+				if(($date == $today) && ($oneDaily['ispost'] == 1)){
+					$this->apiReturn(200,'帖子发布成功');
+				}else{
+					$this->apiReturn(200,'帖子发布成功',array('point'=>3));
+				}
 			}else{
 				$this->apiReturn(404,'帖子发布失败');
 			}
@@ -79,7 +110,10 @@ class TopicController extends ComController{
 				$admireids .= $value['commentid'].',';
 			}
 			$admireids=substr($admireids,0,-1);
-			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar')->where(array('themeid'=>$oneTopic['id'],'a.type'=>2))->select();
+			$total=$this->comment->where(array('themeid'=>$oneTopic['id'],'type'=>2))->count();
+			$page=new \Think\Page($total,FRONT_PAGE_SIZE);
+			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar')->where(array('themeid'=>$oneTopic['id'],'a.type'=>2))->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$commentlist=array();
 			foreach($list as $value){
 				if(strpos($admireids,$value['id']) !== false){
 					$value['isadmire']=1;

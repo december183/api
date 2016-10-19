@@ -73,6 +73,7 @@ class BaseController extends Controller {
         session('authMenu',null);
 		$this->redirect('Login/index');
 	}
+    //上传单图
     public function upload(){
         $upload=new \Think\Upload();
         $upload->maxSize=3145728;
@@ -81,7 +82,6 @@ class BaseController extends Controller {
         $upload->savePath='';
         $info=$upload->uploadOne($_FILES['pic']);
         if(!$info){
-            //echo json_encode(array('errmsg'=>$upload->getError(),'errno'=>0));
             $this->error($upload->getError());
         }else{
             $path=APP_ROOT.'/Uploads/image/'.$info['savepath'].$info['savename'];
@@ -93,12 +93,29 @@ class BaseController extends Controller {
             }
         }
     }
-    public function thumb($path,$width=600,$height=600){
+    //上传多图
+    public function uploads(){
+        $upload=new \Think\Upload();
+        $upload->maxSize=3145728;
+        $upload->exts=array('jpg','gif','png','jpeg');
+        $upload->rootPath='./Uploads/image/';
+        $upload->savePath='';
+        $info=$upload->upload();
+        if(!$info){
+            $this->error($upload->getError());
+        }else{
+            foreach($info as $file){
+                $pathArr[] = APP_ROOT.'/Uploads/image/'.$file['savepath'].$file['savename'];
+            }
+            return $pathArr;
+        }
+    }
+    public function thumb($path,$width=800,$height=800){
         $image=new \Think\Image();
         $image->open($path);
         $_start=substr($path,0,-strlen(strrchr($path,'.')));
         $_end=strrchr($path,'.');
-        $thumb_path=$_start.'_thumb'.$_end;
+        $thumb_path=$_start.$width.'x'.$height.'_thumb'.$_end;
         $image->thumb($width,$height)->save($thumb_path);
         $thumb_path=str_replace('\\', '/', $thumb_path);
         return strstr($thumb_path,__ROOT__.'/Uploads/image/');

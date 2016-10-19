@@ -14,23 +14,40 @@ class CollectController extends Controller{
 	}
 	public function addApi(){
 		$data=I('param.');
-		if($this->collect->create($data)){
-			$oneCollect=$this->collect->where($data)->find();
-			if($oneCollect){
-				$this->apiReturn(402,'已收藏');
-			}
-			if($this->collect->add()){
+		$oneCollect=$this->collect->where($data)->find();
+		if($oneCollect){
+			if($this->collect->delete($oneCollect['id'])){
 				if(isset($data['serviceid'])){
-					$this->service->where(array('id'=>$data['serviceid']))->setInc('collectnum');
+					$this->service->where(array('id'=>$data['serviceid']))->setDec('collectnum');
 				}elseif(isset($data['eventid'])){
-					$this->event->where(array('id'=>$data['eventid']))->setInc('collectnum');
+					$this->event->where(array('id'=>$data['eventid']))->setDec('collectnum');
 				}
-				$this->apiReturn(200,'收藏成功');
+				$this->apiReturn(200,'取消收藏成功');
 			}else{
-				$this->apiReturn(404,'收藏失败');
+				$this->apiReturn(404,'取消收藏失败');
 			}
 		}else{
-			$this->apiReturn(401,$this->collect->getError());
+			if($this->collect->create($data)){
+				if($this->collect->add()){
+					if(isset($data['serviceid'])){
+						$this->service->where(array('id'=>$data['serviceid']))->setInc('collectnum');
+					}elseif(isset($data['eventid'])){
+						$this->event->where(array('id'=>$data['eventid']))->setInc('collectnum');
+					}
+					$this->apiReturn(200,'收藏成功');
+				}else{
+					$this->apiReturn(404,'收藏失败');
+				}
+			}else{
+				$this->apiReturn(401,$this->collect->getError());
+			}
+		}
+	}
+	public function deleteApi(){
+		$data=I('param.');
+		if($this->collect->create($data)){
+			$oneCollect=$this->collect->where()->find();
+
 		}
 	}
 	public function indexApi(){
@@ -50,7 +67,7 @@ class CollectController extends Controller{
 			if($servicelist){
 				$this->apiReturn(200,'返回会员收藏列表成功',$servicelist);
 			}else{
-				$this->apiReturn(404,'暂无会员收藏数据');
+				$this->apiReturn(404,'暂无会员商品收藏数据');
 			}
 		}elseif(isset($data['serviceid'])){
 			$map['serviceid']=0;
@@ -66,7 +83,7 @@ class CollectController extends Controller{
 			if($eventlist){
 				$this->apiReturn(200,'返回会员收藏列表成功',$eventlist);
 			}else{
-				$this->apiReturn(404,'暂无会员收藏数据');
+				$this->apiReturn(404,'暂无会员活动收藏数据');
 			}
 		}else{
 			$this->apiReturn(400,'参数错误');

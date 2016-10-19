@@ -18,6 +18,7 @@ class ServiceController extends ComController{
 		$data=I('param.');
 		$map['cateid']=$data['cateid'];
 		$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
+		$map['isup']=array('eq',1);
 		if(isset($data['price'])){
 			$priceArr=explode('-',$data['price']);
 			$map['price']=array('gt',$priceArr[0]);
@@ -30,7 +31,7 @@ class ServiceController extends ComController{
 			$map['agerange']=array('eq',$data['agerange']);
 		}
 		if(isset($data['keywords'])){
-			$map['title']=array('like','%'.$data['keywords'].'%');
+			$map['title']=array('like','%'.urlencode($data['keywords'].'%'));
 		}
 		$total=$this->service->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
@@ -96,37 +97,51 @@ class ServiceController extends ComController{
 		}
 	}
 	public function editService(){
-		$data=I('param.');
-		if($_FILES['file']){
-			$arr=$this->upload();
-			foreach($arr as $key=>$path){
-				$imgArr=getimagesize($path);
-				if($imgArr[0] < 800 && $imgArr[1] < 800){
-					$path=str_replace('\\', '/',$path);
-					$data['mainpic'].=strstr($path,__ROOT__.'/Uploads/image/').';';
-				}else{
-					$data['mainpic'].=$this->thumb($path).';';
+		if(IS_POST){
+			$data=I('param.');
+			if($_FILES['file']){
+				$arr=$this->upload();
+				foreach($arr as $key=>$path){
+					$imgArr=getimagesize($path);
+					if($imgArr[0] < 800 && $imgArr[1] < 800){
+						$path=str_replace('\\', '/',$path);
+						$data['mainpic'].=strstr($path,__ROOT__.'/Uploads/image/').';';
+					}else{
+						$data['mainpic'].=$this->thumb($path).';';
+					}
+					if($key == 0){
+						$data['thumbpic']=$this->thumb($path,100,100);
+					}
 				}
-				if($key == 0){
-					$data['thumbpic']=$this->thumb($path,100,100);
-				}
+				$data['mainpic']=substr($data['mainpic'],0,-1);
 			}
-			$data['mainpic']=substr($data['mainpic'],0,-1);
-		}
-		if($this->service->create($data)){
-			if($this->service->save()){
-				$this->apiReturn(200,'商品修改成功');
+			if($this->service->create($data)){
+				if($this->service->save()){
+					$this->apiReturn(200,'商品修改成功');
+				}else{
+					$this->apiReturn(404,'商品修改失败');
+				}
 			}else{
-				$this->apiReturn(404,'商品修改失败');
+				$this->apiReturn(402,$this->service->getError());
 			}
 		}else{
-			$this->apiReturn(402,$this->service->getError());
+			$data=I('get.');
+			$oneService=$this->service->where(array('id'=>$data['id']))->find();
+			if($oneService){
+				if($oneService['uid'] == $data['uid']){
+					$this->apiReturn(200,'返回商品信息成功',$oneService);
+				}else{
+					$this->apiReturn(402,'无权限进行此操作');
+				}
+			}else{
+				$this->apiReturn(404,'未找到该商品信息');
+			}
 		}
 	}
 	public function serviceDetail(){
 		$data=I('param.');
 		$map['a.id']=$data['id'];
-		$oneService=$this->service->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.title,a.mainpic,a.price,a.location,a.phone,a.descript,b.shopname')->where($map)->find();
+		$oneService=$this->service->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.title,a.mainpic,a.price,a.discountprice,a.location,a.phone,a.descript,b.shopname')->where($map)->find();
 		if($oneService){
 			$oneAdmire=$this->admire->where(array('serviceid'=>$data['id'],'uid'=>$data['uid']))->find();
 			if($oneAdmire){
@@ -149,7 +164,7 @@ class ServiceController extends ComController{
 		$data['uid']=I('param.uid');
 		$total=$this->service->where($data)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
-		$servicelist=$this->service->field('id,title,price,thumbpic,location,isup')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+		$servicelist=$this->service->field('id,title,price,mainpic,thumbpic,location,isup')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 		if($servicelist){
 			$this->apiReturn(200,'返回用户商品列表成功',$servicelist);
 		}else{
@@ -199,6 +214,20 @@ class ServiceController extends ComController{
 			}
 		}else{
 			$this->apiReturn(401,'暂无该商品');
+		}
+	}
+	public function userDiscountService(){
+		$data=I('param.');
+		$data['isdiscount']=1;
+		$data['isup']=1;
+		$data['status']=1;
+		$total=$this->service->where($data)->count();
+		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
+		$servicelist=$this->service->field('id,title,thumbpic,price,discountprice,salednum')->where($data)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
+		if($servicelist){
+			$this->apiReturn(200,'返回商家优惠商品成功',$servicelist);
+		}else{
+			$this->apiReturn(404,'暂无商家优惠商品');
 		}
 	}
 }

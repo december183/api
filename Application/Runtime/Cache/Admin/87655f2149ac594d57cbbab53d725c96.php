@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="/api/Public/Admin/js/zyUpload.js"></script>
 		<!-- 引用初始化JS -->
 		<script type="text/javascript" src="/api/Public/Admin/js/demo.js"></script>
+		
 	</head>
 	<body>
 		<h1 style="text-align:center;">上传图片</h1>

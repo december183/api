@@ -11,7 +11,7 @@ return array(
 	'DB_DSN'=>'mysql:host=localhost;dbname=appmom;charset=UTF8',
 
 	//页面调试
-	'SHOW_PAGE_TRACE'=>false,
+	'SHOW_PAGE_TRACE'=>true,
 	//修改模版文件后缀
 	'TMPL_TEMPLATE_SUFFIX'=>'.html',
 	//允许模块访问

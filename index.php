@@ -23,6 +23,9 @@ define('APP_PATH','./Application/');
 // 定义网站根目录
 define('APP_ROOT',dirname(__FILE__));
 
+// 定义服务器根目录
+define('SERVER_ROOT',$_SERVER['DOCUMENT_ROOT']);
+
 // 定义后台分页数量
 define('PAGE_SIZE',20);
 

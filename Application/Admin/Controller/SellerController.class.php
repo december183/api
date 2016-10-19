@@ -25,6 +25,12 @@ class SellerController extends BaseController{
 					$this->seller->execute($sql);
 				}
 				$this->success('批量审核成功！',U('Seller/index'),2);
+			}elseif($data['action'] == 'rec'){
+				foreach($data['id'] as $id){
+					$sql="UPDATE app_user SET isrec=1 WHERE id='$id' LIMIT 1";
+					$this->seller->execute($sql);
+				}
+				$this->success('批量推荐成功！',U('Seller/index'),2);
 			}elseif($data['action'] == 'search'){
 				$map['shopname']=array('like','%'.$data['q'].'%');
 				$sellerlist=$this->seller->where($map)->order('date DESC')->select();
@@ -43,7 +49,7 @@ class SellerController extends BaseController{
 	}
 	public function setStatus(){
 		$data['id']=I('param.id');
-		$oneSeller=$this->seller->where($data)->find();
+		$oneSeller=$this->seller->field('id,status')->where($data)->find();
 		if($oneSeller['status'] == 1){
 			$data['status'] = 0;
 			if($this->seller->save($data)){
@@ -61,9 +67,29 @@ class SellerController extends BaseController{
 		}
 		$this->ajaxReturn($response,'json');
 	}
+	public function setRec(){
+		$data['id']=I('param.id');
+		$oneSeller=$this->seller->field('id,isrec')->where($data)->find();
+		if($oneSeller['isrec'] == 1){
+			$data['isrec']=0;
+			if($this->seller->save($data)){
+				$response=array('errno'=>0,'isrec'=>0);
+			}else{
+				$response=array('errno'=>1,'errmsg'=>'推荐商家失败');
+			}
+		}else{
+			$data['isrec']=1;
+			if($this->seller->save($data)){
+				$response=array('errno'=>0,'isrec'=>1);
+			}else{
+				$response=array('errno'=>1,'errmsg'=>'推荐商家失败');
+			}
+		}
+		$this->ajaxReturn($response,'JSON');
+	}
 	public function checkSeller(){
 		$data['id']=I('param.id');
-		$oneSeller=$this->seller->where($data)->find();
+		$oneSeller=$this->seller->field('id,level')->where($data)->find();
 		if($oneSeller['level'] == 2){
 			$data['level'] = 3;
 			if($this->seller->save($data)){

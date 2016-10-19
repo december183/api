@@ -14,14 +14,54 @@ class UpController extends BaseController{
 	}
 	public function index(){
 		if(IS_POST){
-	        $info=$this->upload->upload();
-	        if(!$info){
-	            return $this->error($upload->getError());
-	        }else{
-	            foreach($info as $file){
-					echo $file['savepath'].$file['savename'];
+	        $arr=$this->uploads();
+        	foreach($arr as $key=>$path){
+				if(isset($arr) && is_array($arr)){
+		        	foreach($arr as $key=>$path){
+						$imgArr=getimagesize($path);
+						if($imgArr[0] < 800 && $imgArr[1] < 800){
+							$path=str_replace('\\', '/',$path);
+							$mainpic.=strstr($path,__ROOT__.'/Uploads/image/').';';
+						}else{
+							$mainpic.=$this->thumb($path).';';
+						}
+						if($key == 0){
+							$thumbpic=$this->thumb($path,100,100);
+						}
+					}
+					$mainpic=substr($mainpic,0,-1);
+					$response=array('errno'=>0,'path'=>array('thumb'=>$thumbpic,'main'=>$mainpic));
+		        }else{
+		        	$response=array('errno'=>1,'errmsg'=>'上传失败');
+		        }
+		        $this->ajaxReturn($response,'JSON');
+			}
+		}else{
+			$this->display();
+		}
+	}
+	public function plupload(){
+		if(IS_POST){
+	        $arr=$this->uploads();
+	        if(isset($arr) && is_array($arr)){
+	        	foreach($arr as $key=>$path){
+					$imgArr=getimagesize($path);
+					if($imgArr[0] < 800 && $imgArr[1] < 800){
+						$path=str_replace('\\', '/',$path);
+						$mainpic.=strstr($path,__ROOT__.'/Uploads/image/').';';
+					}else{
+						$mainpic.=$this->thumb($path).';';
+					}
+					if($key == 0){
+						$thumbpic=$this->thumb($path,100,100);
+					}
 				}
+				$mainpic=substr($mainpic,0,-1);
+				$response=array('errno'=>0,'path'=>array('thumb'=>$thumbpic,'main'=>$mainpic));
+	        }else{
+	        	$response=array('errno'=>1,'errmsg'=>'上传失败');
 	        }
+	        $this->ajaxReturn($response,'JSON');
 		}else{
 			$this->display();
 		}
@@ -63,7 +103,7 @@ class UpController extends BaseController{
 			return $path;
         }
 	}
-	public function thumb($path,$width=600,$height=600){
+	/*public function thumb($path,$width=600,$height=600){
         $image=new \Think\Image();
         $image->open($path);
         $_start=substr($path,0,-strlen(strrchr($path,'.')));
@@ -72,5 +112,5 @@ class UpController extends BaseController{
         $image->thumb($width,$height)->save($thumb_path);
         $thumb_path=str_replace('\\', '/', $thumb_path);
         return strstr($thumb_path,__ROOT__.'/Uploads/image/');
-    }
+    }*/
 }

@@ -333,7 +333,7 @@
 					onSuccess: function(file, response) {
 						$("#uploadProgress_" + file.index).hide();
 						$("#uploadSuccess_" + file.index).show();
-						$("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
+						// $("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
 						// 根据配置参数确定隐不隐藏上传成功的文件
 						if(para.finishDel){
 							// 移除效果
@@ -341,6 +341,11 @@
 							// 重新设置统计栏信息
 							self.funSetStatusInfo(ZYFILE.funReturnNeedFiles());
 						}
+						//向父页面传值
+						var response=eval('('+response+')');
+						window.opener.document.getElementById('thumbpic').value=response.path.thumb;
+						window.opener.document.getElementById('mainpic').value+=response.path.main+';';
+						window.opener.document.getElementById('thumb').innerHTML+='<img src="'+response.path.thumb+'" alt="缩略图" />';
 					},
 					onFailure: function(file) {
 						$("#uploadProgress_" + file.index).hide();
@@ -350,6 +355,7 @@
 					},
 					onComplete: function(response){
 						console.info(response);
+						window.close();
 					},
 					onDragOver: function() {
 						$(this).addClass("upload_drag_hover");
@@ -406,6 +412,8 @@
 			// 初始化上传控制层插件
 			this.init();
 		});
+		//关闭当前窗口
+		window.close();
 	};
 })(jQuery);
 

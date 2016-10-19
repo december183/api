@@ -1,0 +1,136 @@
+[ 2016-10-19T11:46:06+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`status` FROM `app_manage` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-19T11:46:10+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`status` FROM `app_manage` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-10-19T11:46:11+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0020s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`status` FROM `app_manage` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-19T11:46:33+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`status` FROM `app_manage` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-19T11:47:13+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0000s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`status` FROM `app_credit_order` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `app_credit_order` SET `status`='1' WHERE `id` = 1 [ RunTime:0.0312s ]
+
+[ 2016-10-19T14:08:55+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index.html
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_credit_order` WHERE `gid` IN () LIMIT 1  
+
+[ 2016-10-19T14:14:21+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index.html
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_credit_order` WHERE `gid` IN () LIMIT 1  
+
+[ 2016-10-19T14:14:57+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index.html
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_credit_order` WHERE `gid` IN () LIMIT 1  
+
+[ 2016-10-19T14:16:02+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index.html
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_credit_order` WHERE `gid` IN () LIMIT 1  
+
+[ 2016-10-19T14:16:24+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index.html
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_credit_order` WHERE `gid` IN () LIMIT 1  
+
+[ 2016-10-19T14:17:51+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0156s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'CreditOrder/setStatus' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `app_credit_goods` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`status` FROM `app_credit_order` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `app_credit_order` SET `status`='1' WHERE `id` = 2 [ RunTime:0.0312s ]
+

@@ -24,12 +24,12 @@
     /**
     * 生成订单号
     *
-    * @param string $cid//产品类型
+    * @param string $type//产品类型
     * @return string
     */
-    function getTradeNo($cid){
+    function getTradeNo($type){
         $code=range('A','Z');
-        return $code[$cid-1].date('Ymd').substr(microtime(),2,3).sprintf('%02d',rand(0,99));
+        return $code[$type-1].date('Ymd').substr(microtime(),2,3).sprintf('%02d',rand(0,99));
     }
 
     /**
@@ -195,4 +195,27 @@
             $agerange='';
         }
         return $agerange;
-    }  
+    } 
+    /**
+     * [getDaysApart 计算相隔日期]
+     * @param  [int] $date [日期时间戳]
+     * @return [array]       [相隔日期]
+     */
+    function getDaysApart($date){  
+        $date1=date('Y-m-d',time());
+        $data2=date('Y-m-d',$date); 
+        list($Y1,$m1,$d1)=explode('-',$date1);  
+        list($Y2,$m2,$d2)=explode('-',$date2);  
+        $Y=$Y2-$Y1;  
+        $m=$m2-$m1;  
+        $d=$d2-$d1;  
+        if($d<0){  
+            $d+=(int)date('t',strtotime("-1 month $date2"));  
+            $m--;  
+        }  
+        if($m<0){  
+            $m+=12;  
+            $Y--;  
+        }
+        return array('year'=>$Y,'month'=>$m,'day'=>$d);
+    }

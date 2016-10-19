@@ -1,0 +1,26 @@
+<extend name="Public/base" />
+<block name="title"><title>任务管理-修改任务</title></block>
+<block name="content">
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 任务管理-修改任务</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">任务列表</a> &gt; <a href="__CONTROLLER__/add">添加任务</a> &gt; <a href="__CONTROLLER__/eidt/id/{$oneTask.id}">修改任务</a></div>
+		    <form method="post" action="">
+		    <input type="hidden" name="id" value="{$oneTask.id}" />
+		    <div class="content">
+	    		<div class="input">任务名称：<input type="text" name="name" value="{$oneTask.name}" /> <em class="red">*</em></div>
+	    		<div class="input">任务分数：<input type="text" name="point" value="{$oneTask.point}" /> <em class="red">*</em></div>
+		        <div class="input">
+		        	是否激活：
+		            <input type="radio" id="radio1" name="status" value="1" <if condition="$oneTask['status'] eq 1">checked="checked"</if>/><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="status" value="0" <if condition="$oneTask['status'] eq 0">checked="checked"</if>/><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+</block>

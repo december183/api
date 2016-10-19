@@ -48,9 +48,6 @@ class EventController extends ComController{
 				$map['price']=array('neq',0);
 			}
 		}
-		if(isset($data['agerange'])){
-			$map['agerange']=array('eq',$data['agerange']);
-		}
 		$total=$this->event->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
@@ -95,21 +92,35 @@ class EventController extends ComController{
 		}
 	}
 	public function editEvent(){
-		$data=I('param.');
-		if($_FILES['file']){
-            $res=$this->uploadPic();
-            if(is_array($res)){
-            	array_merge($data,$res);
-            }
-        }
-		if($this->event->create($data)){
-			if($this->event->save()){
-				$this->apiReturn(200,'活动修改成功');
+		if(IS_POST){
+			$data=I('param.');
+			if($_FILES['file']){
+	            $res=$this->uploadPic();
+	            if(is_array($res)){
+	            	array_merge($data,$res);
+	            }
+	        }
+			if($this->event->create($data)){
+				if($this->event->save()){
+					$this->apiReturn(200,'活动修改成功');
+				}else{
+					$this->apiReturn(404,'活动修改失败');
+				}
 			}else{
-				$this->apiReturn(404,'活动修改失败');
+				$this->apiReturn(403,$this->event->getError());
 			}
 		}else{
-			$this->apiReturn(403,$this->event->getError());
+			$data=I('get.');
+			$oneEvent=$this->event->where(array('id'=>$data['id']))->find();
+			if($oneEvent){
+				if($oneEvent['uid'] == $data['uid']){
+					$this->apiReturn(200,'返回活动信息成功',$oneEvent);
+				}else{
+					$this->apiReturn(402,'无权限进行此操作');
+				}
+			}else{
+				$this->apiReturn(404,'未找到该活动信息');
+			}
 		}
 	}
 	public function eventDetail(){
@@ -144,7 +155,10 @@ class EventController extends ComController{
 				$admireids .= $value['commentid'].',';
 			}
 			$admireids=substr($admireids,0,-1);
-			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar,b.momstatus,b.birthday')->where(array('themeid'=>$oneEvent['id'],'a.type'=>1))->select();
+			$total=$this->comment->where(array('themeid'=>$oneEvent['id'],'type'=>1))->count();
+			$page=new \Think\Page($total,FRONT_PAGE_SIZE);
+			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar,b.momstatus,b.birthday')->where(array('themeid'=>$oneEvent['id'],'a.type'=>1))->order('a.date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$commentlist=array();
 			foreach($list as $value){
 				if(strpos($admireids,$value['id']) !== false){
 					$value['isadmire']=1;
@@ -186,7 +200,9 @@ class EventController extends ComController{
 			}
 			$admireids=substr($admireids,0,-1);
 			//获取当前活动的评论列表
-			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar,b.momstatus,b.birthday')->where(array('themeid'=>$oneEvent['id'],'a.type'=>1))->select();
+			$total=$this->comment->where(array('themeid'=>$oneEvent['id'],'a.type'=>1))->count();
+			$page=new \Think\Page($total,FRONT_PAGE_SIZE);
+			$list=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.content,a.agreenum,a.date,b.username,b.avatar,b.momstatus,b.birthday')->where(array('themeid'=>$oneEvent['id'],'a.type'=>1))->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 			foreach($list as $value){
 				if(strpos($admireids,$value['id']) !== false){
 					$value['isadmire']=1;

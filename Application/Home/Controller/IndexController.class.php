@@ -16,10 +16,13 @@ class IndexController extends Controller {
     public function indexApi(){
         $list=$this->category->field('id,name,thumb')->where(array('groupid'=>3,'pid'=>0))->order('sort ASC')->select();
         foreach($list as $value){
-            $catepricelist=$this->price->field('minprice,maxprice')->where(array('cateid'=>$value['id'],'gid'=>2))->select();
-            $pricelist=array();
-            foreach($catepricelist as $val){
-                $pricelist[]=$val['minprice'].'-'.$val['maxprice'];
+            $catepricelist=$this->price->field('id,minprice,maxprice')->where(array('cateid'=>$value['id'],'gid'=>2))->select();
+            $pricelist='';
+            if($catepricelist){
+               foreach($catepricelist as $val){
+                    $pricelist.=$val['minprice'].'-'.$val['maxprice'].';';
+                }
+                $pricelist=substr($pricelist,0,-1); 
             }
             $value['price']=$pricelist;
             $catelist[]=$value;

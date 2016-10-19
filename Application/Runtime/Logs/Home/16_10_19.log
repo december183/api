@@ -1,0 +1,22 @@
+[ 2016-10-19T08:50:33+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T08:50:33+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T08:50:37+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T08:50:37+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T10:10:36+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T10:10:36+08:00 ] 127.0.0.1 /api/Uploads/image/2016-10-18/5805e7d0657d8800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d095584800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d0c6e87800x800_thumb.jpg;/api/Uploads/image/2016-10-18/5805e7d1035ab800x800_thumb.jpg;
+ERR: 无法加载控制器:Uploads
+
+[ 2016-10-19T11:19:01+08:00 ] 192.168.11.230 /api/index.php/Collect/indexApi?eventid=1&uid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+

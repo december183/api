@@ -55,7 +55,7 @@ class EventController extends BaseController{
 				$total=$this->event->where($map)->count();
 				$page=new \Think\Page($total,PAGE_SIZE);
 				$show=$page->show();
-				$list=$this->event->alias('a')->join('app_category as b ON a.cateid=b.id')->field('a.id,a.title,a.thumbpic,a.tags,a.price,a.place,a.phone,a.agerange,a.starttime,a.endtime,a.sort,a.status,a.isrec,a.commentnum,b.name as typename')->where($map)->order('a.sort')->limit($page->firstRow.','.$page->listRows)->select();
+				$list=$this->event->alias('a')->join('app_category as b ON a.cateid=b.id')->field('a.id,a.title,a.thumbpic,a.tags,a.price,a.place,a.phone,a.starttime,a.endtime,a.sort,a.status,a.isrec,a.commentnum,b.name as typename')->where($map)->order('a.sort')->limit($page->firstRow.','.$page->listRows)->select();
 				foreach($list as $value){
 					$value['tags']=explode(',',$value['tags']);
 					$eventlist[]=$value;
@@ -71,7 +71,7 @@ class EventController extends BaseController{
 			$total=$this->event->where($map)->count();
 			$page=new \Think\Page($total,PAGE_SIZE);
 			$show=$page->show();
-			$list=$this->event->alias('a')->join('app_category as b ON a.cateid=b.id')->field('a.id,a.title,a.thumbpic,a.tags,a.price,a.place,a.phone,a.agerange,a.starttime,a.endtime,a.sort,a.status,a.isrec,a.commentnum,b.name as typename')->where($map)->order('a.sort')->limit($page->firstRow.','.$page->listRows)->select();
+			$list=$this->event->alias('a')->join('app_category as b ON a.cateid=b.id')->field('a.id,a.title,a.thumbpic,a.tags,a.price,a.place,a.phone,a.starttime,a.endtime,a.sort,a.status,a.isrec,a.commentnum,b.name as typename')->where($map)->order('a.sort')->limit($page->firstRow.','.$page->listRows)->select();
 			foreach($list as $value){
 				$value['tags']=explode(',',$value['tags']);
 				$eventlist[]=$value;

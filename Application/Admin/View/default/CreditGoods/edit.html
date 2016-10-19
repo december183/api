@@ -1,0 +1,63 @@
+<extend name="Public/base" />
+<block name="title"><title>积分商品管理-修改积分商品</title></block>
+<block name="content">
+	<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+	<div id="content" class="white">
+        <h1><img src="__PUBLIC__/Admin/img/icons/posts.png" alt="" /> 积分商品管理-修改积分商品</h1>
+        <div class="bloc">
+		    <div class="title"><a href="__CONTROLLER__/index">积分商品列表</a> &gt; <a href="__CONTROLLER__/add">添加积分商品</a> &gt; <a href="__CONTROLLER__/edit/id/{$oneGoods.id}">修改积分商品</a></div>
+		    <form method="post" action="">
+		    <input type="hidden" name="id" value="{$oneGoods.id}" />
+		    <div class="content">
+	    		<div class="input medium">商品标题：<input type="text" name="title" value="{$oneGoods.title}" /> <em class="red">*</em></div>
+                <div class="input">商品积分：<input type="text" name="credit" value="{$oneGoods.credit}" /> <em class="red">*</em></div>
+                <div class="input">商品库存：<input type="text" name="inventory" value="{$oneGoods.inventory}" /> <em class="red">*</em></div>
+				<div class="input">缩略　图：
+					<input type="text" name="thumbpic" id="thumbpic" value="{$oneGoods.thumbpic}" /> <em class="red">* <a href="javascript:;" class="button" onclick="openUp();">上传图片</a></em>
+					<div id="thumb" style="padding: 10px 0 0 63px;"><img src="{$oneGoods.thumbpic}" alt="缩略图" /></div>
+				</div>
+		        <div class="input textarea">
+		            <span class="middle">商品简介：</span><textarea name="descript" rows="3" cols="5">{$oneGoods.descript}</textarea>
+		        </div>
+		        <div class="input textarea">
+		        	商品详情：<textarea name="content" id="editor">{$oneGoods.content}</textarea>
+		        </div>
+		        <div class="input">
+		        	是否推荐：
+		            <input type="radio" id="radio1" name="isrec" value="1" <if condition="$oneGoods['isrec'] eq 1">checked="checked"</if> /><label for="radio1" class="inline">是</label>
+		            <input type="radio" id="radio2"  name="isrec" value="0" <if condition="$oneGoods['isrec'] eq 0">checked="checked"</if> /><label for="radio2" class="inline">否</label>
+		        </div>
+		        <div class="submit">
+		            <input type="submit" value="提交" />
+		            <input type="reset" value="重置" class="white"/>
+		        </div>
+		    </div>
+		    </form>
+		</div>
+	</div>
+    <script>
+        KindEditor.ready(function(K){
+            var opts={
+                uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager : true,
+                height : '450px',
+                width : '100%',
+                afterBlur:function(){this.sync();}
+            };
+            var editor = K.create('textarea[name="content"]', opts);
+        });
+    </script>
+    <script type="text/javascript">
+    	function openUp(){
+    		var url='__MODULE__/Up/index';
+    		var name='上传图片';
+    		var iWidth='750';
+    		var iHeight='550';
+    		var iTop=(window.screen.availHeight - 30 - iHeight)/2;
+    		var iLeft=(window.screen.availWidth - 10 - iWidth)/2;
+    		window.open(url,name,'height='+iHeight+',width='+iWidth+',top='+iTop+',left='+iLeft+',toolbar=no,menubar=no,scrollbars=no,resizeable=no,location=no,status=no');
+    	}
+    </script>
+</block>

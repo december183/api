@@ -4,6 +4,7 @@ use Think\Model;
 
 class ServiceModel extends Model{
 	protected $_validate=array(
+		array('uid','require','必须传入登陆用户uid'),
 		array('region','require','请选择区域'),
 		array('location','require','请填写详细地址'),
 		array('cateid','require','请选择商品类别'),

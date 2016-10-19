@@ -2,7 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class UserController extends Controller{
+class UserController extends ComController{
 	private $user=null;
 	public function __construct(){
 		parent::__construct();
@@ -54,8 +54,8 @@ class UserController extends Controller{
 	}
 	public function applySeller(){
 		$data=I('param.');
-		if(isset($data['uid'])){
-			$oneUser=$this->user->where(array('id'=>$data['uid']))->find();
+		if(isset($data['id'])){
+			$oneUser=$this->user->where(array('id'=>$data['id']))->find();
 			if($oneUser){
 				if($_FILES['file']){
 		            $arr=$this->upload();
@@ -72,7 +72,7 @@ class UserController extends Controller{
 		        }else{
 		            $this->apiReturn(402,'请上传商家营业执照');
 		        }
-				if($this->user->create($data)){
+				if($data=$this->user->create($data)){
 					if($this->user->save()){
 						$this->apiReturn(200,'提交申请成功');
 					}else{
@@ -84,7 +84,6 @@ class UserController extends Controller{
 			}else{
 				$this->apiReturn(401,'未找到此用户');
 			}
-			
 		}else{
 			$this->apiReturn(400,'参数错误');
 		}

@@ -20,6 +20,7 @@
 		                    <th>年龄范围</th>
 		                    <th>是否审核</th>
 		                    <th>状态</th>
+		                    <th>是否推荐</th>
 		                    <th>注册日期</th>
 		                    <th style="text-align:center;">操作</th>
 		                </tr>
@@ -37,6 +38,7 @@
 		                    <td>{$vo.agerange}</td>
 		                    <td><if condition="$vo['level'] gt 2"><a href="javascript:;" onclick="checkSeller({$vo.id},this);">已审核</a><else /><a href="javascript:;" onclick="checkSeller({$vo.id},this);">未审核</a></if></td>
 		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">正常</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">禁用</a></if></td>
+		                    <td><if condition="$vo['isrec'] eq 1"><a href="javascript:;" onclick="setRec({$vo.id},this);">已推荐</a><else /><a href="javascript:;" onclick="setRec({$vo.id},this);">未推荐</a></if></td>
 		                    <td>{$vo.date|date='Y-m-d',###}</td>
 		                    <td style="text-align:center;"><a href="__CONTROLLER__/del/id/{$vo.id}" title="Delete this content" onclick="return confirm('你确定要删除这条信息吗？');"><img src="__PUBLIC__/Admin/img/icons/actions/delete.png" alt="删除" /></a></td>
 		                </tr>
@@ -48,6 +50,7 @@
 		                <option value="">Action</option>
 		                <option value="delete">Delete</option>
 		                <option value="check">Check</option>
+		                <option value="rec">Rec</option>
 		            </select>
 		            <div class="submit">
 		            	<input type="submit" value="提交" />
@@ -96,6 +99,26 @@
 						}else{
 							$target.text('未审核');
 							alert('审核失败');
+						}
+					}
+				}
+			});
+		}
+		function setRec(id,target){
+			var $target=$(target);
+			$.ajax({
+				url:'__CONTROLLER__/setRec',
+				data:{"id":id},
+				type:'post',
+				dataType:'json',
+				success:function(response){
+					if(response.errno == 0){
+						if(response.isrec == 1){
+							$target.text('已推荐');
+							alert('已推荐');
+						}else{
+							$target.text('未推荐');
+							alert('未推荐');
 						}
 					}
 				}
