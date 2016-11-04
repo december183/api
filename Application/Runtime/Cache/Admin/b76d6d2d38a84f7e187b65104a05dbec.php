@@ -90,7 +90,7 @@
 		                    <td><?php echo ($vo["credit"]); ?></td>
 		                    <td><?php echo ($vo["num"]); ?></td>
 		                    <td><?php echo ($vo["totalcredit"]); ?></td>
-		                    <td><?php echo ($vo["pickaddress"]); ?></td>
+		                    <td><?php echo ($vo["place"]); ?></td>
 		                    <td><?php echo ($vo["remark"]); ?></td>
 		                    <td>
 		                    <?php if($vo['status'] == 1): ?><a href="javascript:;">已发货</a><?php else: ?><a href="javascript:;" onclick="setStatus(<?php echo ($vo["id"]); ?>,this);">待发货</a><?php endif; ?>

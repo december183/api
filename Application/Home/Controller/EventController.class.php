@@ -71,6 +71,10 @@ class EventController extends ComController{
 			$this->apiReturn(401,'暂无数据');
 		}
 	}
+	/**
+	 * [releaseEvent IOS发布活动]
+	 * @return [type] [description]
+	 */
 	public function releaseEvent(){
 		$data=I('param.');
 		if($_FILES['file']){
@@ -81,6 +85,21 @@ class EventController extends ComController{
         }else{
             $this->apiReturn(402,'请上传商品主图');
         }
+		if($this->event->create($data)){
+			if($this->event->add()){
+				$this->apiReturn(200,'活动发布成功');
+			}else{
+				$this->apiReturn(404,'活动发布失败');
+			}
+		}else{
+			$this->apiReturn(403,$this->event->getError());
+		}
+	}
+	/**
+	 * [addEvent Andriod发布活动]
+	 */
+	public function addEvent(){
+		$data=I('param.');
 		if($this->event->create($data)){
 			if($this->event->add()){
 				$this->apiReturn(200,'活动发布成功');
@@ -175,10 +194,10 @@ class EventController extends ComController{
 	}
 	public function userEventList(){
 		$data['uid']=I('param.uid');
-		$total=$this->event->where($map)->count();
+		$total=$this->event->where($data)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
-		$eventlist=$this->event->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username')->where($map)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
+		$eventlist=$this->event->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username')->where($data)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
 		if($eventlist){
 			$this->apiReturn(200,'返回会员活动列表成功',$eventlist);
 		}else{
@@ -232,6 +251,25 @@ class EventController extends ComController{
 			}
 		}else{
 			$this->apiReturn(401,'暂无该帖子信息');
+		}
+	}
+	/**
+	 * [cronApi 每6个小时执行一次，改变活动状态]
+	 * @return [type] [description]
+	 */
+	public function cronApi(){
+		$time=time();
+		$map['status']=array('neq',5);
+		$list=$this->event->field('id,starttime,endtime')->where($map)->select();
+		foreach($list as $value){
+			if($time > strtotime($value['starttime']) && $time < strtotime($value['endtime'])){
+				$data['id']=$value['id'];
+				$data['status']=4;
+			}elseif($time > strtotime($value['endtime'])){
+				$data['id']=$value['id'];
+				$data['status']=5;
+			}
+			$this->event->save($data);
 		}
 	}
 }

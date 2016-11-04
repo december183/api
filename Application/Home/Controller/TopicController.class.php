@@ -23,8 +23,12 @@ class TopicController extends ComController{
 		if(isset($data['cateid'])){
 			$map['cateid']=array('in',$this->category->getDelIds($data['cateid']));
 		}
-		if(isset($data['keywords']) && !empty(urlencode($data['keywords']))){
-			$map['title']=array('like','%'.$data['keywords'].'%');
+		
+		if(isset($data['keywords'])){
+			$keywords=urlencode($data['keywords']);
+			if(!empty($keywords)){
+				$map['title']=array('like','%'.$keywords.'%');
+			}
 		}
 		$total=$this->topic->where($map)->select();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
@@ -36,6 +40,10 @@ class TopicController extends ComController{
 			$this->apiReturn(401,'暂无帖子数据');
 		}
 	}
+	/**
+	 * [releaseTopic IOS发布帖子]
+	 * @return [type] [description]
+	 */
 	public function releaseTopic(){
 		$data=I('param.');
 		if($_FILES['file']){
@@ -52,10 +60,10 @@ class TopicController extends ComController{
 				$date=date('Y-m-d',$onedaily[0]['date']);
 				$today=date('Y-m-d',time());
 				if($date == $today){
-					if($onedaily['ispost'] == 0){
-						$data2['id']=$onedaily['id'];
+					if($onedaily[0]['ispost'] == 0){
+						$data2['id']=$onedaily[0]['id'];
 						$data2['ispost']=1;
-						$data2['point']=$oneDaily['point']+3;
+						$data2['point']=$oneDaily[0]['point']+3;
 						if($this->daily->save($data2)){
 							$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
 						}
@@ -69,7 +77,47 @@ class TopicController extends ComController{
 						$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
 					}
 				}
-				if(($date == $today) && ($oneDaily['ispost'] == 1)){
+				if(($date == $today) && ($oneDaily[0]['ispost'] == 1)){
+					$this->apiReturn(200,'帖子发布成功');
+				}else{
+					$this->apiReturn(200,'帖子发布成功',array('point'=>3));
+				}
+			}else{
+				$this->apiReturn(404,'帖子发布失败');
+			}
+		}else{
+			$this->apiReturn(403,$this->topic->getError());
+		}
+	}
+	/**
+	 * [addTopic Andriod上传帖子]
+	 */
+	public function addTopic(){
+		$data=I('param.');
+		if($this->topic->create($data)){
+			if($this->topic->add()){
+				$oneDaily=$this->daily->where(array('uid'=>$data['uid']))->order('date DESC')->limit(1)->select();
+				$date=date('Y-m-d',$onedaily[0]['date']);
+				$today=date('Y-m-d',time());
+				if($date == $today){
+					if($onedaily[0]['ispost'] == 0){
+						$data2['id']=$onedaily[0][0]['id'];
+						$data2['ispost']=1;
+						$data2['point']=$oneDaily[0][0]['point']+3;
+						if($this->daily->save($data2)){
+							$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
+						}
+					}
+				}else{
+					$data2['uid']=$data['uid'];
+					$data2['ispost']=1;
+					$data2['point']=3;
+					$data2['date']=time();
+					if($this->daily->add($data2)){
+						$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
+					}
+				}
+				if(($date == $today) && ($oneDaily[0]['ispost'] == 1)){
 					$this->apiReturn(200,'帖子发布成功');
 				}else{
 					$this->apiReturn(200,'帖子发布成功',array('point'=>3));

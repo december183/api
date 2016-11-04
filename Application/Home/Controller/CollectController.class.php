@@ -60,10 +60,15 @@ class CollectController extends Controller{
 				$serviceids.=$value['serviceid'].',';
 			}
 			$serviceids=substr($serviceids,0,-1);
-			$condition['id']=array('in',$serviceids);
+			if($serviceids){
+				$condition['id']=array('in',$serviceids);
+			}else{
+				$condition['id']=array('eq',$serviceids);
+			}
+			
 			$total=$this->service->where($condition)->count();
 			$page=new \Think\Page($total,FRONT_PAGE_SIZE);
-			$servicelist=$this->service->field('title,thumbpic')->where($condition)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
+			$servicelist=$this->service->field('id,title,thumbpic')->where($condition)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
 			if($servicelist){
 				$this->apiReturn(200,'返回会员收藏列表成功',$servicelist);
 			}else{
@@ -76,10 +81,14 @@ class CollectController extends Controller{
 				$eventids.=$value['eventid'].',';
 			}
 			$eventids=substr($eventids,0,-1);
-			$condition['id']=array('in',$eventids);
+			if($eventids){
+				$condition['id']=array('in',$eventids);
+			}else{
+				$condition['id']=array('eq',$eventids);
+			}
 			$total=$this->event->where($condition)->count();
 			$page=new \Think\Page($total,FRONT_PAGE_SIZE);
-			$eventlist=$this->event->field('title,thumbpic')->where($condition)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
+			$eventlist=$this->event->field('id,title,thumbpic')->where($condition)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
 			if($eventlist){
 				$this->apiReturn(200,'返回会员收藏列表成功',$eventlist);
 			}else{

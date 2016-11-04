@@ -12,7 +12,7 @@ class CategoryModel extends Model{
 	public function getAutoIncid(){
 		$sql="SHOW TABLE STATUS LIKE 'app_category'";
 		$res=$this->query($sql);
-		return $res[0]['Auto_increment'];
+		return $res[0]['auto_increment'];
 	}
 	public function getSortNav($param){
 		$keyArr=$sortNav=$res=array();

@@ -45,6 +45,10 @@ class GoodsController extends ComController{
 			$this->apiReturn(400,'暂无数据');
 		}
 	}
+	/**
+	 * [releaseGoods IOS发布二手商品]
+	 * @return [type] [description]
+	 */
 	public function releaseGoods(){
 		$data=I('param.');
 		if($_FILES['file']){
@@ -75,37 +79,67 @@ class GoodsController extends ComController{
 			$this->apiReturn(403,$this->goods->getError());
 		}
 	}
-	public function editGoods(){
+	/**
+	 * [addGoods Andriod发布二手商品]
+	 */
+	public function addGoods(){
 		$data=I('param.');
-		if($_FILES['file']){
-			$arr=$this->upload();
-			foreach($arr as $key=>$path){
-				$imgArr=getimagesize($path);
-				if($imgArr[0] < 800 && $imgArr[1] < 800){
-					$path=str_replace('\\', '/',$path);
-					$data['mainpic'].=strstr($path,__ROOT__.'/Uploads/image/').';';
-				}else{
-					$data['mainpic'].=$this->thumb($path).';';
-				}
-				if($key == 0){
-					$data['thumbpic']=$this->thumb($path,100,100);
-				}
-			}
-			$data['mainpic']=substr($data['mainpic'],0,-1);
-		}
-		if($this->goods->create($data)){
-			if($this->goods->save()){
-				$this->apiReturn(200,'商品修改成功');
+		if($data=$this->goods->create($data)){
+			if($this->goods->add($data)){
+				$this->apiReturn(200,'商品发布成功');
 			}else{
-				$this->apiReturn(401,'商品修改失败');
+				$this->apiReturn(402,'商品发布失败');
 			}
 		}else{
-			$this->apiReturn(402,$this->goods->getError());
+			$this->apiReturn(403,$this->goods->getError());
+		}
+	}
+	public function editGoods(){
+		if(IS_POST){
+			$data=I('param.');
+			if($_FILES['file']){
+				$arr=$this->upload();
+				foreach($arr as $key=>$path){
+					$imgArr=getimagesize($path);
+					if($imgArr[0] < 800 && $imgArr[1] < 800){
+						$path=str_replace('\\', '/',$path);
+						$data['mainpic'].=strstr($path,__ROOT__.'/Uploads/image/').';';
+					}else{
+						$data['mainpic'].=$this->thumb($path).';';
+					}
+					if($key == 0){
+						$data['thumbpic']=$this->thumb($path,100,100);
+					}
+				}
+				$data['mainpic']=substr($data['mainpic'],0,-1);
+			}
+			if($this->goods->create($data)){
+				if($this->goods->save()){
+					$this->apiReturn(200,'商品修改成功');
+				}else{
+					$this->apiReturn(401,'商品修改失败');
+				}
+			}else{
+				$this->apiReturn(402,$this->goods->getError());
+			}
+		}else{
+			$data=I('get.');
+			$oneGoods=$this->service->where(array('id'=>$data['id']))->find();
+			if($oneGoods){
+				if($oneGoods['uid'] == $data['uid']){
+					$this->apiReturn(200,'返回商品信息成功',$oneGoods);
+				}else{
+					$this->apiReturn(402,'无权限进行此操作');
+				}
+			}else{
+				$this->apiReturn(404,'未找到该商品信息');
+			}
 		}
 	}
 	public function goodsDetail(){
 		$data=I('param.');
-		$oneGoods=$this->goods->where($data)->find();
+		// $oneGoods=$this->goods->where($data)->find();
+		$oneGoods=$this->goods->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.title,a.mainpic,a.price,a.discountprice,a.location,a.phone,a.descript,b.username,b.shopname')->where($map)->find();
 		if($oneGoods){
 			$this->apiReturn(200,'返回商品详情成功',$oneGoods);
 		}else{

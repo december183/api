@@ -77,7 +77,7 @@ class EventCommentController extends BaseController{
 			$total=$this->comment->where($map)->count();
 			$page=new \Think\Page($total,PAGE_SIZE);
 			$show=$page->show();
-			$commentlist=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->join('app_topic as c ON a.themeid=c.id')->field('a.id,b.username,b.avatar,c.title as theme,a.content,a.agreenum,a.date')->where($map2)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$commentlist=$this->comment->alias('a')->join('app_user as b ON a.uid=b.id')->join('app_event as c ON a.themeid=c.id')->field('a.id,b.username,b.avatar,c.title as theme,a.content,a.agreenum,a.date')->where($map2)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 			$this->assign('cid',$cid);
 			$this->assign('topCates',$topCates);
 			$this->assign('commentlist',$commentlist);

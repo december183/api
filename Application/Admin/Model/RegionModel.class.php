@@ -15,6 +15,6 @@ class RegionModel extends Model{
 	public function getAutoIncid(){
 		$sql="SHOW TABLE STATUS LIKE 'app_region'";
 		$res=$this->query($sql);
-		return $res[0]['Auto_increment'];
+		return $res[0]['auto_increment'];
 	}
 }

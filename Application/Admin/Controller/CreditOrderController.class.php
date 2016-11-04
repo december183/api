@@ -47,7 +47,7 @@ class CreditOrderController extends BaseController{
 				$total=$this->creditorder->where($condition)->count();
 				$page=new \Think\Page($total,PAGE_SIZE);
 				$show=$page->show();
-				$orderlist=$this->creditorder->alias('a')->join('app_credit_goods as b ON a.gid=b.id')->field('a.id,a.num,a.credit,a.totalcredit,a.pickaddress,a.remark,a.status,b.title,b.thumbpic')->where($condition)->order('a.date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+				$orderlist=$this->creditorder->alias('a')->join('app_credit_goods as b ON a.gid=b.id')->join('app_pickaddress as c ON a.pickid=c.id')->field('a.id,a.num,a.credit,a.totalcredit,c.place,a.remark,a.status,b.title,b.thumbpic')->where($condition)->order('a.date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 				$this->assign('page',$show);
 				$this->assign('orderlist',$orderlist);
 				$this->display();
@@ -56,7 +56,7 @@ class CreditOrderController extends BaseController{
 			$total=$this->creditorder->count();
 			$page=new \Think\Page($total,PAGE_SIZE);
 			$show=$page->show();
-			$orderlist=$this->creditorder->alias('a')->join('app_credit_goods as b ON a.gid=b.id')->field('a.id,a.num,a.credit,a.totalcredit,a.pickaddress,a.remark,a.status,b.title,b.thumbpic')->order('a.date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$orderlist=$this->creditorder->alias('a')->join('app_credit_goods as b ON a.gid=b.id')->join('app_pickaddress as c ON a.pickid=c.id')->field('a.id,a.num,a.credit,a.totalcredit,c.place,a.remark,a.status,b.title,b.thumbpic')->order('a.date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 			$this->assign('orderlist',$orderlist);
 			$this->assign('page',$show);
 			$this->display();

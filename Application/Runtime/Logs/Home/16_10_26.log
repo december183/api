@@ -1,0 +1,28 @@
+[ 2016-10-26T17:58:54+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T17:58:57+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' AND `uid` IN ('1','21','22','23','24','28','29','30','31','32','33','34','35','36','37','39','40','42','43','44','45','46','47','48','49','50','51','52','53') ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T17:59:02+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' AND `uid` IN ('2') ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T17:59:06+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T17:59:14+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' AND `price` <> 0 ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T17:59:15+08:00 ] 192.168.11.105 /api/index.php/Home/Event/eventList
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '2' AND `price` = 0 ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-26T18:45:00+08:00 ] 192.168.11.147 /api/index.php/Home/Order/addApi
+ERR: 1062:Duplicata du champ '2016102606575' pour la clef 'order_no'
+ [ SQL语句 ] : INSERT INTO `app_order` (`info`,`paymethod`,`pickid`,`remark`,`uid`,`order_no`,`totalfee`,`date`) VALUES ('{\"1\":{\"id\":54,\"num\":\"1\",\"type\":\"1\",\"price\":\"1.00\"}}','1','4','1','45','2016102606575','1','1477478700')
+

@@ -13,6 +13,6 @@ class AdverModel extends Model{
 	public function getAutoIncid(){
 		$sql="SHOW TABLE STATUS LIKE 'app_adver'";
 		$res=$this->query($sql);
-		return $res[0]['Auto_increment'];
+		return $res[0]['auto_increment'];
 	}
 }

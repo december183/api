@@ -10,7 +10,7 @@ class LoginController extends Controller {
     public function api(){
         $data=i('param.');
         if($data=$this->user->create($data)){
-        	$oneUser=$this->user->field('id,username,avatar,level,birthday,phone,pass')->where(array('phone'=>$data['phone']))->find();
+        	$oneUser=$this->user->field('id,username,avatar,level,isfilled,credit,birthday,phone,pass')->where(array('phone'=>$data['phone']))->find();
 	        if($oneUser){
 	        	if($oneUser['pass'] == $data['pass']){
 	        		unset($oneUser['pass']);

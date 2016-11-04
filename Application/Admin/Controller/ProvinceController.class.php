@@ -43,8 +43,8 @@ class ProvinceController extends BaseController{
 	public function add(){
 		if(IS_POST){
 			$data=I('param.');
-			if($this->province->create($data)){
-				if($this->province->add()){
+			if($data=$this->province->create($data)){
+				if($this->province->add($data)){
 					$this->success('新增省分成功！',U('Province/index'),2);
 				}else{
 					$this->error('新增省分失败！');

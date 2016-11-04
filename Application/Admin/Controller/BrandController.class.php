@@ -72,8 +72,8 @@ class BrandController extends BaseController{
 			}else{
 				$data['logo']=__ROOT__.'/Public/Admin/img/no-thumb.jpg';
 			}
-			if($this->brand->create($data)){
-				if($this->brand->add()){
+			if($data=$this->brand->create($data)){
+				if($this->brand->add($data)){
 					$this->success('新增成功！',U('Admin/Brand/index/cid/'.$data['cateid']),2);
 				}else{
 					$this->error('新增失败！');

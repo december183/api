@@ -1,0 +1,6 @@
+[ 2016-10-31T10:47:56+08:00 ] 127.0.0.1 /api/tset.php?phone=13507085913&type=2
+ERR: 无法加载控制器:Tset.php
+
+[ 2016-10-31T12:04:51+08:00 ] 127.0.0.1 /api/phpinfo.php
+ERR: 无法加载控制器:Phpinfo.php
+

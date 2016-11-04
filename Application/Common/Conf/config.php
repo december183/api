@@ -3,12 +3,15 @@ return array(
 	//'配置项'=>'配置值'
 	//PDO连接专用定义
 	'DB_TYPE'=>'mysql',
+	'DB_HOST'=>'localhost',
+	'DB_NAME'=>'appmom',
 	'DB_USER'=>'root',
 	'DB_PWD'=>'123456',
 	'DB_PREFIX'=>'app_',
 	'DB_PORT'=>3306,
-	'DB_PARAMS'=>array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL),
-	'DB_DSN'=>'mysql:host=localhost;dbname=appmom;charset=UTF8',
+	'DB_CHARSET'=>'utf8',
+	//'DB_PARAMS'=>array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL),
+	//'DB_DSN'=>'mysql:host=localhost;dbname=appmom;charset=UTF8',
 
 	//页面调试
 	'SHOW_PAGE_TRACE'=>true,

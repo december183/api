@@ -53,8 +53,8 @@ class CityController extends BaseController{
 	public function add(){
 		if(IS_POST){
 			$data=I('param.');
-			if($this->city->create($data)){
-				if($this->city->add()){
+			if($data=$this->city->create($data)){
+				if($this->city->add($data)){
 					$this->success('新增城市成功！',U('City/index'),2);
 				}else{
 					$this->error('新增城市失败！');

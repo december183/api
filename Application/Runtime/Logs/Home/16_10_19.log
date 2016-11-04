@@ -20,3 +20,91 @@ ERR: 无法加载控制器:Uploads
 ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
  [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
 
+[ 2016-10-19T16:57:42+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:44:57+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:47:44+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:54:11+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:54:36+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:56:30+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:58:16+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T17:59:12+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=14
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '14' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:00:05+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:02:19+08:00 ] 192.168.11.231 /api/index.php/Home/CreditGoods/indexApi?p=1&uid=41
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `p` = '1' AND `uid` = '41' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:03:19+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:03:23+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:03:28+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:03:39+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:03:47+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:04:38+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:04:48+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/indexApi?uid=1&p=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '1' AND `p` = '1' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:05:32+08:00 ] 127.0.0.1 /api/CreditGoods/indexApi?uid=2&p=2
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit FROM app_daily a LEFT JOIN app_user as b ON b.id=a.uid  WHERE `uid` = '2' AND `p` = '2' ORDER BY a.date DESC LIMIT 1  
+
+[ 2016-10-19T18:59:27+08:00 ] 192.168.11.231 /api/index.php/Collect/indexApi?eventid=1&uid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-19T19:02:15+08:00 ] 192.168.11.231 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-19T19:02:19+08:00 ] 192.168.11.231 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-19T19:02:23+08:00 ] 192.168.11.231 /api/index.php/Home/Event/eventList?cateid=16&isfree=1&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') AND `price` = 0 ORDER BY sort ASC LIMIT 0,10  
+

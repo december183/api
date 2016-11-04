@@ -7,6 +7,6 @@ class DailyModel extends Model{
 		array('uid','require','必须传入登陆用户ID'),
 	);
 	protected $_auto=array(
-
+		
 	);
 }

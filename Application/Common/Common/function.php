@@ -115,17 +115,31 @@
      * @param  string $postData post方式时传递的数据
      * @return [type] $res 返回的数据，一版为string或json格式
      */
-    function http_curl($url,$type='get',$postData=''){
-       $ch = curl_init();
-       curl_setopt($ch,CURLOPT_URL,$url);
-       curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-       if($type == 'post'){
+    function http_curl($url,$type='get',$postData='',$second=30){
+        $ch = curl_init();
+        //设置超时
+        curl_setopt($ch, CURLOPT_TIMEOUT, $second);
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);
+        curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);
+        //设置header
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        if($type == 'post'){
             curl_setopt($ch,CURLOPT_POST,1);
             curl_setopt($ch,CURLOPT_POSTFIELDS,$postData);
-       }
-       $res=curl_exec($ch);
-       curl_close($ch);
-       return $res;
+        }
+        //运行curl
+        $res=curl_exec($ch);
+        //返回结果
+        if($res){
+            curl_close($ch);
+            return $res;
+        } else { 
+            $error = curl_errno($ch);
+            curl_close($ch);
+            return false;
+        }
     }
     
     /**
@@ -218,4 +232,77 @@
             $Y--;  
         }
         return array('year'=>$Y,'month'=>$m,'day'=>$d);
+    }
+    /**
+     * [toUrlParam 将参数拼接为url:key=value&key=value]
+     * @param  [array] $params []
+     * @return [string]        []
+     */
+    function toUrlParam($params){
+        $string='';
+        if( !empty($params) ){
+            $array = array();
+            foreach( $params as $key => $value ){
+                $array[] = $key.'='.$value;
+            }
+            $string = implode("&",$array);
+        }
+        return $string;
+    }
+    /**
+     * [toUrlFormatParam 将参数拼接为url:key="value"&key="value"]
+     * @return [type] [description]
+     */
+    function toUrlFormatParam($params){
+        $string='';
+        if( !empty($params) ){
+            $array = array();
+            foreach( $params as $key => $value ){
+                $array[] = $key.'='.'"'.$value.'"';
+            }
+            $string = implode("&",$array);
+        }
+        return $string;
+    }
+    //数组转XML
+    function arrayToXml($params)
+    {
+        if(!is_array($params)|| count($params) <= 0){
+            return false;
+        }
+        $xml = "<xml>";
+        foreach ($params as $key=>$val){
+            if (is_numeric($val)){
+                $xml.="<".$key.">".$val."</".$key.">";
+            }else{
+                 $xml.="<".$key."><![CDATA[".$val."]]></".$key.">";
+            }
+        }
+        $xml.="</xml>";
+        return $xml;
+    }
+
+    //将XML转为array
+    function xmlToArray($xml)
+    {    
+        if(!$xml){
+            return false;
+        }
+        //禁止引用外部xml实体
+        libxml_disable_entity_loader(true);
+        $values = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);        
+        return $values;
+    }
+    /**
+     * [decodeUnicode 对unicode再进行解码]
+     * @param  [string] $str [description]
+     * @return [type]      [description]
+     */
+    function decodeUnicode($str){
+    return preg_replace_callback('/\\\\u([0-9a-f]{4})/i',
+        create_function(
+            '$matches',
+            'return mb_convert_encoding(pack("H*", $matches[1]), "UTF-8", "UCS-2BE");'
+        ),
+        $str);
     }

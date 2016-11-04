@@ -2,16 +2,17 @@
 	"folders":
 	[
 		{
-			"follow_symlinks":true,
 			"path": "."
 		}
 	],
 	"settings":{
 		"xdebug":{
-			"url":"http://localhost/api/test.php",
+			"path_mapping":{
+				"/www/api/" : "D:/wamp/www/api/"
+			},
+			"url":"http://localhost/api/index.php",
 			"super_globals":true,
-			"close_on_stop":true,
-			"port":9000
+			"close_on_stop":true
 		}
 	}
 }

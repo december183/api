@@ -18,6 +18,7 @@ class ServiceModel extends Model{
 	protected $_auto=array(
 		array('hits','randClick',1,'callback'),
 		array('sort','getAutoIncid',1,'callback'),
+		array('date','time',1,'function'),
 	);
 	public function randClick($min=50,$max=100){
 		return rand($min,$max);
@@ -25,6 +26,6 @@ class ServiceModel extends Model{
 	public function getAutoIncid(){
 		$sql="SHOW TABLE STATUS LIKE 'app_service'";
 		$res=$this->query($sql);
-		return $res[0]['Auto_increment'];
+		return $res[0]['auto_increment'];
 	}
 }

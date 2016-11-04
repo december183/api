@@ -55,8 +55,8 @@ class RegionController extends BaseController{
 	public function add(){
 		if(IS_POST){
 			$data=I('param.');
-			if($this->region->create($data)){
-				if($this->region->add()){
+			if($data=$this->region->create($data)){
+				if($this->region->add($data)){
 					$this->success('新增区域成功！',U('Region/index'),2);
 				}else{
 					$this->error('新增区域失败！');

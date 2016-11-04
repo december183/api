@@ -1,0 +1,14 @@
+[ 2016-10-24T09:20:45+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Order/index
+ERR: 无法加载控制器:Order
+
+[ 2016-10-24T09:20:51+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/CreditOrder/index
+ERR: 1054:Champ 'a.pickaddress' inconnu dans field list
+ [ SQL语句 ] : SELECT a.id,a.num,a.credit,a.totalcredit,a.pickaddress,a.remark,a.status,b.title,b.thumbpic FROM app_credit_order a INNER JOIN app_credit_goods as b ON a.gid=b.id  ORDER BY a.date DESC LIMIT 0,20  
+
+[ 2016-10-24T09:37:17+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Order/index
+ERR: 无法加载控制器:Order
+
+[ 2016-10-24T09:37:37+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/Order/index
+ERR: 1054:Champ 'price' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`title`,`price` FROM `app_goods` WHERE `id` = 1 LIMIT 1  
+

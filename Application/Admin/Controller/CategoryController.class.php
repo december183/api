@@ -89,8 +89,8 @@ class CategoryController extends BaseController{
 			}else{
 				$data['thumb']=__ROOT__.'/Public/Admin/img/no-thumb.jpg';
 			}
-			if($this->category->create($data)){
-				if($this->category->add()){
+			if($data=$this->category->create($data)){
+				if($this->category->add($data)){
 					$this->success('添加栏目成功！',U('Admin/Category/index/gid/'.$data['groupid']),2);
 				}else{
 					$this->error('添加栏目失败！');

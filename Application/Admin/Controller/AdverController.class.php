@@ -58,8 +58,8 @@ class AdverController extends BaseController{
 			}else{
 				$data['thumb']=__ROOT__.'/Public/Admin/img/no-thumb.jpg';
 			}
-			if($this->adver->create($data)){
-				if($this->adver->add()){
+			if($data=$this->adver->create($data)){
+				if($this->adver->add($data)){
 					$this->success('新增广告成功！',U('Adver/index'),2);
 				}else{
 					$this->error('新增广告失败！');

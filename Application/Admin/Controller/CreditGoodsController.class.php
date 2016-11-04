@@ -59,8 +59,8 @@ class CreditGoodsController extends BaseController{
 	public function add(){
 		if(IS_POST){
 			$data=I('param.');
-			if($this->creditgoods->create($data)){
-				if($this->creditgoods->add()){
+			if($data=$this->creditgoods->create($data)){
+				if($this->creditgoods->add($data)){
 					$this->success('发布成功',U('CreditGoods/index'),2);
 				}else{
 					$this->error('发布失败');

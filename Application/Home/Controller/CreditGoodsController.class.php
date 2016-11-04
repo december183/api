@@ -14,8 +14,9 @@ class CreditGoodsController extends Controller{
 	}
 	public function indexApi(){
 		$data=I('param.');
+		$condition['uid']=$data['uid'];
 		if(isset($data['uid'])){
-			$oneDaily=$this->daily->alias('a')->join('LEFT JOIN __USER__ as b ON b.id=a.uid')->field('a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit')->where($data)->order('a.date DESC')->limit(1)->select();
+			$oneDaily=$this->daily->alias('a')->join('LEFT JOIN __USER__ as b ON b.id=a.uid')->field('a.issigned,a.signcount,a.date,b.username,b.avatar,b.credit')->where($condition)->order('a.date DESC')->limit(1)->select();
 			if($oneDaily){
 				$date=date('Y-m-d',$oneDaily[0]['date']);
 				$today=date('Y-m-d',time());
@@ -70,6 +71,20 @@ class CreditGoodsController extends Controller{
 			}
 		}else{
 			$this->apiReturn(401,'必须传入当前登陆用户ID');
+		}
+	}
+	public function detailApi(){
+		$data=I('param.');
+		if(isset($data['id'])){
+			$map['id']=$data['id'];
+			$oneGoods=$this->creditgoods->field('id,title,mainpic,credit,inventory,content')->where($map)->select();
+			if($oneGoods){
+				$this->apiReturn(200,'返回积分商品信息成功',$oneGoods);
+			}else{
+				$this->apiReturn(404,'未找到该商品信息');
+			}
+		}else{
+			$this->apiReturn(401,'参数错误，需传入商品ID');
 		}
 	}
 }

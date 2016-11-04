@@ -27,11 +27,22 @@ class IndexController extends Controller {
             $value['price']=$pricelist;
             $catelist[]=$value;
         }
-        $bannerlist=$this->adver->field('id,title,type,url,thumb')->where(array('typeid'=>1,'status'=>1))->order('sort ASC')->limit(4)->select();
+        $bannerlist=$this->adver->field('title,agerange,type,url,thumb')->where(array('typeid'=>1,'status'=>1))->order('sort ASC')->limit(4)->select();
         $data['id']=I('param.id');
     	$oneUser=$this->user->field('birthday')->where($data)->find();
-    	$agerange=getAgeRange($oneUser['birthday']);
-    	if($agerange){
+    	if($oneUser && $oneUser['birthday']){
+            $agerange=getAgeRange($oneUser['birthday']);
+            switch($agerange){
+                case '0-3':
+                    $agerange=1;
+                    break;
+                case '3-6':
+                    $agerange=2;
+                    break;
+                case '6-12':
+                    $agerange=3;
+                    break;
+            }
     		$map1=array('agerange'=>$agerange,'typeid'=>2,'status'=>1);
     		$map2=array('agerange'=>$agerange,'typeid'=>3,'status'=>1);
     		$map3=array('agerange'=>$agerange,'typeid'=>4,'status'=>1);
@@ -44,13 +55,13 @@ class IndexController extends Controller {
     		$map4=array('typeid'=>5,'status'=>1);
     		$map5=array('typeid'=>6,'status'=>1);
     	}
-		$list1=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('date DESC')->limit(1)->select();
-    	$list2=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('date DESC')->limit(1)->select();
-    	$list3=$this->adver->field('id,title,type,url,thumb')->where($map3)->order('date DESC')->limit(2)->select();
-    	$babyadverlist=array($list1,$list2,$list3);
-    	$list4=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('date DESC')->limit(1)->select();
-    	$list5=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('date DESC')->limit(1)->select();
-    	$mamaadverlist=array($list4,$list5);
+		$list1=$this->adver->field('title,agerange,type,url,thumb')->where($map1)->order('sort ASC')->limit(1)->select();
+    	$list2=$this->adver->field('title,agerange,type,url,thumb')->where($map2)->order('sort ASC')->limit(1)->select();
+    	$list3=$this->adver->field('title,agerange,type,url,thumb')->where($map3)->order('sort ASC')->limit(2)->select();
+    	$babyadverlist=array_merge($list1,$list2,$list3);
+    	$list4=$this->adver->field('title,agerange,type,url,thumb')->where($map4)->order('sort ASC')->limit(4)->select();
+    	$list5=$this->adver->field('title,agerange,type,url,thumb')->where($map5)->order('sort ASC')->limit(1)->select();
+    	$mamaadverlist=array_merge($list4,$list5);
     	$data=array('cate'=>$catelist,'banner'=>$bannerlist,'baby'=>$babyadverlist,'mama'=>$mamaadverlist);
     	if($data){
     		$this->apiReturn(200,'首页数据返回成功',$data);
@@ -77,8 +88,19 @@ class IndexController extends Controller {
     public function custBabyAdver(){
     	$data['id']=I('param.id');
     	$oneUser=$this->user->field('birthday')->where($data)->find();
-    	$agerange=getAgeRange($oneUser['birthday']);
-    	if($agerange){
+    	if($oneUser && $oneUser['birthday']){
+            $agerange=getAgeRange($oneUser['birthday']);
+            switch($agerange){
+                case '0-3':
+                    $agerange=1;
+                    break;
+                case '3-6':
+                    $agerange=2;
+                    break;
+                case '6-12':
+                    $agerange=3;
+                    break;
+            }
     		$map1=array('agerange'=>$agerange,'typeid'=>2,'status'=>1);
     		$map2=array('agerange'=>$agerange,'typeid'=>3,'status'=>1);
     		$map3=array('agerange'=>$agerange,'typeid'=>4,'status'=>1);
@@ -87,10 +109,10 @@ class IndexController extends Controller {
     		$map2=array('typeid'=>3,'status'=>1);
     		$map3=array('typeid'=>4,'status'=>1);
     	}
-		$list1=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('date DESC')->limit(1)->select();
-    	$list2=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('date DESC')->limit(1)->select();
-    	$list3=$this->adver->field('id,title,type,url,thumb')->where($map3)->order('date DESC')->limit(2)->select();
-    	$adverlist=array($list1,$list2,$list3);
+		$list1=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('sort ASC')->limit(1)->select();
+    	$list2=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('sort ASC')->limit(1)->select();
+    	$list3=$this->adver->field('id,title,type,url,thumb')->where($map3)->order('sort ASC')->limit(2)->select();
+    	$adverlist=array_merge($list1,$list2,$list3);
     	if($adverlist){
     		$this->apiReturn(200,'返回宝宝自定义推荐广告成功',$adverlist);
     	}else{
@@ -100,17 +122,28 @@ class IndexController extends Controller {
     public function custMomAdver(){
     	$data['id']=I('param.id');
     	$oneUser=$this->user->field('birthday')->where($data)->find();
-    	$agerange=getAgeRange($oneUser['birthday']);
-    	if($agerange){
+    	if($oneUser && $oneUser['birthday']){
+            $agerange=getAgeRange($oneUser['birthday']);
+            switch($agerange){
+                case '0-3':
+                    $agerange=1;
+                    break;
+                case '3-6':
+                    $agerange=2;
+                    break;
+                case '6-12':
+                    $agerange=3;
+                    break;
+            }
     		$map1=array('agerange'=>$agerange,'typeid'=>5,'status'=>1);
     		$map2=array('agerange'=>$agerange,'typeid'=>6,'status'=>1);
     	}else{
     		$map1=array('typeid'=>5,'status'=>1);
     		$map2=array('typeid'=>6,'status'=>1);
     	}
-		$list1=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('date DESC')->limit(1)->select();
-    	$list2=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('date DESC')->limit(1)->select();
-    	$adverlist=array($list1,$list2);
+		$list1=$this->adver->field('id,title,type,url,thumb')->where($map1)->order('sort ASC')->limit(4)->select();
+    	$list2=$this->adver->field('id,title,type,url,thumb')->where($map2)->order('sort ASC')->limit(1)->select();
+    	$adverlist=array_merge($list1,$list2);
     	if($adverlist){
     		$this->apiReturn(200,'返回妈妈自定义推荐广告成功',$adverlist);
     	}else{

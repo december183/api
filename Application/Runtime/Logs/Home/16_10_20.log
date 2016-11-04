@@ -1,0 +1,201 @@
+[ 2016-10-20T09:14:27+08:00 ] 127.0.0.1 /api/index.php
+ERR: 非法操作:index
+
+[ 2016-10-20T09:39:10+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?uid=1
+ERR: 1054:Champ 'b.thumbpic' inconnu dans field list
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_order as b ON a.gid=b.id  WHERE `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:24:40+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?p=1&uid=1
+ERR: 1054:Champ 'b.thumbpic' inconnu dans field list
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_order as b ON a.gid=b.id  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:27:25+08:00 ] 127.0.0.1 /api/CreditOrder/indexApi?uid=1
+ERR: 1054:Champ 'b.thumbpic' inconnu dans field list
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_order as b ON a.gid=b.id  WHERE `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:30:37+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?p=1&uid=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_goods as b ON a.gid=b.id  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:40:33+08:00 ] 192.168.11.147 /api/index.php/Collect/indexApi?eventid=1&uid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T10:40:35+08:00 ] 192.168.11.147 /api/index.php/Collect/indexApi?serviceid=1&uid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_event` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T10:40:37+08:00 ] 192.168.11.147 /api/index.php/Collect/indexApi?eventid=1&uid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T10:46:11+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?p=1&uid=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_goods as b ON a.gid=b.id  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:48:59+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?p=1&uid=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_goods as b ON a.gid=b.id  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:50:15+08:00 ] 192.168.11.115 /api/index.php/Home/CreditOrder/indexApi?p=1&uid=1
+ERR: 1054:Champ 'p' inconnu dans where clause
+ [ SQL语句 ] : SELECT a.num,a.totalcredit,a.date,b.thumbpic,b.title FROM app_credit_order a INNER JOIN app_credit_goods as b ON a.gid=b.id  WHERE `p` = '1' AND `uid` = '1' ORDER BY a.date DESC LIMIT 0,10  
+
+[ 2016-10-20T10:55:20+08:00 ] 127.0.0.1 /api/
+ERR: 非法操作:index
+
+[ 2016-10-20T10:55:30+08:00 ] 127.0.0.1 /api/Home/index
+ERR: 非法操作:index
+
+[ 2016-10-20T11:37:16+08:00 ] 192.168.11.230 /api/index.php/Home/Event/eventList?p=1&region=1&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `region` = '1' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T11:37:21+08:00 ] 192.168.11.230 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T11:37:25+08:00 ] 192.168.11.230 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T11:37:31+08:00 ] 192.168.11.230 /api/index.php/Home/Event/eventList?cateid=16&isfree=1&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') AND `price` = 0 ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T11:47:59+08:00 ] 192.168.11.105 /api/index.php/Collect/indexApi?uid=1&eventid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T11:48:03+08:00 ] 192.168.11.105 /api/index.php/Collect/indexApi?uid=1&eventid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T15:39:12+08:00 ] 192.168.11.229 /api/index.php/Home/CreditGoods/detailApi?id=1
+ERR: 1054:Champ 'title' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`title`,`mainpic`,`credit`,`inventory`,`content` FROM `app_user` WHERE `id` = 1 
+
+[ 2016-10-20T15:39:51+08:00 ] 127.0.0.1 /api/CreditGoods/detailApi?id=1
+ERR: 1054:Champ 'title' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`title`,`mainpic`,`credit`,`inventory`,`content` FROM `app_user` WHERE `id` = 1 
+
+[ 2016-10-20T15:41:48+08:00 ] 192.168.11.229 /api/index.php/Collect/indexApi?uid=1&eventid=1
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `app_service` WHERE `id` IN () LIMIT 1  
+
+[ 2016-10-20T16:14:11+08:00 ] 192.168.11.193 /api/index.php/Home/Order/userIndexApi?uid=40
+ERR: 1054:Champ 'thumbnail' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`price`,`discountprice`,`title`,`thumbnail`,`location` FROM `app_service` WHERE `id` = 55 LIMIT 1  
+
+[ 2016-10-20T16:14:53+08:00 ] 192.168.11.175 /api/index.php/Home/Order/userIndexApi?uid=40
+ERR: 1054:Champ 'thumbnail' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`price`,`discountprice`,`title`,`thumbnail`,`location` FROM `app_service` WHERE `id` = 55 LIMIT 1  
+
+[ 2016-10-20T16:15:05+08:00 ] 192.168.11.218 /api/index.php/Home/Order/userIndexApi?uid=40
+ERR: 1054:Champ 'thumbnail' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`price`,`discountprice`,`title`,`thumbnail`,`location` FROM `app_service` WHERE `id` = 55 LIMIT 1  
+
+[ 2016-10-20T16:15:18+08:00 ] 127.0.0.1 /api/order/userIndexApi?uid=40
+ERR: 1054:Champ 'thumbnail' inconnu dans field list
+ [ SQL语句 ] : SELECT `id`,`price`,`discountprice`,`title`,`thumbnail`,`location` FROM `app_service` WHERE `id` = 55 LIMIT 1  
+
+[ 2016-10-20T17:24:44+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:26:07+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:26:44+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:29:02+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:29:06+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:30:45+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:30:48+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:30:51+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:31:03+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:31:15+08:00 ] 192.168.11.229 /api/index.php/Home/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:32:20+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:32:22+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:33:06+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:33:07+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T17:37:30+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T18:00:54+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T18:01:30+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T18:01:33+08:00 ] 127.0.0.1 /api/CreditOrder/addApi
+ERR: 1064:Erreur de syntaxe près de 'WHERE `id` = null' à la ligne 1
+ [ SQL语句 ] : UPDATE `app_credit_goods` SET `inventory`=inventory- WHERE `id` = null
+
+[ 2016-10-20T19:05:08+08:00 ] 192.168.11.147 /api/index.php/Home/Order/addApi?1=type&client_ip=192.168.11.193&info%5B%5D%5B55%5D=1.0&paymethod=2&pickid=5&remark=1&uid=1
+ERR: 1054:Champ 'price' inconnu dans field list
+ [ SQL语句 ] : SELECT `price` FROM `app_goods` WHERE `id` = 0 LIMIT 1  
+
+[ 2016-10-20T19:05:15+08:00 ] 192.168.11.147 /api/index.php/Home/Order/addApi?1=type&client_ip=192.168.11.193&info%5B%5D%5B55%5D=1.0&paymethod=2&pickid=5&remark=1&uid=1
+ERR: 1054:Champ 'price' inconnu dans field list
+ [ SQL语句 ] : SELECT `price` FROM `app_goods` WHERE `id` = 0 LIMIT 1  
+
+[ 2016-10-20T19:05:26+08:00 ] 192.168.11.147 /api/index.php/Home/Order/addApi?1=type&client_ip=192.168.11.193&info%5B%5D%5B55%5D=1.0&paymethod=2&pickid=5&remark=1&uid=1
+ERR: 1054:Champ 'price' inconnu dans field list
+ [ SQL语句 ] : SELECT `price` FROM `app_goods` WHERE `id` = 0 LIMIT 1  
+
+[ 2016-10-20T19:20:10+08:00 ] 192.168.11.147 /api/index.php/Home/Order/addApi?1=type&client_ip=192.168.11.193&info%5B%5D%5B55%5D=1.0&paymethod=2&pickid=5&remark=1&uid=1
+ERR: 1054:Champ 'price' inconnu dans field list
+ [ SQL语句 ] : SELECT `price` FROM `app_goods` WHERE `id` = 0 LIMIT 1  
+
+[ 2016-10-20T19:42:57+08:00 ] 192.168.11.147 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T19:43:02+08:00 ] 192.168.11.147 /api/index.php/Home/Event/eventList?cateid=16&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') ORDER BY sort ASC LIMIT 0,10  
+
+[ 2016-10-20T19:43:06+08:00 ] 192.168.11.147 /api/index.php/Home/Event/eventList?cateid=16&isfree=1&p=1&region=1&type=0&uid=1
+ERR: 1052:Champ: 'region' dans where clause est ambigu
+ [ SQL语句 ] : SELECT a.id,a.starttime,a.endtime,a.thumbpic,a.title,a.price,a.place,a.descript,a.status,b.username FROM app_event a INNER JOIN app_user as b ON a.uid=b.id  WHERE `cateid` IN ('17','16') AND `region` = '1' AND `uid` IN ('2') AND `price` = 0 ORDER BY sort ASC LIMIT 0,10  
+

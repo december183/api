@@ -44,8 +44,8 @@ class TaskController extends BaseController{
 	public function add(){
 		if(IS_POST){
 			$data=I('param.');
-			if($this->task->create($data)){
-				if($this->task->add()){
+			if($data=$this->task->create($data)){
+				if($this->task->add($data)){
 					$this->success('新增任务成功！',U('Task/index'),2);
 				}else{
 					$this->error('新增任务失败！');

@@ -18,6 +18,7 @@
 		                    <th>电话</th>
 		                    <th>门店地址</th>
 		                    <th>年龄范围</th>
+		                    <th>账户余额</th>
 		                    <th>是否审核</th>
 		                    <th>状态</th>
 		                    <th>是否推荐</th>
@@ -36,6 +37,7 @@
 		                    <td>{$vo.tel}</td>
 		                    <td>{$vo.location}</td>
 		                    <td>{$vo.agerange}</td>
+		                    <td>{$vo.account}</td>
 		                    <td><if condition="$vo['level'] gt 2"><a href="javascript:;" onclick="checkSeller({$vo.id},this);">已审核</a><else /><a href="javascript:;" onclick="checkSeller({$vo.id},this);">未审核</a></if></td>
 		                    <td><if condition="$vo['status'] eq 1"><a href="javascript:;" onclick="setStatus({$vo.id},this);">正常</a><else /><a href="javascript:;" onclick="setStatus({$vo.id},this);">禁用</a></if></td>
 		                    <td><if condition="$vo['isrec'] eq 1"><a href="javascript:;" onclick="setRec({$vo.id},this);">已推荐</a><else /><a href="javascript:;" onclick="setRec({$vo.id},this);">未推荐</a></if></td>

@@ -1,8 +1,8 @@
 <?php
-namespace Home\Controller;
+namespace Admin\Controller;
 use Think\Controller;
 
-class OrderController extends Controller{
+class OrderController extends BaseController{
 	private $order=null;
 	private $service=null;
 	private $goods=null;
@@ -19,9 +19,6 @@ class OrderController extends Controller{
 				$paramStr.=$key.'/'.$value;
 			}
 			$map=$param;
-		}else{
-			$paramStr='type/1';
-			$map=array('type'=>1);
 		}
 		if(IS_POST){
 			$data=I('param.');
@@ -59,10 +56,10 @@ class OrderController extends Controller{
 				$this->display();
 			}
 		}else{
-			$total=$this->order->where($map)->count();
+			$total=$this->order->count();
 			$page=new \Think\Page($total,PAGE_SIZE);
 			$show=$page->show();
-			$list=$this->order->where($map)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+			$list=$this->order->alias('a')->join('app_pickaddress as b ON a.pickid=b.id')->field('a.id,a.order_no,a.uid,a.info,a.totalfee,a.remark,a.status,b.name,b.phone,b.place')->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 			$orderlist=$this->getOrderInfo($list);
 			$this->assign('orderlist',$orderlist);
 			$this->assign('page',$show);
@@ -71,31 +68,31 @@ class OrderController extends Controller{
 	}
 	protected function getOrderInfo($list){
 		$orderlist=array();
-		if($map['type'] == 1){
-			foreach($list as $value){
-				$info=json_decode($value['info'],true);
-				$goodslist=array();
-				foreach($info as $key=>$val){
-					$oneGoods=$this->service->field('id,title,price')->where(array('id'=>$key))->find();
-					$oneGoods['num']=$val;
-					$goodslist[]=$oneGoods;
+		foreach($list as $value){
+			$info=json_decode($value['info'],true);
+			$goodslist=array();
+			foreach($info as $val){
+				if($val['type'] == 1){
+					$oneGoods=$this->service->field('id,thumbpic,title')->where(array('id'=>$val['id']))->find();
+				}else{
+					$oneGoods=$this->goods->field('id,thumbpic,title')->where(array('id'=>$val['id']))->find();
 				}
-				$value['info']=$goodslist;
-				$orderlist[]=$value;
+				$oneGoods['price']=$val['price'];
+				$oneGoods['num']=$val['num'];
+				$goodslist[]=$oneGoods;
 			}
-		}else{
-			foreach($list as $value){
-				$info=json_decode($value['info'],true);
-				$goodslist=array();
-				foreach($info as $key=>$val){
-					$oneGoods=$this->goods->field('id,title,price')->where(array('id'=>$key))->find();
-					$oneGoods['num']=$val;
-					$goodslist[]=$oneGoods;
-				}
-				$value['info']=$goodslist;
-				$orderlist[]=$value;
-			}
+			$value['info']=$goodslist;
+			$value['count']=count($value['info']);
+			$orderlist[]=$value;
 		}
 		return $orderlist;
+	}
+	public function del(){
+		$id=I('get.id');
+		if($this->order->delete($id)){
+			$this->success('删除成功！',U('Order/index'),2);
+		}else{
+			$this->error('删除失败！');
+		}
 	}
 }

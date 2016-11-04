@@ -9,7 +9,9 @@ class RegController extends Controller {
 	}
     public function api(){
         $data=I('param.');
-        if($data['mscode'] == $_SESSION['mscode']){
+        $data['type']=1;
+        if($data['mscode'] == $_SESSION[$data['phone'].$data['type']]){
+            unset($_SESSION[$data['phone'].$data['type']]);
             if($data=$this->user->create($data,4)){
                 $result=$this->user->add($data);
         		if($result){

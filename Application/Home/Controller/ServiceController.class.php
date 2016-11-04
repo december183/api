@@ -7,18 +7,21 @@ class ServiceController extends ComController{
 	private $admire=null;
 	private $collect=null;
 	private $category=null;
+	private $user=null;
 	public function __construct(){
 		parent::__construct();
 		$this->service=D('Service');
 		$this->admire=D('Admire');
 		$this->collect=D('Collect');
 		$this->category=D('Category');
+		$this->user=D('User');
 	}
 	public function serviceList(){
 		$data=I('param.');
-		$map['cateid']=$data['cateid'];
+		// $map['cateid']=$data['cateid'];
 		$map['cateid']=array('IN',$this->category->getDelIds($data['cateid']));
 		$map['isup']=array('eq',1);
+		$map['isdelete']=array('eq',0);
 		if(isset($data['price'])){
 			$priceArr=explode('-',$data['price']);
 			$map['price']=array('gt',$priceArr[0]);
@@ -36,7 +39,7 @@ class ServiceController extends ComController{
 		$total=$this->service->where($map)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$show=$page->show();
-		$list=$this->service->field('id,thumbpic,title,price,location')->where($map)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
+		$list=$this->service->field('id,uid,thumbpic,title,price,location')->where($map)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();
 		$admirelist=$this->admire->field('serviceid')->where(array('uid'=>$data['uid'],'commentid'=>0))->select();
 		foreach($admirelist as $value){
 			$admireids .= $value['serviceid'].',';
@@ -48,6 +51,8 @@ class ServiceController extends ComController{
 		}
 		$collectids=substr($collectids,0,-1);
 		foreach($list as $value){
+			$oneUser=$this->user->field('username')->where(array('id'=>$value['uid']))->find();
+			$value['username']=$oneUser['username'];
 			if(strpos($admireids,$value['id']) !== false){
 				$value['isadmire']=1;
 			}else{
@@ -66,6 +71,10 @@ class ServiceController extends ComController{
 			$this->apiReturn(401,'暂无数据');
 		}
 	}
+	/**
+	 * [releaseService IOS发布商品]
+	 * @return [type] [description]
+	 */
 	public function releaseService(){
 		$data=I('param.');
 		if($_FILES['file']){
@@ -88,6 +97,21 @@ class ServiceController extends ComController{
 		}
 		if($this->service->create($data)){
 			if($this->service->add()){
+				$this->apiReturn(200,'商品发布成功');
+			}else{
+				$this->apiReturn(404,'商品发布失败');
+			}
+		}else{
+			$this->apiReturn(403,$this->service->getError());
+		}
+	}
+	/**
+	 * [addService Andriod发布商品]
+	 */
+	public function addService(){
+		$data=I('param.');
+		if($data=$this->service->create($data)){
+			if($this->service->add($data)){
 				$this->apiReturn(200,'商品发布成功');
 			}else{
 				$this->apiReturn(404,'商品发布失败');
@@ -141,7 +165,7 @@ class ServiceController extends ComController{
 	public function serviceDetail(){
 		$data=I('param.');
 		$map['a.id']=$data['id'];
-		$oneService=$this->service->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.title,a.mainpic,a.price,a.discountprice,a.location,a.phone,a.descript,b.shopname')->where($map)->find();
+		$oneService=$this->service->alias('a')->join('app_user as b ON a.uid=b.id')->field('a.id,a.uid,a.title,a.mainpic,a.price,a.discountprice,a.location,a.phone,a.descript,b.shopname')->where($map)->find();
 		if($oneService){
 			$oneAdmire=$this->admire->where(array('serviceid'=>$data['id'],'uid'=>$data['uid']))->find();
 			if($oneAdmire){
@@ -162,9 +186,10 @@ class ServiceController extends ComController{
 	}
 	public function userServiceList(){
 		$data['uid']=I('param.uid');
+		$data['isdelete']=0;
 		$total=$this->service->where($data)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
-		$servicelist=$this->service->field('id,title,price,mainpic,thumbpic,location,isup')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
+		$servicelist=$this->service->field('id,title,price,discountprice,mainpic,thumbpic,location,isup')->where($data)->order('date DESC')->limit($page->firstRow.','.$page->listRows)->select();
 		if($servicelist){
 			$this->apiReturn(200,'返回用户商品列表成功',$servicelist);
 		}else{
@@ -176,7 +201,8 @@ class ServiceController extends ComController{
 		$oneService=$this->service->field('id,uid')->where(array('id'=>$data['id']))->find();
 		if($oneService){
 			if($data['uid'] == $oneService['uid']){
-				if($this->service->delete($oneService['id'])){
+				$data['isdelete']=0;
+				if($this->service->save($data)){
 					$this->apiReturn(200,'删除成功');
 				}else{
 					$this->apiReturn(404,'删除失败');
@@ -221,6 +247,7 @@ class ServiceController extends ComController{
 		$data['isdiscount']=1;
 		$data['isup']=1;
 		$data['status']=1;
+		$data['isdelete']=0;
 		$total=$this->service->where($data)->count();
 		$page=new \Think\Page($total,FRONT_PAGE_SIZE);
 		$servicelist=$this->service->field('id,title,thumbpic,price,discountprice,salednum')->where($data)->order('sort ASC')->limit($page->firstRow.','.$page->listRows)->select();

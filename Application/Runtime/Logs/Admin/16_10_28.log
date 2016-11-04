@@ -1,0 +1,18 @@
+[ 2016-10-28T16:45:43+08:00 ] 127.0.0.1 /api/index.php?s=/Admin/AdverType/getAdverTypeInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `app_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_auth` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_manage` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_adver` [ RunTime:0.0030s ]
+SQL: SELECT `auth` FROM `app_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_auth` WHERE `status` = 1 ORDER BY sort ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 18 D:\wamp\www\api\Application\Admin\Model\AuthModel.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_config` WHERE `conf_group` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`url` FROM `app_auth` WHERE `url` = 'AdverType/getAdverTypeInfo' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `app_adver_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `app_adver_type` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+
