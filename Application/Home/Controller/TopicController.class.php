@@ -57,11 +57,11 @@ class TopicController extends ComController{
 		if($this->topic->create($data)){
 			if($this->topic->add()){
 				$oneDaily=$this->daily->where(array('uid'=>$data['uid']))->order('date DESC')->limit(1)->select();
-				$date=date('Y-m-d',$onedaily[0]['date']);
+				$date=date('Y-m-d',$oneDaily[0]['date']);
 				$today=date('Y-m-d',time());
 				if($date == $today){
-					if($onedaily[0]['ispost'] == 0){
-						$data2['id']=$onedaily[0]['id'];
+					if($oneDaily[0]['ispost'] == 0){
+						$data2['id']=$oneDaily[0]['id'];
 						$data2['ispost']=1;
 						$data2['point']=$oneDaily[0]['point']+3;
 						if($this->daily->save($data2)){
@@ -97,13 +97,13 @@ class TopicController extends ComController{
 		if($this->topic->create($data)){
 			if($this->topic->add()){
 				$oneDaily=$this->daily->where(array('uid'=>$data['uid']))->order('date DESC')->limit(1)->select();
-				$date=date('Y-m-d',$onedaily[0]['date']);
+				$date=date('Y-m-d',$oneDaily[0]['date']);
 				$today=date('Y-m-d',time());
 				if($date == $today){
-					if($onedaily[0]['ispost'] == 0){
-						$data2['id']=$onedaily[0][0]['id'];
+					if($oneDaily[0]['ispost'] == 0){
+						$data2['id']=$oneDaily[0]['id'];
 						$data2['ispost']=1;
-						$data2['point']=$oneDaily[0][0]['point']+3;
+						$data2['point']=$oneDaily[0]['point']+3;
 						if($this->daily->save($data2)){
 							$this->user->where(array('id'=>$data['uid']))->setInc('credit',3);
 						}

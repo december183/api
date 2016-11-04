@@ -27,9 +27,9 @@ class CreditGoodsController extends Controller{
 				}
 				$daily=$oneDaily[0];
 			}else{
-				$oneUser=$this->user->field('username,avatar,credit')->where($data)->find();
+				$oneUser=$this->user->field('username,avatar,credit')->where(array('id'=>$data['uid']))->find();
 				$oneUser['issigned']=0;
-				$oneUser['sigincount']=0;
+				$oneUser['signcount']=0;
 				$daily=$oneUser;
 			}
 			$map=array('isrec'=>1);
@@ -43,7 +43,7 @@ class CreditGoodsController extends Controller{
 				$this->apiReturn(404,'返回积分商城商品失败');
 			}
 		}else{
-			$this->apiReturn(401,'必须传入当前登陆用户id');
+			$this->apiReturn(401,'必须传入当前登陆用户ID');
 		}
 	}
 	public function allApi(){
